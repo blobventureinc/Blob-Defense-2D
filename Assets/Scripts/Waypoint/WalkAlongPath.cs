@@ -9,7 +9,7 @@ public class WalkAlongPath : MonoBehaviour {
 
     private float position;
 
-    void Update() {
+    void FixedUpdate() {
         position += Time.deltaTime * speed;
         transform.position = pathCreator.path.GetPointAtDistance(position, EndOfPathInstruction.Stop);
     }
