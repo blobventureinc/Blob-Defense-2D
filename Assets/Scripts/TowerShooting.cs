@@ -32,6 +32,6 @@ public class TowerShooting : MonoBehaviour
 
     void shoot()
     {
-        Debug.Log("Shooting at: " +targetfinder.target);
+        Debug.Log("Shooting a "+projectile+" at: " +targetfinder.target);
     }
 }
