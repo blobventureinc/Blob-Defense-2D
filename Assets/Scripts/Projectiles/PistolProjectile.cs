@@ -11,12 +11,17 @@ public class PistolProjectile : Projectile
     }
 
     // Update is called once per frame
-    void Update()
+    public override void Update()
     {
 
     }
-    public override void myNameIs()
+    public override void shootAt( GameObject target)
     {
         Debug.Log("I am a Pistol Projectile!");
+    }
+
+    public override bool alive()
+    {
+        return true;
     }
 }

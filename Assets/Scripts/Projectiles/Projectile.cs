@@ -12,10 +12,9 @@ public abstract class Projectile : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public abstract void Update();
 
-    public abstract void myNameIs();
+    public abstract void shootAt(GameObject target);
+
+    public abstract bool alive();
 }
