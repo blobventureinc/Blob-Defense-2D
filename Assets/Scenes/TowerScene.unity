@@ -132,6 +132,8 @@ GameObject:
   - component: {fileID: 428210194}
   - component: {fileID: 428210197}
   - component: {fileID: 428210196}
+  - component: {fileID: 428210199}
+  - component: {fileID: 428210198}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -230,6 +232,30 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &428210198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428210193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f58a5d3f28d8e34a8b1a53808b6ef00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &428210199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428210193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ea39b20489a56a41a7902584d4821bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1086647482
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {x: 0, y: -1, z: 0}
-  speed: 1
+  speed: 0.5
 --- !u!212 &1086647486
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -460,7 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dir: {x: 1, y: 0, z: 0}
-  speed: 1
+  speed: 0.5
 --- !u!50 &1227813931
 Rigidbody2D:
   serializedVersion: 4
