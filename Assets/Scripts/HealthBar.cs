@@ -13,7 +13,9 @@ public class HealthBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        HealthSystem healthSystem = GetComponent<HealthSystem>();
         prefabHealthBar = Instantiate(Resources.Load("HealthBar", typeof(Transform)), new Vector3(0, 1), Quaternion.identity, gameObject.transform) as Transform;
         healthBar = prefabHealthBar.Find("Bar");
+        healthSystem.UpdateHealthBar();
     }
 }

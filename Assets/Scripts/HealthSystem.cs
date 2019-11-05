@@ -18,7 +18,6 @@ public class HealthSystem : MonoBehaviour
     void Start() {
         onHealthChange.AddListener(UpdateHealthBar);
         healthBar = GetComponent<HealthBar>();
-        healthBar.UpdateHealthBar(GetHealthPercent());
     }
 
     public int GetHealth() {
@@ -33,25 +32,21 @@ public class HealthSystem : MonoBehaviour
         healthBar.UpdateHealthBar(GetHealthPercent());
     }
 
-    public void DestroyItself () {
-        Destroy(gameObject.transform);
-    }
-
     public void ApplyDamage (int dmg) {
         health -= dmg;
-        onHealthChange.Invoke();
-        if (health < 0) {
+        if (health <= 0) {
             health = 0;
             onDeath.Invoke();
         }
+        onHealthChange.Invoke();
     }
 
     public void ApplyHeal (int heal) {
         health += heal;
-        onHealthChange.Invoke();
-        if (health > maxHealth) {
+        if (health >= maxHealth) {
             health = maxHealth;
         }
+        onHealthChange.Invoke();
     }
 
     // Update is called once per frame
