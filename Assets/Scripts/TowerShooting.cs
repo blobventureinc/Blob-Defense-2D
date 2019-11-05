@@ -39,7 +39,7 @@ public class TowerShooting : MonoBehaviour
     {
         Debug.Log("Shooting a " + projectile + " at: " + targetfinder.target);
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-        proj.AddComponent(projectileBehaviour.GetType());
+        //proj.AddComponent(projectileBehaviour.GetType());
         proj.GetComponent<Projectile>().shootAt(targetfinder.target);
 
     }

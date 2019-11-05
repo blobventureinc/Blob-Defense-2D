@@ -12,7 +12,6 @@ public class CannonProjectile : Projectile
     // Start is called before the first frame update
     void Start()
     {
-        // target_ = null;
         speed_ = 1f;
         lifetime = 0f;
         startPos = new Vector3(transform.position[0], transform.position[1], transform.position[2]);
@@ -26,7 +25,6 @@ public class CannonProjectile : Projectile
 
         if (target_ != null)
         {
-            Debug.Log("As intended");
             float step = speed_ * Time.deltaTime;
             transform.position = Vector3.MoveTowards(transform.position, target_.transform.position, step);
             if (Vector3.Distance(transform.position, target_.transform.position) < 0.001 || !alive())
@@ -48,6 +46,14 @@ public class CannonProjectile : Projectile
             return true;
         else
             return false;
+
+    }
+    //To initialize a Projectile with its parameters
+    public CannonProjectile create(GameObject where, float speed /*complete parameterlist*/)
+    {
+        CannonProjectile cp = where.AddComponent<CannonProjectile>();
+        cp.speed_ = speed; //for every parameter
+        return cp;
 
     }
 }
