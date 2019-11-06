@@ -11,21 +11,36 @@ public class HealthSystem : MonoBehaviour
     public UnityEvent onHealthChange;
     public UnityEvent onDeath;
 
-    [SerializeField] private int health = 100;
-    [SerializeField] private int maxHealth = 100;
-    private float healthPercent;
+    [SerializeField] private int _health = 100;
+    [SerializeField] private int _maxHealth = 100;
+    private float _healthPercent;
 
-    public int Health {
+    public int health {
         get {
-            return health;
+            return _health;
+        }
+        set {
+            _health = value;
+            if (_health <= 0) {
+                _health = 0;
+                onDeath.Invoke();
+            }
+            if (_health >= _maxHealth) {
+                _health = _maxHealth;
+            }
+            onHealthChange.Invoke();
         }
     }
-    public int MaxHealth {
+
+    public int maxHealth {
         get {
-            return maxHealth;
+            return _maxHealth;
+        }
+        set {
+            _maxHealth = value;
         }
     }
-    public float HealthPercent {
+    public float healthPercent {
         get {
             return (float) health / maxHealth; 
         }
@@ -33,19 +48,10 @@ public class HealthSystem : MonoBehaviour
 
     public void ApplyDamage (int dmg) {
         health -= dmg;
-        if (health <= 0) {
-            health = 0;
-            onDeath.Invoke();
-        }
-        onHealthChange.Invoke();
     }
 
     public void ApplyHeal (int heal) {
         health += heal;
-        if (health >= maxHealth) {
-            health = maxHealth;
-        }
-        onHealthChange.Invoke();
     }
 
     void Start() {
@@ -61,6 +67,6 @@ public class HealthSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G)) {
             ApplyHeal(10);
         }
-        Debug.Log("HP%:"+HealthPercent);
+        //Debug.Log("HP%:"+healthPercent);
     }
 }

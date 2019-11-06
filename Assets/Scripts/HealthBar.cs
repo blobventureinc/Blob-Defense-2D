@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     private HealthSystem healthSystem;
 
     public void UpdateHealthBar() {
-        barSpriteContainer.localScale = new Vector3(healthSystem.HealthPercent, 1);
+        barSpriteContainer.localScale = new Vector3(healthSystem.healthPercent, 1);
     }
 
     void Start()
