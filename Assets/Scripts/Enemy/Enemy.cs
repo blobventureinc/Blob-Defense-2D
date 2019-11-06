@@ -7,7 +7,7 @@ using PathCreation;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private new string name;
-    [SerializeField] private float speed;
+    [SerializeField] private float speed = 1f;
 
     private WalkAlongPath walkScript;
     private PathCreator path;
@@ -17,10 +17,11 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject.transform.parent.transform.parent.gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
+        // Has to be changed to a dynamic path selection after spawn in the future as a map could contain several paths
         path = GameObject.Find("Path").GetComponent<PathCreator>();
+
         walkScript = GetComponent<WalkAlongPath>();
         walkScript.pathCreator = path;
         walkScript.speed = speed;

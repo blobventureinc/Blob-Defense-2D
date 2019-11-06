@@ -6,30 +6,29 @@ using UnityEngine.Events;
 [RequireComponent(typeof(HealthBar))]
 public class HealthSystem : MonoBehaviour
 {
+    private HealthBar healthBar;
+
     public UnityEvent onHealthChange;
     public UnityEvent onDeath;
 
-    [SerializeField] private int health;
-    [SerializeField] private int maxHealth;
+    [SerializeField] private int health = 100;
+    [SerializeField] private int maxHealth = 100;
+    private float healthPercent;
 
-    private HealthBar healthBar;
-
-    // Start is called before the first frame update
-    void Start() {
-        onHealthChange.AddListener(UpdateHealthBar);
-        healthBar = GetComponent<HealthBar>();
+    public int Health {
+        get {
+            return health;
+        }
     }
-
-    public int GetHealth() {
-        return health;
+    public int MaxHealth {
+        get {
+            return maxHealth;
+        }
     }
-
-    public float GetHealthPercent() {
-        return (float)health / maxHealth;
-    }
-
-    public void UpdateHealthBar() {
-        healthBar.UpdateHealthBar(GetHealthPercent());
+    public float HealthPercent {
+        get {
+            return (float) health / maxHealth; 
+        }
     }
 
     public void ApplyDamage (int dmg) {
@@ -49,7 +48,10 @@ public class HealthSystem : MonoBehaviour
         onHealthChange.Invoke();
     }
 
-    // Update is called once per frame
+    void Start() {
+        healthBar = GetComponent<HealthBar>();
+    }
+
     void Update()
     {
         // Debug Stuff
@@ -59,5 +61,6 @@ public class HealthSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G)) {
             ApplyHeal(10);
         }
+        Debug.Log("HP%:"+HealthPercent);
     }
 }
