@@ -37,7 +37,7 @@ public class HealthSystem : MonoBehaviour
 
     public void ApplyDamage (int dmg) {
         _health -= dmg;
-        if (_health <= 0) {
+        if (isDead) {
             _health = 0;
             onDeath.Invoke();
         }
