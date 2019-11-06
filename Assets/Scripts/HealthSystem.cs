@@ -19,39 +19,37 @@ public class HealthSystem : MonoBehaviour
         get {
             return _health;
         }
-        set {
-            _health = value;
-            if (_health <= 0) {
-                _health = 0;
-                onDeath.Invoke();
-            }
-            if (_health >= _maxHealth) {
-                _health = _maxHealth;
-            }
-            onHealthChange.Invoke();
-        }
     }
 
     public int maxHealth {
         get {
             return _maxHealth;
         }
-        set {
-            _maxHealth = value;
-        }
     }
+
     public float healthPercent {
         get {
             return (float) health / maxHealth; 
         }
     }
 
+    public bool isDead => _health <= 0;
+
     public void ApplyDamage (int dmg) {
-        health -= dmg;
+        _health -= dmg;
+        if (_health <= 0) {
+            _health = 0;
+            onDeath.Invoke();
+        }
+        onHealthChange.Invoke();
     }
 
     public void ApplyHeal (int heal) {
-        health += heal;
+        _health += heal;
+        if (_health >= _maxHealth) {
+            _health = _maxHealth;
+        }
+        onHealthChange.Invoke();
     }
 
     void Start() {
