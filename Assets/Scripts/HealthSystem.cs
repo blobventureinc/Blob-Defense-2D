@@ -55,16 +55,4 @@ public class HealthSystem : MonoBehaviour
     void Start() {
         healthBar = GetComponent<HealthBar>();
     }
-
-    void Update()
-    {
-        // Debug Stuff
-        if (Input.GetKeyDown(KeyCode.F)) {
-            ApplyDamage(10);
-        }
-        if (Input.GetKeyDown(KeyCode.G)) {
-            ApplyHeal(10);
-        }
-        //Debug.Log("HP%:"+healthPercent);
-    }
 }
