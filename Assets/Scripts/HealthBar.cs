@@ -11,7 +11,7 @@ public class HealthBar : MonoBehaviour
     public void UpdateHealthBar() {
         barSpriteContainer.localScale = new Vector3(healthSystem.HealthPercent, 1);
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         healthSystem = GetComponent<HealthSystem>();
