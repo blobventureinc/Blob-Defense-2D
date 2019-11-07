@@ -22,9 +22,12 @@ public class TowerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (targetfinder.target != null && counter > 1)
+        if (targetfinder.targets != null && counter > 1)
         {
-            shoot();
+            foreach (GameObject target in targetfinder.targets)
+            {
+                shoot(target);
+            }
             counter = 0;
         }
         else
@@ -35,12 +38,12 @@ public class TowerShooting : MonoBehaviour
         }
     }
 
-    void shoot()
+    void shoot(GameObject target)
     {
-        Debug.Log("Shooting a " + projectile + " at: " + targetfinder.target);
+        Debug.Log("Shooting a " + projectile + " at: " + target);
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
         //proj.AddComponent(projectileBehaviour.GetType());
-        proj.GetComponent<Projectile>().shootAt(targetfinder.target);
+        proj.GetComponent<Projectile>().shootAt(target);
 
     }
 }

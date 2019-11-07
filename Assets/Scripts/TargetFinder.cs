@@ -2,45 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetFinder : MonoBehaviour
+public abstract class TargetFinder : MonoBehaviour
 {
-    private List<GameObject> _targets;
-    public GameObject target
+    protected List<GameObject> _targets;
+    public abstract List<GameObject> targets
     {
-        get
-        {
-            if (_targets.Count != 0)
-                return _targets[0];
-            else
-                return null;
-        }
+        get;
     }
 
     // Start is called before the first frame update
-    void Start()
-    {
-        _targets = new List<GameObject>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public abstract void Start();
 
     //Collision
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        _targets.Add(other.gameObject);
-    }
-    private void OnTriggerStay2D(Collider2D other)
-    {
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Debug.Log("Target out of range, its " + other.gameObject);
-        _targets.Remove(other.gameObject);
-
-    }
-
+    protected abstract void OnTriggerEnter2D(Collider2D other);
+    protected abstract void OnTriggerStay2D(Collider2D other);
+    protected abstract void OnTriggerExit2D(Collider2D other);
 }
