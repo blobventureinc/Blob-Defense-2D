@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerShooting : MonoBehaviour
 {
+    public float attacksPerSec;
     public GameObject projectile;
     private Projectile projectileBehaviour;
     private TargetFinder targetfinder;
@@ -22,19 +23,18 @@ public class TowerShooting : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (targetfinder.targets != null && counter > 1)
+        counter += Time.deltaTime;
+        if (targetfinder.targets != null)
         {
-            foreach (GameObject target in targetfinder.targets)
+            if (counter > 1/attacksPerSec)
             {
-                shoot(target);
+                shoot(targetfinder.targets[0]);
+                counter = 0;
             }
-            counter = 0;
         }
         else
         {
             Debug.Log("No target");
-            counter += Time.deltaTime;
-
         }
     }
 
@@ -42,7 +42,6 @@ public class TowerShooting : MonoBehaviour
     {
         Debug.Log("Shooting a " + projectile + " at: " + target);
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-        //proj.AddComponent(projectileBehaviour.GetType());
         proj.GetComponent<Projectile>().shootAt(target);
 
     }

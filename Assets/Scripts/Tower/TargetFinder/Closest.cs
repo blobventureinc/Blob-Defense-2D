@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeDependant : TargetFinder
+public class Closest : TargetFinder
 {
     public override List<GameObject> targets
     {
@@ -25,12 +25,13 @@ public class TimeDependant : TargetFinder
     }
     protected override void OnTriggerStay2D(Collider2D other)
     {
+        //if (_targets.Count > 1)
+        _targets.Sort((emp1, emp2) => Vector3.Distance(gameObject.transform.position, emp1.transform.position).CompareTo(Vector3.Distance(gameObject.transform.position, emp2.transform.position)));
+
     }
     protected override void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Target out of range, its " + other.gameObject);
         _targets.Remove(other.gameObject);
 
     }
 }
-
