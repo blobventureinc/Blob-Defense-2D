@@ -6,13 +6,7 @@ public class TimeDependant : TargetFinder
 {
     public override List<GameObject> targets
     {
-        get
-        {
-            if (_targets.Count != 0)
-                return _targets;
-            else
-                return null;
-        }
+        get => _targets;
     }
     public override void Start()
     {
@@ -23,9 +17,7 @@ public class TimeDependant : TargetFinder
     {
         _targets.Add(other.gameObject);
     }
-    protected override void OnTriggerStay2D(Collider2D other)
-    {
-    }
+    protected override void OnTriggerStay2D(Collider2D other) { }
     protected override void OnTriggerExit2D(Collider2D other)
     {
         _targets.Remove(other.gameObject);

@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class CannonProjectile : Projectile
 {
+    //Projectilespeed
     private float speed_;
-
     // Start is called before the first frame update
     void Start()
     {
         speed_ = 1f;
     }
-
     // Update is called once per frame
     public override void Update()
     {
@@ -19,23 +18,16 @@ public class CannonProjectile : Projectile
         float step = speed_ * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target_.transform.position, step);
     }
-
+    //A setter used in the TowerShoot-Behaviour
     public override void shootAt(GameObject target)
     {
         target_ = target;
     }
-
     //Projectile collision behaviour, can be used for area damage
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         Destroy(gameObject);
     }
-    protected override void OnTriggerStay2D(Collider2D other)
-    {
-
-    }
-    protected override void OnTriggerExit2D(Collider2D other)
-    {
-
-    }
+    protected override void OnTriggerStay2D(Collider2D other) { }
+    protected override void OnTriggerExit2D(Collider2D other) { }
 }
