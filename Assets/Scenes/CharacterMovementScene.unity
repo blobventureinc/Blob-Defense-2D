@@ -2259,6 +2259,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6583961172791868035, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583961172791868034, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: tilemap
+      value: 
+      objectReference: {fileID: 593830644}
     - target: {fileID: 6583961172791868092, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
         type: 3}
       propertyPath: tilemap

@@ -29,30 +29,32 @@ public class Player_Movement : MonoBehaviour
         {
             isMovingByKey = false;
             facing = 0;
-            Vector3 clickPos = tilemap.WorldToCell(Input.mousePosition);
-            Debug.Log(string.Format("clickPos [X: {0} Y: {0}]", clickPos.x, clickPos.y));
+            Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            Debug.Log(string.Format("clickPos [X: {0} Y: {1}]", clickPos.x, clickPos.y));   
             
             clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));
+            
         }
         if (Input.GetKeyDown("w"))
         {
             facing = 1;
-            KeyBoardMovement();
+            isMovingByKey = true;
         }
         if (Input.GetKeyDown("d"))
         {
             facing = 2;
-            KeyBoardMovement();
+            isMovingByKey = true;
         }
         if (Input.GetKeyDown("s"))
         {
             facing = 3;
-            KeyBoardMovement();
+            isMovingByKey = true;
         }
         if (Input.GetKeyDown("a"))
         {
             facing = 4;
-            KeyBoardMovement();
+            isMovingByKey = true;
         }
         if(isMovingByKey)
         {
@@ -82,20 +84,26 @@ public class Player_Movement : MonoBehaviour
     }
 void MouseMovement()
     {
-        Vector2 toClick = new Vector2(clickPos.x, clickPos.y) - rb.position;
-       // Debug.Log(string.Format("Moving to [X: {0} Y: {0}]", toClick.x, toClick.y));
+        Vector2 toClick = new Vector2(clickPos.x, clickPos.y);
+        //  Debug.Log(string.Format("rb pos [X: {0} Y: {1}]", rb.position.x, rb.position.y));
+        //    Debug.Log(string.Format("Moving to [X: {0} Y: {1}]", toClick.x, toClick.y));
         float mag = toClick.magnitude;
-        if(mag >= 0.1)
+        if(mag >= 0.2)
         {
-            float div = (float)mag / moveSpeedMax;
-            velocity = toClick / div;
-            Debug.Log(string.Format("div {0}", div));
+            float div = mag / moveSpeedMax;
+            if(div > 0.2)
+            {
+                velocity = new Vector2(toClick.x / div, toClick.y / div);
+               
+            } else { velocity = toClick * div; }
+            
+        //    Debug.Log(string.Format("div {0}", div));
         } else { velocity = new Vector2(0, 0); }
     
     }
     void KeyBoardMovement()
     {
-        isMovingByKey = true;
+        
         //get input
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
