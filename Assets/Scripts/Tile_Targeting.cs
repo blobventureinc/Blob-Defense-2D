@@ -6,9 +6,9 @@ using UnityEngine.Tilemaps;
 public class Tile_Targeting : MonoBehaviour
 {
     public Tile tileHighlighter; //Tile used to mark targeted Tile
-    public Tilemap tilemap;
+    [SerializeField] Tilemap tilemap;
     public Tile targetedTile; //saves tile "under" tileHighlighter, is the targeted tile
-    float playerRot;
+    int playerFacing;
     Vector3Int playerPos;
     Vector3Int targetLoc; //Coordinates to be targeted
     Vector3Int targetLocOld; //Coordinates of last targeted Tile
@@ -18,7 +18,7 @@ public class Tile_Targeting : MonoBehaviour
     void Start()
     {
         movementscript = player.GetComponent<Player_Movement>();
-        playerRot = movementscript.rotation;
+        playerFacing = movementscript.facing;
         targetLocOld = targetLoc;
     }
     // Update is called once per frame
@@ -32,20 +32,20 @@ public class Tile_Targeting : MonoBehaviour
     {
         
         Vector3Int playerPos = tilemap.WorldToCell(transform.position);
-        playerRot = movementscript.rotation;
-        if (Mathf.Round(playerRot) == 0)
+        playerFacing = movementscript.facing;
+        if (Mathf.Round(playerFacing) == 1)
         {
             targetLoc = new Vector3Int(playerPos.x, playerPos.y + 1, 0);
         }
-        if (Mathf.Round(playerRot) == -90)
+        if (Mathf.Round(playerFacing) == 2)
         {
             targetLoc = new Vector3Int(playerPos.x + 1, playerPos.y, 0);
         }
-        if (Mathf.Round(playerRot) == 180)
+        if (Mathf.Round(playerFacing) == 3)
         {
             targetLoc = new Vector3Int(playerPos.x, playerPos.y - 1, 0);
         }
-        if (Mathf.Round(playerRot) == 90)
+        if (Mathf.Round(playerFacing) == 4)
         {
             targetLoc = new Vector3Int(playerPos.x - 1, playerPos.y, 0);
         }
