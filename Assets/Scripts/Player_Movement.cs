@@ -16,10 +16,13 @@ public class Player_Movement : MonoBehaviour
     public Vector2 Velocity { get => velocity; set => velocity = value; }
     Vector2 moveTo;
     [SerializeField] Tilemap tilemap;
+    [SerializeField] GameObject player;
+    Tile_Targeting targetingscript;
 
     void Start()
     {
         facing = 0;
+       // targetingscript = player.GetComponent<Tile_Targeting>().MouseTargetTile;
     }
 
     // Update is called once per frame
@@ -76,12 +79,6 @@ public class Player_Movement : MonoBehaviour
             rb.MovePosition(moveTo);
         }
     }
-    //Gets an XY direction of magnitude from a radian angle relative to the x axis
-    //Simple version
-    Vector2 GetXYDirection(float angle, float magnitude) 
-    {
-        return new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * magnitude;
-    }
 void MouseMovement()
     {
         Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y);
@@ -91,11 +88,17 @@ void MouseMovement()
         if(mag >= 0.2)
         {
             float div = mag / moveSpeedMax;
-            if(div > 0.2)
+            if(div > 1.0)
             {
                 velocity = new Vector2(toClick.x / div, toClick.y / div);
                
-            } else { velocity = toClick * div; }
+            } else { velocity = toClick * div;
+                if (velocity.x <= 0.5 && velocity.y <= 0.5)
+                {
+                    velocity = new Vector2(0, 0);
+                    player.GetComponent<Tile_Targeting>().MouseTargetTile(clickPos);
+                }
+            }
             
         //    Debug.Log(string.Format("div {0}", div));
         } else { velocity = new Vector2(0, 0); }

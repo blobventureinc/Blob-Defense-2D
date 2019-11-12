@@ -30,36 +30,55 @@ public class Tile_Targeting : MonoBehaviour
     */
     private void FixedUpdate()
     {
-        
-        Vector3Int playerPos = tilemap.WorldToCell(transform.position);
-        playerFacing = movementscript.facing;
-        if (Mathf.Round(playerFacing) == 1)
+        if(movementscript.isMovingByKey)
         {
-            targetLoc = new Vector3Int(playerPos.x, playerPos.y + 1, 0);
-        }
-        if (Mathf.Round(playerFacing) == 2)
-        {
-            targetLoc = new Vector3Int(playerPos.x + 1, playerPos.y, 0);
-        }
-        if (Mathf.Round(playerFacing) == 3)
-        {
-            targetLoc = new Vector3Int(playerPos.x, playerPos.y - 1, 0);
-        }
-        if (Mathf.Round(playerFacing) == 4)
-        {
-            targetLoc = new Vector3Int(playerPos.x - 1, playerPos.y, 0);
-        }
-        if (targetLoc != targetLocOld)
-        {
-            if(targetedTile != null)
+            Vector3Int playerPos = tilemap.WorldToCell(transform.position);
+            playerFacing = movementscript.facing;
+            if (Mathf.Round(playerFacing) == 1)
+            {
+                targetLoc = new Vector3Int(playerPos.x, playerPos.y + 1, 0);
+            }
+            if (Mathf.Round(playerFacing) == 2)
+            {
+                targetLoc = new Vector3Int(playerPos.x + 1, playerPos.y, 0);
+            }
+            if (Mathf.Round(playerFacing) == 3)
+            {
+                targetLoc = new Vector3Int(playerPos.x, playerPos.y - 1, 0);
+            }
+            if (Mathf.Round(playerFacing) == 4)
+            {
+                targetLoc = new Vector3Int(playerPos.x - 1, playerPos.y, 0);
+            }
+            if (targetLoc != targetLocOld)
+            {
+                if (targetedTile != null)
                 {
                     tilemap.SetTile(targetLocOld, targetedTile);
-                }        
+                }
+                targetedTile = (Tile)tilemap.GetTile(targetLoc);
+                // set the new tile
+                tilemap.SetTile(targetLoc, tileHighlighter);
+                // save the new position for next frame
+                targetLocOld = targetLoc;
+            }
+        }
+        
+    }
+    public void MouseTargetTile(Vector3 clickPos)
+    {
+        targetLoc = new Vector3Int((int)clickPos.x, (int)clickPos.y, 0);
+        if (targetLoc != targetLocOld)
+        {
+            if (targetedTile != null)
+            {
+                tilemap.SetTile(targetLocOld, targetedTile);
+            }
             targetedTile = (Tile)tilemap.GetTile(targetLoc);
             // set the new tile
             tilemap.SetTile(targetLoc, tileHighlighter);
             // save the new position for next frame
             targetLocOld = targetLoc;
-        }                
+        }
     }
 }
