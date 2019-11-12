@@ -29,7 +29,7 @@ public class Player_Movement : MonoBehaviour
         {
             isMovingByKey = false;
             facing = 0;
-            Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             Debug.Log(string.Format("clickPos [X: {0} Y: {1}]", clickPos.x, clickPos.y));   
             
@@ -84,7 +84,7 @@ public class Player_Movement : MonoBehaviour
     }
 void MouseMovement()
     {
-        Vector2 toClick = new Vector2(clickPos.x, clickPos.y);
+        Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y);
         //  Debug.Log(string.Format("rb pos [X: {0} Y: {1}]", rb.position.x, rb.position.y));
         //    Debug.Log(string.Format("Moving to [X: {0} Y: {1}]", toClick.x, toClick.y));
         float mag = toClick.magnitude;
