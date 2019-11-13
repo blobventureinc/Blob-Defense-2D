@@ -22,9 +22,9 @@ public class TowerShooting : MonoBehaviour
     void Update()
     {
         counter += Time.deltaTime;
-        if (targetfinder.targets != null)
+        if (counter > 1 / attacksPerSec)
         {
-            if (counter > 1 / attacksPerSec)
+            if (targetfinder.targets != null)
             {
                 shoot(targetfinder.targets[0]);
                 counter = 0;

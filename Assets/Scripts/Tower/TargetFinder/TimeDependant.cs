@@ -12,6 +12,7 @@ public class TimeDependant : TargetFinder
     {
         _targets = new List<GameObject>();
     }
+    public override void Update() { }
     //Collision
     protected override void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,6 +22,7 @@ public class TimeDependant : TargetFinder
     protected override void OnTriggerExit2D(Collider2D other)
     {
         _targets.Remove(other.gameObject);
+        Debug.Log("Ich bin nicht");
 
     }
 }
