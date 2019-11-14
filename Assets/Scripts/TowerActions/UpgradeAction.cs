@@ -10,9 +10,8 @@ public class UpgradeAction : TowerAction
         this.towerUpgradePrefab = towerUpgradePrefab;
     }
 
-    //TODO: Implement Method
-    public override void DoAction()
+    public override void DoAction(Tower tower)
     {
-        throw new System.NotImplementedException();
+        tower.UpgradeTower(towerUpgradePrefab);
     }
 }

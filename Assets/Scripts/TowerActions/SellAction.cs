@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class SellAction : TowerAction
 {
-    public SellAction(string name): base(name) 
-    {
+    public SellAction(string name): base(name) {}
 
-    }
-
-    //TODO: Implement Method
-    public override void DoAction()
+    public override void DoAction(Tower tower)
     {
-        throw new System.NotImplementedException();
+        tower.SellTower();
     }
 }

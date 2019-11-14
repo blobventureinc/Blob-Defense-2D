@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeActionProvider : TowerActionProvider, ISerializationCallbackReceiver
+public class UpgradeActionProvider : TowerActionProvider
 {
     [SerializeField]
     private GameObject[] upgradeTowers;

@@ -10,6 +10,5 @@ public abstract class TowerAction
         this.name = name;
     }
 
-    //TODO: Add reference to Tower to parameter
-    public abstract void DoAction();
+    public abstract void DoAction(Tower tower);
 }

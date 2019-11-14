@@ -7,12 +7,15 @@ public class DebugSpawnerTrigger : MonoBehaviour
 {
     private Spawner spawner;
 
-    void Start() {
+    void Start() 
+    {
         spawner = GetComponent<Spawner>();
     }
 
-    void Update() {
-        if(Input.GetButtonDown("Jump")) {
+    void Update() 
+    {
+        if(Input.GetButtonDown("Jump")) 
+        {
             spawner.SpawnNextWave();
         }
     }

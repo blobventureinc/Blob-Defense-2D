@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class TowerActionProvider : MonoBehaviour, ISerializationCallbackReceiver
+public abstract class TowerActionProvider : MonoBehaviour
 {
     private TowerAction[] _towerActions;
 
@@ -10,10 +10,7 @@ public abstract class TowerActionProvider : MonoBehaviour, ISerializationCallbac
 
     protected abstract TowerAction[] CreateTowerActions();
 
-    public void OnAfterDeserialize()
-    {
+    void Start() {
         _towerActions = CreateTowerActions();
     }
-
-    public void OnBeforeSerialize() {}
 }
