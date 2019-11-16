@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Projectile : MonoBehaviour
 {
     //Projectilespeed
-    public float speed;
+    [SerializeField]protected float speed;
     //Target of the projectile
     protected GameObject target_;
     //Message methods

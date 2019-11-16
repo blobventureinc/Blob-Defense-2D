@@ -5,9 +5,9 @@ using UnityEngine;
 public class TowerShooting : MonoBehaviour
 {
     //Attacks per second
-    public float attacksPerSec;
+    [SerializeField] private float attacksPerSec;
     //Projectile prefab
-    public GameObject projectile;
+    [SerializeField] private GameObject projectile;
     //The targetfinder
     private TargetFinder targetfinder;
     //Used to shoot
