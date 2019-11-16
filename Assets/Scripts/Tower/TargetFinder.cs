@@ -6,15 +6,26 @@ public abstract class TargetFinder : MonoBehaviour
 {
     //Targets
     protected List<GameObject> _targets;
-    public abstract List<GameObject> targets
+    public List<GameObject> targets
     {
-        get;
+        get => _targets;
     }
     // Start is called before the first frame update
-    public abstract void Start();
+    //Maybe will change to virtual
+    public void Start()
+    {
+        _targets = new List<GameObject>();
+    }
+    //Do not make this one virtual, it would look good, but there should never be an instance of the class: TargetFinder
+    //only specific subclasses like Closest and TimeDependant. Right now we specify through the name exactly what the class does!
     public abstract void Update();
     //Collision
-    protected abstract void OnTriggerEnter2D(Collider2D other);
-    protected abstract void OnTriggerStay2D(Collider2D other);
-    protected abstract void OnTriggerExit2D(Collider2D other);
+    protected void OnTriggerEnter2D(Collider2D other)
+    {
+        _targets.Add(other.gameObject);
+    }
+    protected void OnTriggerExit2D(Collider2D other)
+    {
+        _targets.Remove(other.gameObject);
+    }
 }

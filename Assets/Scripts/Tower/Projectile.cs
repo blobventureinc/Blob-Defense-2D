@@ -8,10 +8,19 @@ public abstract class Projectile : MonoBehaviour
     public float speed;
     //Target of the projectile
     protected GameObject target_;
-    //Setter for the target, always use this wehen instantiating a new Projectile
-    public abstract void shootAt(GameObject target);
-    //Impact behaviour, damage etc
-    protected abstract void impact();
+    //Message methods
+    public abstract void Start();
+    public abstract void Update();
 
-    //Projectile collision behaviour, can be used for area damage
+    //Setter for the target, always use this wehen instantiating a new Projectile
+    public void shootAt(GameObject target)
+    {
+        target_ = target;
+    }
+    protected void OnTriggerEnter2D(Collider2D other)
+    {
+        impact(other.gameObject);
+    }
+    //Impact behaviour, damage etc
+    protected abstract void impact(GameObject enemy);
 }

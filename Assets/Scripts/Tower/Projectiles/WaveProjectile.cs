@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class WaveProjectile : Projectile
 {
-    // Start is called before the first frame update
-    void Start() { }
-    // Update is called once per frame
-    public void Update()
-    {
-        //Go to target
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, target_.transform.position, step);
-    }
-    //Projectile collision behaviour, can be used for area damage
-    protected void OnTriggerEnter2D(Collider2D other)
-    {
-        impact();
-        Destroy(gameObject);
-    }
-    //protected void OnTriggerStay2D(Collider2D other) { }
-    //protected void OnTriggerExit2D(Collider2D other) { }
+    public float max_radius;
+    private CircleCollider2D waveCollider;
 
-    //A setter used in the TowerShoot-Behaviour
-    public override void shootAt(GameObject target)
+    public override void Start()
     {
-        target_ = target;
+        waveCollider = GetComponent<CircleCollider2D>();
     }
-    protected override void impact()
+    public override void Update()
+    { 
+        //Increment the radius of the wave and destroy the projectile if the max_radius is reached
+        float step = speed * Time.deltaTime;
+        waveCollider.radius += step;
+        if (waveCollider.radius >= max_radius)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    protected override void impact(GameObject enemy)
     {
+        Debug.Log("Hit "+ enemy);
     }
 }

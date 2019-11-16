@@ -4,24 +4,15 @@ using UnityEngine;
 
 public class CannonProjectile : Projectile
 {
-    void Start() { }
-    public void Update()
+    public override void  Start() { }
+    public override void Update()
     {
         //Go to target
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, target_.transform.position, step);
     }
-    protected void OnTriggerEnter2D(Collider2D other)
+    protected override void impact(GameObject enemy)
     {
-        impact();
         Destroy(gameObject);
-    }
-
-    public override void shootAt(GameObject target)
-    {
-        target_ = target;
-    }
-    protected override void impact()
-    {
     }
 }
