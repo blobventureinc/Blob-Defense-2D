@@ -11,7 +11,7 @@ public class Tile_Targeting : MonoBehaviour
     int playerFacing;
     Vector3Int playerPos;
     Vector3Int targetLoc; //Coordinates to be targeted
-    Vector3Int targetLocOld; //Coordinates of last targeted Tile
+    Vector3Int targetLocOld; //Coordinates of last targeted Tile, to restore it if highlighter moves
     Player_Movement movementscript;
     [SerializeField] GameObject player;
 
@@ -20,8 +20,8 @@ public class Tile_Targeting : MonoBehaviour
         movementscript = player.GetComponent<Player_Movement>();
         playerFacing = movementscript.facing;
         targetLocOld = targetLoc;
+        player = this.gameObject;
     }
-    // Update is called once per frame
     /*
     void Update()
     {
@@ -54,16 +54,13 @@ public class Tile_Targeting : MonoBehaviour
             {
                 if (targetedTile != null)
                 {
-                    tilemap.SetTile(targetLocOld, targetedTile);
+                    tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
                 }
-                targetedTile = (Tile)tilemap.GetTile(targetLoc);
-                // set the new tile
-                tilemap.SetTile(targetLoc, tileHighlighter);
-                // save the new position for next frame
-                targetLocOld = targetLoc;
+                targetedTile = (Tile)tilemap.GetTile(targetLoc);            
+                tilemap.SetTile(targetLoc, tileHighlighter);  // set the new tile              
+                targetLocOld = targetLoc; // save the new position for restoring next frame
             }
-        }
-        
+        }     
     }
     public void MouseTargetTile(Vector3 clickPos)
     {
@@ -72,13 +69,11 @@ public class Tile_Targeting : MonoBehaviour
         {
             if (targetedTile != null)
             {
-                tilemap.SetTile(targetLocOld, targetedTile);
+                tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
             }
-            targetedTile = (Tile)tilemap.GetTile(targetLoc);
-            // set the new tile
-            tilemap.SetTile(targetLoc, tileHighlighter);
-            // save the new position for next frame
-            targetLocOld = targetLoc;
+            targetedTile = (Tile)tilemap.GetTile(targetLoc);         
+            tilemap.SetTile(targetLoc, tileHighlighter); // set the new tile           
+            targetLocOld = targetLoc; // save the new position for restoring next frame
         }
     }
 }

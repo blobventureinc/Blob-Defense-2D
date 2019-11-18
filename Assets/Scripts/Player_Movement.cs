@@ -5,24 +5,24 @@ using UnityEngine.Tilemaps;
 
 public class Player_Movement : MonoBehaviour
 {
+    [SerializeField] Tilemap tilemap;
+    [SerializeField] GameObject player;
     public float moveSpeedMax = 3f;
     public Rigidbody2D rb;
     public int facing;
     public bool isMovingByKey;
     TileBase clickedTile;
-    Vector2 input;
     Vector3 clickPos;
+    Vector2 input;
     Vector2 velocity;
-    public Vector2 Velocity { get => velocity; set => velocity = value; }
     Vector2 moveTo;
-    [SerializeField] Tilemap tilemap;
-    [SerializeField] GameObject player;
     Tile_Targeting targetingscript;
 
     void Start()
     {
+        //not facing anything, so no tile targeted
         facing = 0;
-       // targetingscript = player.GetComponent<Tile_Targeting>().MouseTargetTile;
+        player = this.gameObject;
     }
 
     // Update is called once per frame
@@ -33,31 +33,13 @@ public class Player_Movement : MonoBehaviour
             isMovingByKey = false;
             facing = 0;
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
-            Debug.Log(string.Format("clickPos [X: {0} Y: {1}]", clickPos.x, clickPos.y));   
-            
-            clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));
-            
+            Debug.Log(string.Format("clickPos [X: {0} Y: {1}]", clickPos.x, clickPos.y));              
+            clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));           
         }
-        if (Input.GetKeyDown("w"))
+        if(Input.anyKeyDown && !Input.GetMouseButtonDown(0))
         {
-            facing = 1;
             isMovingByKey = true;
-        }
-        if (Input.GetKeyDown("d"))
-        {
-            facing = 2;
-            isMovingByKey = true;
-        }
-        if (Input.GetKeyDown("s"))
-        {
-            facing = 3;
-            isMovingByKey = true;
-        }
-        if (Input.GetKeyDown("a"))
-        {
-            facing = 4;
-            isMovingByKey = true;
+            KeyBoardMovement();
         }
         if(isMovingByKey)
         {
@@ -70,43 +52,59 @@ public class Player_Movement : MonoBehaviour
         }
     }
     void FixedUpdate()
-    {
-        
+    {      
         if(velocity.x != 0 || velocity.y != 0)
         {
             //Move to Direction
             moveTo = rb.position + velocity * Time.fixedDeltaTime;
             rb.MovePosition(moveTo);
+            //Determine facing
+            //X-Axis
+            if (Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
+            {
+                if (velocity.x > 0)
+                {
+                    facing = 2;
+                }
+                else { facing = 4; }
+            }
+            //Y-Axis
+            else
+            {
+                if (Mathf.Abs(velocity.x) < Mathf.Abs(velocity.y))
+                {
+                    if (velocity.y > 0)
+                    {
+                        facing = 1;
+                    }
+                    else { facing = 3; }
+                }
+            }
         }
     }
 void MouseMovement()
     {
-        Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y);
-        //  Debug.Log(string.Format("rb pos [X: {0} Y: {1}]", rb.position.x, rb.position.y));
-        //    Debug.Log(string.Format("Moving to [X: {0} Y: {1}]", toClick.x, toClick.y));
-        float mag = toClick.magnitude;
+        Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y); //vector from character to click
+        float mag = toClick.magnitude; //length of toClick
         if(mag >= 0.2)
         {
-            float div = mag / moveSpeedMax;
-            if(div > 1.0)
+            float div = mag / moveSpeedMax; //how many times allowed movespeed fits in length
+            if (div > 1.0) //if a certain distance away
             {
-                velocity = new Vector2(toClick.x / div, toClick.y / div);
-               
-            } else { velocity = toClick * div;
+                velocity = new Vector2(toClick.x / div, toClick.y / div); //set to click as velocity, shortened to respect allowed movespeed
+            }
+            else { velocity = toClick * div; //if close by, do weird calculations to get a tolerable movespeed while slowing down
                 if (velocity.x <= 0.5 && velocity.y <= 0.5)
                 {
                     velocity = new Vector2(0, 0);
                     player.GetComponent<Tile_Targeting>().MouseTargetTile(clickPos);
                 }
             }
-            
-        //    Debug.Log(string.Format("div {0}", div));
-        } else { velocity = new Vector2(0, 0); }
+        } else { velocity = new Vector2(0, 0); } //when very close by, stop
     
     }
     void KeyBoardMovement()
-    {
-        
+    {       
         //get input
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
