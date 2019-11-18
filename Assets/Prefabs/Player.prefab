@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1125454594637477714
+--- !u!1 &6994366280104389877
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1125454594637477712}
-  - component: {fileID: 1125454594637477715}
+  - component: {fileID: 6994366280104389879}
+  - component: {fileID: 6994366280104389876}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -17,13 +17,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1125454594637477712
+--- !u!4 &6994366280104389879
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125454594637477714}
+  m_GameObject: {fileID: 6994366280104389877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 832.45447, y: 465.2037, z: -210.75665}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,18 +31,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1125454594637477715
+--- !u!114 &6994366280104389876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125454594637477714}
+  m_GameObject: {fileID: 6994366280104389877}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 82b86ce79e3b3264e991188b848438bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lives: 8
+  _maxLives: 10
+  _mana: 5
+  _maxMana: 10
+  _energy: 50
+  _exp: 0
+  _maxExp: 1000
+  _level: 0
+  _maxLevel: 20
+  _gold: 0
+  lives:
+    value: 0
+    valueMax: 0
+  mana:
+    value: 0
+    valueMax: 0
+  energy:
+    value: 0
+    valueMax: 0
+  exp:
+    value: 0
+    valueMax: 0
+  level:
+    value: 0
+    valueMax: 0
+  gold:
+    value: 0
+    valueMax: 0
   onLivesChange:
     m_PersistentCalls:
       m_Calls: []
@@ -52,9 +80,15 @@ MonoBehaviour:
   onEnergyChange:
     m_PersistentCalls:
       m_Calls: []
-  _lives: 10
-  _maxLives: 10
-  _mana: 10
-  _maxMana: 10
-  _energy: 100
-  _maxEnergy: 100
+  onExpChange:
+    m_PersistentCalls:
+      m_Calls: []
+  onLevelChange:
+    m_PersistentCalls:
+      m_Calls: []
+  onGoldChange:
+    m_PersistentCalls:
+      m_Calls: []
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
