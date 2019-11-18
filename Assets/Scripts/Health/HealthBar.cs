@@ -16,8 +16,6 @@ public class HealthBar : MonoBehaviour
     {
         healthSystem = GetComponent<HealthSystem>();
         healthSystem.onHealthChange.AddListener(UpdateHealthBar);
-        // HealthBar added to Prefab itself, no need to Instantiate
-        // prefabHealthBar = Instantiate(Resources.Load("HealthBar", typeof(Transform)), new Vector3(0, 1), Quaternion.identity, gameObject.transform) as Transform;
         UpdateHealthBar();
     }
 }
