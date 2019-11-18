@@ -21,9 +21,12 @@ public class WaveProjectile : Projectile
             Destroy(gameObject);
         }
     }
-
+    protected override void OnTriggerEnter2D(Collider2D other)
+    {
+        impact(other.gameObject);
+    }
     protected override void impact(GameObject enemy)
     {
-        Debug.Log("Hit "+ enemy);
+        //Debug.Log("Hit "+ enemy);
     }
 }

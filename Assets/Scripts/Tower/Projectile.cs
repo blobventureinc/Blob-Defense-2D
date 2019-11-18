@@ -17,10 +17,7 @@ public abstract class Projectile : MonoBehaviour
     {
         target_ = target;
     }
-    protected void OnTriggerEnter2D(Collider2D other)
-    {
-        impact(other.gameObject);
-    }
+    protected abstract void OnTriggerEnter2D(Collider2D other);
     //Impact behaviour, damage etc
     protected abstract void impact(GameObject enemy);
 }
