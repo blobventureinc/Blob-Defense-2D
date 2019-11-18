@@ -36,8 +36,7 @@ public class Player_Movement : MonoBehaviour
             facing = 0;
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(string.Format("clickPos [X: {0} Y: {1}]", clickPos.x, clickPos.y));
-            if (clickPos.x < 0) { clickPos.x--; }
-            if (clickPos.y < 0) { clickPos.y--; }
+            
             clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));
         }
         if (Input.anyKeyDown && !Input.GetMouseButtonDown(0))
@@ -89,17 +88,21 @@ public class Player_Movement : MonoBehaviour
         if (mag >= 0.2)
         {
             float div = mag / moveSpeedMax; //how many times allowed movespeed fits in length
-            if (div > 1.0) //if a certain distance away
+            if (div > 1.0) //if more than one frame of max movespeed away; following this are different calculations for lower distances
             {
                 velocity = new Vector2(toClick.x / div, toClick.y / div); //set to click as velocity, shortened to respect allowed movespeed
             }
             else
             {
-                velocity = toClick * div; //if close by, do weird calculations to get a tolerable movespeed while slowing down
-                if (velocity.x <= 0.5 && velocity.y <= 0.5)
+                if(div > 0.35)
                 {
+                    velocity = toClick * div *2; //simulates a finishing dash to the target location
+                }
+                else
+                { //Stop if close to target
+                    Debug.Log(string.Format("STOPPING"));
                     velocity = new Vector2(0, 0);
-                    player.GetComponent<Tile_Targeting>().MouseTargetTile(clickPos);
+                    player.GetComponent<Tile_Targeting>().MouseTargetTile(clickPos);                   
                 }
             }
         }

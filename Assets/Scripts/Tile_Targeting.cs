@@ -67,6 +67,8 @@ public class Tile_Targeting : MonoBehaviour
     {
         
         targetLoc = new Vector3Int((int)clickPos.x, (int)clickPos.y, 0);
+        if (clickPos.x < 0) { targetLoc.x--; }
+        if (clickPos.y < 0) { targetLoc.y--; }
         if (targetLoc != targetLocOld)
         {
             if (targetedTile != null)
