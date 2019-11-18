@@ -21,6 +21,7 @@ public class Tile_Targeting : MonoBehaviour
         playerFacing = movementscript.facing;
         targetLocOld = targetLoc;
         player = this.gameObject;
+
     }
     /*
     void Update()
@@ -30,7 +31,7 @@ public class Tile_Targeting : MonoBehaviour
     */
     private void FixedUpdate()
     {
-        if(movementscript.isMovingByKey)
+        if (movementscript.isMovingByKey)
         {
             Vector3Int playerPos = tilemap.WorldToCell(transform.position);
             playerFacing = movementscript.facing;
@@ -56,22 +57,25 @@ public class Tile_Targeting : MonoBehaviour
                 {
                     tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
                 }
-                targetedTile = (Tile)tilemap.GetTile(targetLoc);            
+                targetedTile = (Tile)tilemap.GetTile(targetLoc);
                 tilemap.SetTile(targetLoc, tileHighlighter);  // set the new tile              
                 targetLocOld = targetLoc; // save the new position for restoring next frame
             }
-        }     
+        }
     }
     public void MouseTargetTile(Vector3 clickPos)
     {
+        
         targetLoc = new Vector3Int((int)clickPos.x, (int)clickPos.y, 0);
+        if (clickPos.x < 0) { targetLoc.x--; }
+        if (clickPos.y < 0) { targetLoc.y--; }
         if (targetLoc != targetLocOld)
         {
             if (targetedTile != null)
             {
                 tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
             }
-            targetedTile = (Tile)tilemap.GetTile(targetLoc);         
+            targetedTile = (Tile)tilemap.GetTile(targetLoc);
             tilemap.SetTile(targetLoc, tileHighlighter); // set the new tile           
             targetLocOld = targetLoc; // save the new position for restoring next frame
         }

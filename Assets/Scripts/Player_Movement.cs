@@ -11,6 +11,7 @@ public class Player_Movement : MonoBehaviour
     public Rigidbody2D rb;
     public int facing;
     public bool isMovingByKey;
+    public bool isMoving;
     TileBase clickedTile;
     Vector3 clickPos;
     Vector2 input;
@@ -23,6 +24,7 @@ public class Player_Movement : MonoBehaviour
         //not facing anything, so no tile targeted
         facing = 0;
         player = this.gameObject;
+        isMoving = false;
     }
 
     // Update is called once per frame
@@ -33,28 +35,23 @@ public class Player_Movement : MonoBehaviour
             isMovingByKey = false;
             facing = 0;
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log(string.Format("clickPos [X: {0} Y: {1}]", clickPos.x, clickPos.y));              
-            clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));           
+            Debug.Log(string.Format("clickPos [X: {0} Y: {1}]", clickPos.x, clickPos.y));
+            
+            clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));
         }
-        if(Input.anyKeyDown && !Input.GetMouseButtonDown(0))
+        if (Input.anyKeyDown && !Input.GetMouseButtonDown(0))
         {
             isMovingByKey = true;
-            KeyBoardMovement();
-        }
-        if(isMovingByKey)
-        {
             clickedTile = null;
-            KeyBoardMovement();
         }
-        if(!isMovingByKey)
-        {
-            MouseMovement();
-        }
+        if (isMovingByKey) { KeyBoardMovement(); }
+        if (!isMovingByKey) { MouseMovement(); }
     }
     void FixedUpdate()
-    {      
-        if(velocity.x != 0 || velocity.y != 0)
+    {
+        if (velocity.x != 0 || velocity.y != 0)
         {
+            isMoving = true;
             //Move to Direction
             moveTo = rb.position + velocity * Time.fixedDeltaTime;
             rb.MovePosition(moveTo);
@@ -81,30 +78,39 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
+        else { isMoving = false; }
     }
-void MouseMovement()
-    {
+    void MouseMovement()
+    {   
+        
         Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y); //vector from character to click
         float mag = toClick.magnitude; //length of toClick
-        if(mag >= 0.2)
+        if (mag >= 0.2)
         {
             float div = mag / moveSpeedMax; //how many times allowed movespeed fits in length
-            if (div > 1.0) //if a certain distance away
+            if (div > 1.0) //if more than one frame of max movespeed away; following this are different calculations for lower distances
             {
                 velocity = new Vector2(toClick.x / div, toClick.y / div); //set to click as velocity, shortened to respect allowed movespeed
             }
-            else { velocity = toClick * div; //if close by, do weird calculations to get a tolerable movespeed while slowing down
-                if (velocity.x <= 0.5 && velocity.y <= 0.5)
+            else
+            {
+                if(div > 0.35)
                 {
+                    velocity = toClick * div *2; //simulates a finishing dash to the target location
+                }
+                else
+                { //Stop if close to target
+                    Debug.Log(string.Format("STOPPING"));
                     velocity = new Vector2(0, 0);
-                    player.GetComponent<Tile_Targeting>().MouseTargetTile(clickPos);
+                    player.GetComponent<Tile_Targeting>().MouseTargetTile(clickPos);                   
                 }
             }
-        } else { velocity = new Vector2(0, 0); } //when very close by, stop
-    
+        }
+        else { velocity = new Vector2(0, 0); } //when very close by, stop
+
     }
     void KeyBoardMovement()
-    {       
+    {
         //get input
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
@@ -145,5 +151,5 @@ void MouseMovement()
             velocity.y = -moveSpeedMax;
         }
     }
-    
+
 }
