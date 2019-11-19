@@ -10,15 +10,19 @@ public class Player_Movement : MonoBehaviour {
     private TileBase clickedTile;
 
     public float moveSpeedMax = 3f;
-    public bool isMovingByKey = true;
-    private Vector3 clickPos = Vector3.zero;
+    public bool isMovingByKey;
+    private Vector3 clickPos;
     private Vector2 input;
     private Vector2 velocity;
     public Vector2 lastVelocity;
     private Vector2 moveTo;
 
+    private void Start() {
+        isMovingByKey = true;
+    }
+
     void Update() {
-        Debug.Log(velocity.ToString());
+        //Debug.Log(velocity.ToString());
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
@@ -45,7 +49,6 @@ public class Player_Movement : MonoBehaviour {
         }
     }
     void MouseMovement() {
-
         Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y); //vector from character to click
         float mag = toClick.magnitude; //length of toClick
         if (mag >= 0.2) {

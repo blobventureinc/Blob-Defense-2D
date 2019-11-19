@@ -16,23 +16,7 @@ public class Tile_Targeting : MonoBehaviour {
     private void FixedUpdate() {
         if (movementScript.isMovingByKey) {
             playerPos = tilemap.WorldToCell(transform.position);
-            if (movementScript.lastVelocity.x == 0 && movementScript.lastVelocity.y > 0) {
-                targetLoc = new Vector3Int(playerPos.x, playerPos.y + 1, 0);
-            } else if (movementScript.lastVelocity.x > 0 && movementScript.lastVelocity.y > 0) {
-                targetLoc = new Vector3Int(playerPos.x + 1, playerPos.y + 1, 0);
-            } else if (movementScript.lastVelocity.x > 0 && movementScript.lastVelocity.y == 0) {
-                targetLoc = new Vector3Int(playerPos.x + 1, playerPos.y, 0);
-            } else if (movementScript.lastVelocity.x > 0 && movementScript.lastVelocity.y < 0) {
-                targetLoc = new Vector3Int(playerPos.x + 1, playerPos.y - 1, 0);
-            } else if (movementScript.lastVelocity.x == 0 && movementScript.lastVelocity.y < 0) {
-                targetLoc = new Vector3Int(playerPos.x, playerPos.y - 1, 0);
-            } else if (movementScript.lastVelocity.x < 0 && movementScript.lastVelocity.y < 0) {
-                targetLoc = new Vector3Int(playerPos.x - 1, playerPos.y - 1, 0);
-            } else if (movementScript.lastVelocity.x < 0 && movementScript.lastVelocity.y == 0) {
-                targetLoc = new Vector3Int(playerPos.x - 1, playerPos.y, 0);
-            } else if (movementScript.lastVelocity.x < 0 && movementScript.lastVelocity.y > 0) {
-                targetLoc = new Vector3Int(playerPos.x - 1, playerPos.y + 1, 0);
-            }
+            targetLoc = new Vector3Int(playerPos.x + Mathf.RoundToInt(movementScript.lastVelocity.normalized.x) , playerPos.y + Mathf.RoundToInt(movementScript.lastVelocity.normalized.y), 0);
 
             if (targetLoc != targetLocOld) {
                 if (targetedTile != null) {
