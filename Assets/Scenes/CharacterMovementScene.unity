@@ -2192,6 +2192,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112041194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6583961172791868092, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+    type: 3}
+  m_PrefabInstance: {fileID: 6583961173107354140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747d735ced36514458881e0640839bf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2112041195 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6583961172791868034, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+    type: 3}
+  m_PrefabInstance: {fileID: 6583961173107354140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3f2a12e85e796489523bd5cf44c842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6583961173107354140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2207,12 +2231,12 @@ PrefabInstance:
     - target: {fileID: 6583961172791868033, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.576
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6583961172791868033, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.895
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6583961172791868033, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
         type: 3}
@@ -2269,10 +2293,30 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 593830644}
+    - target: {fileID: 6583961172791868034, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: targetingScript
+      value: 
+      objectReference: {fileID: 2112041194}
     - target: {fileID: 6583961172791868092, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
         type: 3}
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 593830644}
+    - target: {fileID: 6583961172791868092, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: movementscript
+      value: 
+      objectReference: {fileID: 2112041195}
+    - target: {fileID: 6583961172791868092, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: movementScript
+      value: 
+      objectReference: {fileID: 2112041195}
+    - target: {fileID: 6583961172791868032, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6495866b2f3fd964fa0bf0ce96d3be22, type: 3}
