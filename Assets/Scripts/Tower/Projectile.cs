@@ -6,6 +6,8 @@ public abstract class Projectile : MonoBehaviour
 {
     //Projectilespeed
     [SerializeField]protected float speed;
+    //Damage
+    [SerializeField] protected Damage dmg;
     //Target of the projectile
     protected GameObject target_;
     //Message methods
