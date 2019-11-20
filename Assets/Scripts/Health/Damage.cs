@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public struct Damage {
+[CreateAssetMenu(fileName = "New Damage", menuName = "Damage")]
+public class Damage : ScriptableObject
+{
     public int _physicalDmg;
     public int _poisonDmg;
     public int _fireDmg;
@@ -11,7 +14,8 @@ public struct Damage {
     public int _shadowDmg;
     public int _lightDmg;
 
-    public Damage(int physicalDmg, int poisonDmg, int fireDmg, int waterDmg, int windDmg, int earthDmg, int shadowDmg, int lightDmg) {
+    public Damage(int physicalDmg, int poisonDmg, int fireDmg, int waterDmg, int windDmg, int earthDmg, int shadowDmg, int lightDmg)
+    {
         _physicalDmg = physicalDmg;
         _poisonDmg = poisonDmg;
         _fireDmg = fireDmg;
