@@ -5,27 +5,26 @@ using UnityEngine.Tilemaps;
 
 public class Tile_Targeting : MonoBehaviour {
     public Tile tileHighlighter; //Tile used to mark targeted Tile
-    [SerializeField] private Tilemap tilemap;
+    [SerializeField] private Tilemap tilemap = null;
     public Tile targetedTile; //saves tile "under" tileHighlighter, is the targeted tile
 
     private Vector3Int playerPos;
     private Vector3Int targetLoc; //Coordinates to be targeted
     private Vector3Int targetLocOld; //Coordinates of last targeted Tile, to restore it if highlighter moves
-    [SerializeField] private Player_Movement movementScript;
+    [SerializeField] private Player_Movement movementScript = null;
     public bool isMining;
-    [SerializeField] private Resourcescript resourceScript;
+    [SerializeField] private Resourcescript resourceScript = null;
 
     private void Update() {
         if (Input.GetKeyDown(KeyCode.Return)) {
-            Object obj = resourceScript.FindResourceAt(new Vector2Int(targetLoc.x, targetLoc.y));
-            if (obj) { Debug.Log("OBJECT FOUND"); } else {
-                Debug.Log("NOTHIN FOUND");
-            }
+            Resource obj = resourceScript.FindResourceAt(new Vector2Int(targetLoc.x, targetLoc.y));
+            Debug.Log("FOUND: " + obj.type);
+            isMining = true;
         }
     }
     void Start() {
         isMining = false;
-        resourceScript = 
+        
     }
 
     private void FixedUpdate() {

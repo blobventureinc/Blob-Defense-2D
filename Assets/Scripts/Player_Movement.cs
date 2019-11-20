@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Player_Movement : MonoBehaviour {
-    [SerializeField] private Tilemap tilemap;
-    [SerializeField] private Tile_Targeting targetingScript;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Tilemap tilemap = null;
+    [SerializeField] private Tile_Targeting targetingScript = null;
+    [SerializeField] private Rigidbody2D rb = null;
     private TileBase clickedTile;
 
     public float moveSpeedMax = 3f;
@@ -40,7 +40,7 @@ public class Player_Movement : MonoBehaviour {
         if (velocity != new Vector2(0, 0)) // Taute: better as asking for every value with or
         {
             lastVelocity = velocity;
-        } else { Debug.Log("PLAYER STOPPED"); }
+        }
     }
     void FixedUpdate() {
         if (velocity.x != 0 || velocity.y != 0) {
