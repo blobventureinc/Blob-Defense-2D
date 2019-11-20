@@ -2274,5 +2274,15 @@ PrefabInstance:
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 593830644}
+    - target: {fileID: 6583961172791868032, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1664460547
+      objectReference: {fileID: 0}
+    - target: {fileID: 6583961172791868032, guid: 6495866b2f3fd964fa0bf0ce96d3be22,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6495866b2f3fd964fa0bf0ce96d3be22, type: 3}
