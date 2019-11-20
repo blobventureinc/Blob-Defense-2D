@@ -22,29 +22,20 @@ public class UpdatePlayerAttributes : MonoBehaviour
 
     [SerializeField] private Text goldText = null;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
-        player = GameObject.Find("Player").GetComponent<Player>();
+        player.lives.onValueChange.AddListener(UpdateLivesBar);
+        player.mana.onValueChange.AddListener(UpdateManaBar);
+        player.energy.onValueChange.AddListener(UpdateEnergyBar);
+        player.exp.onValueChange.AddListener(UpdateExpBar);
+        player.level.onValueChange.AddListener(UpdateLevel);
+        player.gold.onValueChange.AddListener(UpdateGold);
 
-        livesBar.maxValue = player.lives.valueMax;
-        manaBar.maxValue = player.mana.valueMax;
-        energyBar.maxValue = player.energy.valueMax;
-        expBar.maxValue = player.exp.valueMax;
-
-        player.onLivesChange.AddListener(UpdateLivesBar);
-        player.onManaChange.AddListener(UpdateManaBar);
-        player.onEnergyChange.AddListener(UpdateEnergyBar);
-        player.onExpChange.AddListener(UpdateExpBar);
-        player.onLevelChange.AddListener(UpdateLevel);
-        player.onGoldChange.AddListener(UpdateGold);
-
-        player.onStart.AddListener(UpdateLivesBar);
-        player.onStart.AddListener(UpdateManaBar);
-        player.onStart.AddListener(UpdateEnergyBar);
-        player.onStart.AddListener(UpdateExpBar);
-        player.onStart.AddListener(UpdateLevel);
-        player.onStart.AddListener(UpdateGold);
+        UpdateLivesBar();
+        UpdateManaBar();
+        UpdateEnergyBar();
+        UpdateExpBar();
+        UpdateLevel();
     }
 
     public void UpdateLivesBar() {
