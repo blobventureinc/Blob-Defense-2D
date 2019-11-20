@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public struct Damage {
+[CreateAssetMenu(fileName = "New Damage", menuName = "Damage")]
+public class Damage : ScriptableObject
+{
     public int _physicalDmg;
     public int _poisonDmg;
     public int _fireDmg;
