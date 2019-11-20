@@ -12,6 +12,21 @@ public class Tile_Targeting : MonoBehaviour {
     private Vector3Int targetLoc; //Coordinates to be targeted
     private Vector3Int targetLocOld; //Coordinates of last targeted Tile, to restore it if highlighter moves
     [SerializeField] private Player_Movement movementScript;
+    public bool isMining;
+    [SerializeField] private Resourcescript resourceScript;
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            Object obj = resourceScript.FindResourceAt(new Vector2Int(targetLoc.x, targetLoc.y));
+            if (obj) { Debug.Log("OBJECT FOUND"); } else {
+                Debug.Log("NOTHIN FOUND");
+            }
+        }
+    }
+    void Start() {
+        isMining = false;
+        resourceScript = 
+    }
 
     private void FixedUpdate() {
         if (movementScript.isMovingByKey) {
