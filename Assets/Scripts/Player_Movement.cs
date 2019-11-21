@@ -11,6 +11,7 @@ public class Player_Movement : MonoBehaviour {
 
     public float moveSpeedMax = 3f;
     public bool isMovingByKey;
+    public bool isMining;
     private Vector3 clickPos;
     private Vector2 input;
     private Vector2 velocity;
@@ -19,6 +20,7 @@ public class Player_Movement : MonoBehaviour {
 
     private void Start() {
         isMovingByKey = true;
+        isMining = false;
     }
 
     void Update() {

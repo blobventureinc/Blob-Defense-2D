@@ -7,23 +7,16 @@ public class Tile_Targeting : MonoBehaviour {
     public Tile tileHighlighter; //Tile used to mark targeted Tile
     [SerializeField] private Tilemap tilemap = null;
     public Tile targetedTile; //saves tile "under" tileHighlighter, is the targeted tile
-
     private Vector3Int playerPos;
     private Vector3Int targetLoc; //Coordinates to be targeted
     private Vector3Int targetLocOld; //Coordinates of last targeted Tile, to restore it if highlighter moves
     [SerializeField] private Player_Movement movementScript = null;
-    public bool isMining;
-    [SerializeField] private Resourcescript resourceScript = null;
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Return)) {
-            Resource obj = resourceScript.FindResourceAt(new Vector2Int(targetLoc.x, targetLoc.y));
-            Debug.Log("FOUND: " + obj.type);
-            isMining = true;
-        }
+        
     }
     void Start() {
-        isMining = false;
+      
         
     }
 
@@ -31,7 +24,6 @@ public class Tile_Targeting : MonoBehaviour {
         if (movementScript.isMovingByKey) {
             playerPos = tilemap.WorldToCell(transform.position);
             targetLoc = new Vector3Int(playerPos.x + Mathf.RoundToInt(movementScript.lastVelocity.normalized.x) , playerPos.y + Mathf.RoundToInt(movementScript.lastVelocity.normalized.y), 0);
-
             if (targetLoc != targetLocOld) {
                 if (targetedTile != null) {
                     tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
@@ -56,5 +48,8 @@ public class Tile_Targeting : MonoBehaviour {
             tilemap.SetTile(targetLoc, tileHighlighter); // set the new tile           
             targetLocOld = targetLoc; // save the new position for restoring next frame
         }
+    }
+    public Vector3Int gettargetLoc() {
+        return targetLoc;
     }
 }
