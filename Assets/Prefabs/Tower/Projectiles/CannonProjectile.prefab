@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4480471631854831151}
   - component: {fileID: -5666930025625280121}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: CannonProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  dmg: {fileID: 11400000, guid: 3e9ff626c601ba14f88262909ff57b0d, type: 2}
 --- !u!58 &-5666930025625280121
 CircleCollider2D:
   m_ObjectHideFlags: 0
