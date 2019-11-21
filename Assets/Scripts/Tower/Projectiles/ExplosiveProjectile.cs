@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class ExplosiveProjectile : Projectile
 {
+    [Header("Explosive Projectile attributes")]
+    [SerializeField] private float max_radius = 0;
+    [SerializeField] private Damage explosion_damage;
+
     private bool exploded;
-    [SerializeField] private float max_radius;
     private CircleCollider2D explosionCollider;
 
     public override void Start()
@@ -43,7 +46,11 @@ public class ExplosiveProjectile : Projectile
 
     protected override void impact(GameObject enemy)
     {
-        Debug.Log("Hit " + enemy);
+        if(!exploded)
+            Debug.Log("Hit with impact " + enemy);
+        else
+            Debug.Log("Hit with explosion" + enemy);
+
     }
 
     private void explode()
