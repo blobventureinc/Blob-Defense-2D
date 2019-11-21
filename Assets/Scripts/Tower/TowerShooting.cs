@@ -5,13 +5,13 @@ using UnityEngine;
 public class TowerShooting : MonoBehaviour
 {
     //Attacks per second
-    [SerializeField] private float attacksPerSec;
+    [SerializeField] private float attacksPerSec = 0;
     //Projectile prefab
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private GameObject projectile = null;
     //The targetfinder
     private TargetFinder targetfinder;
     //Used to shoot
-    private float counter;
+    private float counter = 0;
     // Start is called before the first frame update
     void Start()
     {
