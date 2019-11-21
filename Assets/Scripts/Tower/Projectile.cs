@@ -4,8 +4,9 @@ using UnityEngine;
 
 public abstract class Projectile : MonoBehaviour
 {
+    [Header("Projectile attributes")]
     //Projectilespeed
-    [SerializeField]protected float speed;
+    [SerializeField] protected float speed;
     //Damage
     [SerializeField] protected Damage dmg;
     //Target of the projectile

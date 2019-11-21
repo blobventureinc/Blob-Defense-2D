@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class WaveProjectile : Projectile
 {
-    [SerializeField] private float max_radius;
+    
+    [Header("Wave Projectile attributes")]
+    [SerializeField] private float max_radius = 0;
     private CircleCollider2D waveCollider;
 
     public override void Start()
