@@ -37,7 +37,7 @@ public class Player_Movement : MonoBehaviour {
         if (isMovingByKey) { KeyBoardMovement(); }
         if (!isMovingByKey) { MouseMovement(); }
 
-        if (velocity.ToString() != "(0.0,0.0)") // Taute: better as asking for every value with or
+        if (velocity != new Vector2(0, 0)) // Taute: better as asking for every value with or
         {
             lastVelocity = velocity;
         }
