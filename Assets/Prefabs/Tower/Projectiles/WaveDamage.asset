@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3f568fc9162734d92a4d02f92f015f, type: 3}
   m_Name: WaveDamage
   m_EditorClassIdentifier: 
-  _physicalDmg: 0
+  _physicalDmg: 40
   _poisonDmg: 0
   _fireDmg: 0
   _waterDmg: 0
-  _windDmg: 0
+  _windDmg: 30
   _earthDmg: 0
   _shadowDmg: 0
   _lightDmg: 0
