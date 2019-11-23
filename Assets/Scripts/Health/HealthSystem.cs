@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(HealthBar))]
-public class HealthSystem : MonoBehaviour {
+public class HealthSystem : MonoBehaviour
+{
 
     public UnityEvent onHealthChange;
     public UnityEvent onDeath;
@@ -24,51 +25,62 @@ public class HealthSystem : MonoBehaviour {
     [SerializeField] private float _shadowRes = 0;
     [SerializeField] private float _lightRes = 0;
 
-    public int health {
-        get {
+    public int health
+    {
+        get
+        {
             return _health;
         }
     }
 
-    public int maxHealth {
-        get {
+    public int maxHealth
+    {
+        get
+        {
             return _maxHealth;
         }
     }
 
-    public float healthPercent {
-        get {
+    public float healthPercent
+    {
+        get
+        {
             return (float)health / maxHealth;
         }
     }
 
     public bool isDead => _health <= 0;
 
-    private int CalculateDamage(Damage dmg) {
+    private int CalculateDamage(Damage dmg)
+    {
         int calcDmg = 0;
-        calcDmg += (int)(dmg._physicalDmg * (_physicalRes / 100) );
-        calcDmg += (int)(dmg._poisonDmg * (_poisonRes / 100) );
-        calcDmg += (int)(dmg._fireDmg * (_fireRes / 100) );
-        calcDmg += (int)(dmg._waterDmg * (_waterRes / 100) );
-        calcDmg += (int)(dmg._windDmg * (_windRes / 100) );
-        calcDmg += (int)(dmg._earthDmg * (_earthRes / 100) );
-        calcDmg += (int)(dmg._shadowDmg * (_shadowRes / 100) );
-        calcDmg += (int)(dmg._lightDmg * (_lightRes / 100) );
+        calcDmg += (int)(dmg._physicalDmg * (1 - _physicalRes));
+        calcDmg += (int)(dmg._poisonDmg * (1 - _poisonRes));
+        calcDmg += (int)(dmg._fireDmg * (1 - _fireRes));
+        calcDmg += (int)(dmg._waterDmg * (1 - _waterRes));
+        calcDmg += (int)(dmg._windDmg * (1 - _windRes));
+        calcDmg += (int)(dmg._earthDmg * (1 - _earthRes));
+        calcDmg += (int)(dmg._shadowDmg * (1 - _shadowRes));
+        calcDmg += (int)(dmg._lightDmg * (1 - _lightRes));
         return calcDmg;
     }
 
-    public void ApplyDamage (Damage dmg) {
+    public void ApplyDamage(Damage dmg)
+    {
         _health -= CalculateDamage(dmg);
-        if (isDead) {
+        if (isDead)
+        {
             _health = 0;
             onDeath.Invoke();
         }
         onHealthChange.Invoke();
     }
 
-    public void ApplyHeal (int heal) {
+    public void ApplyHeal(int heal)
+    {
         _health += heal;
-        if (_health >= _maxHealth) {
+        if (_health >= _maxHealth)
+        {
             _health = _maxHealth;
         }
         onHealthChange.Invoke();
