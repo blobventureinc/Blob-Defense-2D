@@ -10,7 +10,7 @@ public abstract class Projectile : MonoBehaviour
     //Damage
     [SerializeField] protected Damage dmg;
     //Target of the projectile
-    protected GameObject target_;
+    protected GameObject _target;
     //Message methods
     public abstract void Start();
     public abstract void Update();
@@ -18,9 +18,19 @@ public abstract class Projectile : MonoBehaviour
     //Setter for the target, always use this wehen instantiating a new Projectile
     public void shootAt(GameObject target)
     {
-        target_ = target;
+        _target = target;
     }
     protected abstract void OnTriggerEnter2D(Collider2D other);
     //Impact behaviour, damage etc
     protected abstract void impact(GameObject enemy);
+
+    protected void damage(GameObject enemy, Damage damage)
+    {
+        enemy.GetComponent<HealthSystem>().ApplyDamage(damage);
+    }
+
+    protected void DestroyItself()
+    {
+        Destroy(gameObject);
+    }
 }
