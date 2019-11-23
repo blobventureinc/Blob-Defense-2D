@@ -112,5 +112,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   dmg: {fileID: 11400000, guid: a17a37ebb4c7cac47ad9621165198191, type: 2}
-  max_radius: 0.2
+  max_radius: 0.5
   explosion_damage: {fileID: 11400000, guid: 672f66788abf1d64fadf8703e0577893, type: 2}
