@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WaveProjectile : Projectile
 {
-    
     [Header("Wave Projectile attributes")]
     [SerializeField] private float max_radius = 0;
     private CircleCollider2D waveCollider;
@@ -14,7 +13,7 @@ public class WaveProjectile : Projectile
         waveCollider = GetComponent<CircleCollider2D>();
     }
     public override void Update()
-    { 
+    {
         //Increment the radius of the wave and destroy the projectile if the max_radius is reached
         float step = speed * Time.deltaTime;
         waveCollider.radius += step;
@@ -29,6 +28,6 @@ public class WaveProjectile : Projectile
     }
     protected override void impact(GameObject enemy)
     {
-        //Debug.Log("Hit "+ enemy);
+        damage(enemy, dmg);
     }
 }
