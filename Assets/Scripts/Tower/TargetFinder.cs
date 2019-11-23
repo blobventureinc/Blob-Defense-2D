@@ -8,7 +8,11 @@ public abstract class TargetFinder : MonoBehaviour
     protected List<GameObject> _targets;
     public List<GameObject> targets
     {
-        get => _targets;
+        get
+        {
+            _targets.RemoveAll(item => item == null);
+            return _targets;
+        }
     }
     // Start is called before the first frame update
     //Maybe will change to virtual
