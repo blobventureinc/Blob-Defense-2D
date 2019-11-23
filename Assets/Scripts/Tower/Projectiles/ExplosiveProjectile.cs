@@ -6,7 +6,7 @@ public class ExplosiveProjectile : Projectile
 {
     [Header("Explosive Projectile attributes")]
     [SerializeField] private float max_radius = 0;
-    [SerializeField] private Damage explosion_damage;
+    [SerializeField] private Damage explosion_damage = null;
 
     private bool exploded;
     private CircleCollider2D explosionCollider;
@@ -15,6 +15,7 @@ public class ExplosiveProjectile : Projectile
     {
         exploded = false;
         explosionCollider = GetComponent<CircleCollider2D>();
+        _target.GetComponent<HealthSystem>().onDeath.AddListener(DestroyItself);
     }
     public override void Update()
     {
@@ -22,7 +23,8 @@ public class ExplosiveProjectile : Projectile
         {
             //Go to target
             float step = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, target_.transform.position, step);
+            if (_target != null)
+                transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, step);
         }
         else
         {
@@ -34,6 +36,8 @@ public class ExplosiveProjectile : Projectile
                 Destroy(gameObject);
             }
         }
+        if (_target == null)
+            Destroy(gameObject);
     }
     protected override void OnTriggerEnter2D(Collider2D other)
     {
@@ -46,11 +50,10 @@ public class ExplosiveProjectile : Projectile
 
     protected override void impact(GameObject enemy)
     {
-        if(!exploded)
-            Debug.Log("Hit with impact " + enemy);
+        if (!exploded)
+            damage(enemy, explosion_damage);
         else
-            Debug.Log("Hit with explosion" + enemy);
-
+            damage(enemy, dmg);
     }
 
     private void explode()
