@@ -5,41 +5,41 @@ using UnityEngine;
 public class TowerShooting : MonoBehaviour
 {
     //Attacks per second
-    [SerializeField] private float attacksPerSec = 0;
+    [SerializeField] private float attacks_per_sec = 0;
     //Projectile prefab
     [SerializeField] private GameObject projectile = null;
     //The targetfinder
     private TargetFinder targetfinder;
     //Used to shoot
-    private float counter = 0;
+    private float time_since_last_shot_ = 100;
     // Start is called before the first frame update
     void Start()
     {
         targetfinder = GetComponent<TargetFinder>();
-        counter = 4;
     }
     // Update is called once per frame
     void Update()
     {
-        counter += Time.deltaTime;
-        if (counter > 1 / attacksPerSec)
+        time_since_last_shot_ += Time.deltaTime;
+        if (time_since_last_shot_ > 1 / attacks_per_sec)
         {
-            if (targetfinder.targets != null)
+            if (targetfinder.targets.Count != 0)
             {
                 shoot(targetfinder.targets[0]);
-                counter = 0;
+                resetShootTime();
             }
         }
-        /*else
-        {
-            Debug.Log("No target");
-        }*/
     }
 
     void shoot(GameObject target)
     {
-        //Debug.Log("Shooting a " + projectile + " at: " + target);
         GameObject proj = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+        proj.transform.parent = gameObject.transform;
         proj.GetComponent<Projectile>().shootAt(target);
+    }
+
+    public void resetShootTime()
+    {
+        time_since_last_shot_ = 0;
     }
 }
