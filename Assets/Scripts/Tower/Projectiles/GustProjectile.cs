@@ -5,9 +5,9 @@ using UnityEngine;
 public class GustProjectile : Projectile
 {
     [Header("Gust Projectile attributes")]
-    [SerializeField] private float life_time = 0;
+    private float life_time;
     [SerializeField] private float attacks_per_sec = 0;
-    [SerializeField] private float range_radius = 0;
+    [SerializeField] private float range_radius;
 
     private Vector3 start_position;
     private TowerShooting tower_shooting;
@@ -21,6 +21,10 @@ public class GustProjectile : Projectile
         Transform t = gameObject.transform;
         start_position = new Vector3(t.position.x, t.position.y, t.position.z);
         targetfinder = t.parent.GetComponent<TargetFinder>() as TargetFinder;
+        tower_shooting = t.parent.GetComponent<TowerShooting>() as TowerShooting;
+
+
+        life_time = 1 / tower_shooting.attacks_per_sec;
     }
     public override void Update()
     {
