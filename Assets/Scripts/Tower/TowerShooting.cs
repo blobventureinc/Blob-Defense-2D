@@ -5,7 +5,7 @@ using UnityEngine;
 public class TowerShooting : MonoBehaviour
 {
     //Attacks per second
-    [SerializeField] private float attacks_per_sec = 0;
+    public float attacks_per_sec = 0;
     //Projectile prefab
     [SerializeField] private GameObject projectile = null;
     //The targetfinder
