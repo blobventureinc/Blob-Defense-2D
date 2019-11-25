@@ -21,11 +21,15 @@ public class Player_Mining : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Return) && !isMining) {
-            StartCoroutine(Mine());
+            StartCoroutine(MiningCoroutine());
         }
     }
 
-    IEnumerator Mine() {
+    public void Mine() {
+        StartCoroutine(MiningCoroutine());
+    }
+
+    IEnumerator MiningCoroutine() {
         Vector3Int target = targetingScript.gettargetLoc();
         Debug.Log("SEARCHING AT:" + target.x + " , " + target.y);
         Collider[] objarr = Physics.OverlapSphere(target, 1);

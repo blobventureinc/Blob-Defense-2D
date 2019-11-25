@@ -12,7 +12,7 @@ public class Player_Movement : MonoBehaviour {
 
     public float moveSpeedMax = 3f;
     public bool isMovingByKey;
-    public bool isMining;
+    bool mouseMovementDone; //to not repeatedly mine and target, is only false while MOVING by mouse, false when still by mouse
     private Vector3 clickPos;
     private Vector2 input;
     private Vector2 velocity;
@@ -21,7 +21,7 @@ public class Player_Movement : MonoBehaviour {
 
     private void Start() {
         isMovingByKey = true;
-        isMining = false;
+        mouseMovementDone = true;
     }
 
     void Update() {
@@ -30,6 +30,7 @@ public class Player_Movement : MonoBehaviour {
         input.y = Input.GetAxisRaw("Vertical");
 
         if (Input.GetMouseButtonDown(0)) {
+            mouseMovementDone = false; ;
             miningScript.isMining = false;
             isMovingByKey = false;
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -54,22 +55,34 @@ public class Player_Movement : MonoBehaviour {
         }
     }
     void MouseMovement() {
-        Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y); //vector from character to click
-        float mag = toClick.magnitude; //length of toClick
-        if (mag >= 0.2) {
-            float div = mag / moveSpeedMax; //how many times allowed movespeed fits in length
-            if (div > 1.0) //if more than one frame of max movespeed away; following this are different calculations for lower distances
+        if (!mouseMovementDone) {
+            Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y); //vector from character to click
+            float mag = toClick.magnitude; //length of toClick
+            if (mag >= 0.2)
             {
-                velocity = new Vector2(toClick.x / div, toClick.y / div); //set to click as velocity, shortened to respect allowed movespeed
-            } else {
-                if (div > 0.35) {
-                    velocity = toClick * div * 2; //simulates a finishing dash to the target location
-                } else { //Stop if close to target
-                    velocity = new Vector2(0, 0);
-                    targetingScript.MouseTargetTile(clickPos);
+                float div = mag / moveSpeedMax; //how many times allowed movespeed fits in length
+                if (div > 1.0) //if more than one frame of max movespeed away; following this are different calculations for lower distances
+                {
+                    velocity = new Vector2(toClick.x / div, toClick.y / div); //set to click as velocity, shortened to respect allowed movespeed
+                }
+                else
+                {
+                    if (div > 0.35)
+                    {
+                        velocity = toClick * div * 2; //simulates a finishing dash to the target location
+                    }
+                    else
+                    { //Stop if close to target
+                        velocity = new Vector2(0, 0);
+                        targetingScript.MouseTargetTile(clickPos);
+                        miningScript.Mine();
+                        mouseMovementDone = true;
+                    }
                 }
             }
-        } else { velocity = new Vector2(0, 0); } //when very close by, stop
+            else { velocity = new Vector2(0, 0); } //when very close by, stop
+        }
+        
 
     }
     void KeyBoardMovement() {
