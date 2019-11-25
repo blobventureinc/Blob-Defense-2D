@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class Player_Movement : MonoBehaviour {
     [SerializeField] private Tilemap tilemap = null;
     [SerializeField] private Tile_Targeting targetingScript = null;
+    [SerializeField] private Player_Mining miningScript = null;
     [SerializeField] private Rigidbody2D rb = null;
     private TileBase clickedTile;
 
@@ -29,10 +30,12 @@ public class Player_Movement : MonoBehaviour {
         input.y = Input.GetAxisRaw("Vertical");
 
         if (Input.GetMouseButtonDown(0)) {
+            miningScript.isMining = false;
             isMovingByKey = false;
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));
         } else if (input.x != 0 || input.y != 0) {
+            miningScript.isMining = false;
             isMovingByKey = true;
             clickedTile = null;
         }

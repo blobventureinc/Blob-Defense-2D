@@ -12,7 +12,7 @@ public class Stone : MonoBehaviour
     {
         type = "stone";
         value = 3;
-        duration = 2;
+        duration = 3;
         Debug.Log("STONE INITIALIZED");
     }
 

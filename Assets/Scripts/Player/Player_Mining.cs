@@ -34,11 +34,10 @@ public class Player_Mining : MonoBehaviour
             resourceScript = ob.GetComponent<Stone>();
             Debug.Log("FOUND: " + resourceScript.type + ", VALUE: " + resourceScript.value);
             isMining = true;
-            input.x = Input.GetAxisRaw("Horizontal");
-            input.y = Input.GetAxisRaw("Vertical");
-            while (ob && input.x == 0 && input.y == 0) {
+            while (ob != null && isMining) {
                 if(miningTimer == resourceScript.duration) {
-                    Object.Destroy(ob);
+                    resourceScript.Mine();
+                    ob = null;
                 } else {
                     yield return new WaitForSeconds(1);
                     input.x = Input.GetAxisRaw("Horizontal");
@@ -47,6 +46,7 @@ public class Player_Mining : MonoBehaviour
                     Debug.Log("INCREMENTING MINING TIMER");
                 }    
             }
+            Debug.Log("MINING DONE/CANCELED");
             isMining = false;
             miningTimer = 0;
         }   
