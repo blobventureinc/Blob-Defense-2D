@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: e26cfd1da4f2259478f2b7c6ae525de8
 =======
 <<<<<<< HEAD
@@ -8,6 +9,9 @@ guid: 74da9502e64e1f46d800379238dbc212
 guid: f331f9d50de6f8748a578ec7d8c47098
 >>>>>>> master
 >>>>>>> master
+=======
+guid: 42c7ff71bb959db4caff50ae71a7a33a
+>>>>>>> Added first UI Prefab / Created Player Script containing PlayerAttributes / Created Script that updates the UI when PlayerAttributes Change
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
