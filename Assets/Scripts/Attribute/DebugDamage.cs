@@ -5,7 +5,7 @@ using UnityEngine;
 public class DebugDamage : MonoBehaviour
 {
     private GameObject enemyObject;
-    private DamageSystem damageSystem;
+    private HealthSystem healthSystem;
 
     [SerializeField] private Damage damage;
 
@@ -13,7 +13,7 @@ public class DebugDamage : MonoBehaviour
     void Start()
     {
         enemyObject = GameObject.Find("Enemy");
-        damageSystem = enemyObject.GetComponent<DamageSystem>();
+        healthSystem = enemyObject.GetComponent<HealthSystem>();
         Debug.Log("Click 'd' to do Damage");
     }
 
@@ -21,7 +21,7 @@ public class DebugDamage : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.D)) {
-            damageSystem.ApplyDamage(damage);
+            healthSystem.ApplyDamage(damage);
             Debug.Log("Do Damage");
         }
     }

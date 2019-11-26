@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
 
-[RequireComponent( typeof(WalkAlongPath), typeof(DamageSystem), typeof(AttributeManager))]
+[RequireComponent( typeof(WalkAlongPath), typeof(HealthSystem), typeof(AttributeManager))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private new string name;
@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
 
     private WalkAlongPath walkScript;
     private PathCreator path;
-    private DamageSystem damageSystem;
+    private HealthSystem healthSystem;
 
     void DestroyItself() {
         Destroy(gameObject.transform.parent.transform.parent.gameObject);
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         walkScript = GetComponent<WalkAlongPath>();
         walkScript.pathCreator = path;
         walkScript.speed = speed;
-        damageSystem = GetComponent<DamageSystem>();
-        damageSystem.onDeath.AddListener(DestroyItself);
+        healthSystem = GetComponent<HealthSystem>();
+        healthSystem.onDeath.AddListener(DestroyItself);
     }
 }

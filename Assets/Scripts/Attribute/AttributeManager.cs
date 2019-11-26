@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(DamageSystem))]
 public class AttributeManager : MonoBehaviour
 {
     [Header("Should the Attributes (Health) scale up by level?")]
@@ -39,11 +38,12 @@ public class AttributeManager : MonoBehaviour
         level = new Attribute(_level, _levelMax);
         gold = new Attribute(_initGold);
 
+        exp.onValueChange.AddListener(LevelUp);
+
         if (isScalabeByLevel) {
             level.onValueChange.AddListener(ScaleHealthLevel);
+            ScaleHealthLevel();
         }
-        exp.onValueChange.AddListener(LevelUp);
-        ScaleHealthLevel();
 
         // Init UI Scripts
         if (GameObject.Find("UI") != null) {
