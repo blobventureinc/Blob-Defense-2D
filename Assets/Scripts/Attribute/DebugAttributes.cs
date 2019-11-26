@@ -2,75 +2,71 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DebugPlayer : MonoBehaviour
+public class DebugAttributes : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    [SerializeField] private AttributeManager attributes;
 
     // // // // // // // // // // // //
     // LIVES
     public void IncreaseLives(int value) {
-        player.lives.Increase(value);
+        attributes.health.Increase(value);
     }
     public void DecreaseLives(int value) {
-        player.lives.Decrease(value);
+        attributes.health.Decrease(value);
     }
     public void IncreaseLivesMax(int value) {
-        player.lives.IncreaseMax(value);
+        attributes.health.IncreaseMax(value);
     }
     public void DecreaseLivesMax(int value) {
-        player.lives.DecreaseMax(value);
+        attributes.health.DecreaseMax(value);
     }
     // // // // // // // // // // // //
     // MANA
     public void IncreaseMana(int value) {
-        player.mana.Increase(value);
+        attributes.mana.Increase(value);
     }
     public void DecreaseMana(int value) {
-        player.mana.Decrease(value);
+        attributes.mana.Decrease(value);
     }
     public void IncreaseManaMax(int value) {
-        player.mana.IncreaseMax(value);
+        attributes.mana.IncreaseMax(value);
     }
     public void DecreaseManaMax(int value) {
-        player.mana.DecreaseMax(value);
+        attributes.mana.DecreaseMax(value);
     }
     // // // // // // // // // // // //
     // ENERGY
     public void IncreaseEnergy(int value) {
-        player.energy.Increase(value);
+        attributes.energy.Increase(value);
     }
     public void DecreaseEnergy(int value) {
-        player.energy.Decrease(value);
+        attributes.energy.Decrease(value);
     }
     // // // // // // // // // // // //
     // EXPERIENCE
     public void IncreaseExp(int value) {
-        player.exp.Increase(value);
-        if (player.exp.value >= player.exp.valueMax) {
-            player.exp.value = 0;
-            IncreaseLevel();
-        }
+        attributes.exp.Increase(value);
     }
     public void DecreaseExp(int value) {
-        player.exp.Decrease(value);
+        attributes.exp.Decrease(value);
     }
     public void IncreaseExpMax(int value) {
-        player.exp.IncreaseMax(value);
+        attributes.exp.IncreaseMax(value);
     }
     public void DecreaseExpMax(int value) {
-        player.exp.DecreaseMax(value);
+        attributes.exp.DecreaseMax(value);
     }
     // // // // // // // // // // // //
     // LEVEL
     public void IncreaseLevel() {
-        player.level.Increase(1);
+        attributes.level.Increase(1);
     }
     // // // // // // // // // // // //
     // GOLD
     public void IncreaseGold(int value) {
-        player.gold.Increase(value);
+        attributes.gold.Increase(value);
     }
     public void DecreaseGold(int value) {
-        player.gold.Decrease(value);
+        attributes.gold.Decrease(value);
     } 
 }

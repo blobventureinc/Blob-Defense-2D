@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UpdatePlayerAttributes : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    [SerializeField] private AttributeManager player;
 
     [SerializeField] private Slider livesBar = null;
     [SerializeField] private Text livesText = null;
@@ -24,7 +24,7 @@ public class UpdatePlayerAttributes : MonoBehaviour
 
     public void Init()
     {
-        player.lives.onValueChange.AddListener(UpdateLivesBar);
+        player.health.onValueChange.AddListener(UpdateLivesBar);
         player.mana.onValueChange.AddListener(UpdateManaBar);
         player.energy.onValueChange.AddListener(UpdateEnergyBar);
         player.exp.onValueChange.AddListener(UpdateExpBar);
@@ -39,9 +39,9 @@ public class UpdatePlayerAttributes : MonoBehaviour
     }
 
     public void UpdateLivesBar() {
-        livesBar.maxValue = player.lives.valueMax;
-        livesBar.value = player.lives.value;
-        livesText.text = "HP: " + player.lives.value.ToString()+" / "+ player.lives.valueMax.ToString();
+        livesBar.maxValue = player.health.valueMax;
+        livesBar.value = player.health.value;
+        livesText.text = "HP: " + player.health.value.ToString()+" / "+ player.health.valueMax.ToString();
     }
     public void UpdateManaBar() {
         manaBar.maxValue = player.mana.valueMax;

@@ -24,11 +24,16 @@ public class Attribute
         onValueChange = new UnityEvent();
     }
 
+    public void Set(int value) {
+        this.value = value;
+        onValueChange.Invoke();
+    }
+
     public void Increase(int value) {
         this.value += value;
-        if (valueMax != 0) {
-            if (this.value >= valueMax) {
-                this.value = valueMax;
+        if (this.valueMax != 0) {
+            if (this.value >= this.valueMax) {
+                this.value = this.valueMax;
             }
         }
         onValueChange.Invoke();
@@ -42,16 +47,25 @@ public class Attribute
         onValueChange.Invoke();
     }
 
+    public void SetMax(int value) {
+        this.valueMax = value;
+        onValueChange.Invoke();
+    }
+
     public void IncreaseMax(int value) {
-        valueMax += value;
+        this.valueMax += value;
         onValueChange.Invoke();
     }
 
     public void DecreaseMax(int value) {
-        valueMax -= value;
-        if (valueMax <= 0) {
-            valueMax = 0;
+        this.valueMax -= value;
+        if (this.valueMax <= 0) {
+            this.valueMax = 0;
         }
         onValueChange.Invoke();
+    }
+
+    public float GetValuePercent() {
+        return (float) value / valueMax;
     }
 }
