@@ -17,7 +17,8 @@ public class DebugTowerActionExecutor : MonoBehaviour
         if(Input.GetButtonDown("Jump")) 
         {
             IEnumerator<TowerAction> towerActions = tower.TowerActions;
-            if(towerActions.MoveNext()) {
+            if(towerActions.MoveNext()) 
+            {
                 tower.DoAction(towerActions.Current);
             }
         }

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< master
 guid: e0ac01f86493f0a47965f14c1fccedd5
+=======
+guid: 3027309b966c9872a92ef17677206120
+>>>>>>> Added tower action menu ui
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
