@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8631875451190390268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8631875451190390270}
+  - component: {fileID: 8631875451190390264}
+  - component: {fileID: 8631875451190390269}
+  - component: {fileID: 8631875451190390265}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8631875451190390270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631875451190390268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 832.45447, y: 465.2037, z: -210.75665}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8631875451190390264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631875451190390268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 100
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!114 &8631875451190390269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631875451190390268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f56d73aa62516b43bb52abe16b8fd10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributeManager: {fileID: 8631875451190390264}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  _physicalRes: 0
+  _poisonRes: 0
+  _fireRes: 0
+  _waterRes: 0
+  _windRes: 0
+  _earthRes: 0
+  _shadowRes: 0
+  _lightRes: 0
+--- !u!114 &8631875451190390265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8631875451190390268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0465bb6f31ad96940b484cbec2936efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes: {fileID: 8631875451190390264}
