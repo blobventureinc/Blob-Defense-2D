@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stone : MonoBehaviour
+public class Resource : MonoBehaviour
 {
     public string type;
     public int value;
@@ -13,7 +13,6 @@ public class Stone : MonoBehaviour
         type = "stone";
         value = 3;
         duration = 3;
-        Debug.Log("STONE INITIALIZED");
     }
 
     // Update is called once per frame

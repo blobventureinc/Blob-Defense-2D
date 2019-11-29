@@ -9,9 +9,9 @@ public class Player_Movement : MonoBehaviour {
     [SerializeField] private Player_Mining miningScript = null;
     [SerializeField] private Rigidbody2D rb = null;
     private TileBase clickedTile;
-
     public float moveSpeedMax = 3f;
     public bool isMovingByKey;
+    public bool isMoving;
     bool mouseMovementDone; //to not repeatedly mine and target, is only false while MOVING by mouse, false when still by mouse
     private Vector3 clickPos;
     private Vector2 input;
@@ -22,69 +22,61 @@ public class Player_Movement : MonoBehaviour {
     private void Start() {
         isMovingByKey = true;
         mouseMovementDone = true;
+        isMoving = false;
     }
 
     void Update() {
-        //Debug.Log(velocity.ToString());
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
-
         if (Input.GetMouseButtonDown(0)) {
-            mouseMovementDone = false; ;
-            miningScript.isMining = false;
+            mouseMovementDone = false;
             isMovingByKey = false;
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));
         } else if (input.x != 0 || input.y != 0) {
-            miningScript.isMining = false;
             isMovingByKey = true;
             clickedTile = null;
         }
         if (isMovingByKey) { KeyBoardMovement(); }
         if (!isMovingByKey) { MouseMovement(); }
-
-        if (velocity != new Vector2(0, 0)) // Taute: better as asking for every value with or
-        {
+        if (velocity != new Vector2(0, 0)) {
             lastVelocity = velocity;
         }
     }
+
     void FixedUpdate() {
         if (velocity.x != 0 || velocity.y != 0) {
+            miningScript.isMining = false;
+            isMoving = true;
             moveTo = rb.position + velocity * Time.fixedDeltaTime;
             rb.MovePosition(moveTo);
+        } else {
+            isMoving = false;
         }
     }
+
     void MouseMovement() {
         if (!mouseMovementDone) {
             Vector2 toClick = new Vector2(clickPos.x - rb.position.x, clickPos.y - rb.position.y); //vector from character to click
             float mag = toClick.magnitude; //length of toClick
-            if (mag >= 0.2)
-            {
+            if (mag >= 0.2) {
                 float div = mag / moveSpeedMax; //how many times allowed movespeed fits in length
-                if (div > 1.0) //if more than one frame of max movespeed away; following this are different calculations for lower distances
-                {
+                if (div > 1.0) { //if more than one frame of max movespeed away; following this are different calculations for lower distances
                     velocity = new Vector2(toClick.x / div, toClick.y / div); //set to click as velocity, shortened to respect allowed movespeed
-                }
-                else
-                {
-                    if (div > 0.35)
-                    {
+                } else {
+                    if (div > 0.35) {
                         velocity = toClick * div * 2; //simulates a finishing dash to the target location
-                    }
-                    else
-                    { //Stop if close to target
+                    } else { //Stop if close to target
                         velocity = new Vector2(0, 0);
                         targetingScript.MouseTargetTile(clickPos);
                         miningScript.Mine();
                         mouseMovementDone = true;
                     }
                 }
-            }
-            else { velocity = new Vector2(0, 0); } //when very close by, stop
+            } else { velocity = new Vector2(0, 0); } //when very close by, stop
         }
-        
-
     }
+
     void KeyBoardMovement() {
         //Stop or slow down if no input
         if (input.x == 0) {
@@ -113,5 +105,4 @@ public class Player_Movement : MonoBehaviour {
             velocity.y = -moveSpeedMax;
         }
     }
-
 }

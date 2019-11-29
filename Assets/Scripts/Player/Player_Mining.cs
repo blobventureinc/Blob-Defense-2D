@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class Player_Mining : MonoBehaviour
 {
-
-    public bool isMining;
-    public int miningTimer;
-    Vector2 input;
-    Stone resourceScript;
+    public bool isMining; //Toggled off by movement to cancel mining
+    public int miningTimer; //Increments to time mining process
+    Resource resourceScript;
     [SerializeField] private Tile_Targeting targetingScript = null;
-    // Start is called before the first frame update
+
     void Start() {
         isMining = false;
         miningTimer = 0;
-        input = new Vector2(0, 0);
         resourceScript = null;
     }
 
-    // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Return) && !isMining) {
             StartCoroutine(MiningCoroutine());
@@ -26,26 +22,25 @@ public class Player_Mining : MonoBehaviour
     }
 
     public void Mine() {
-        StartCoroutine(MiningCoroutine());
+        if(!isMining) {
+            StartCoroutine(MiningCoroutine());
+        }      
     }
 
     IEnumerator MiningCoroutine() {
         Vector3Int target = targetingScript.gettargetLoc();
-        Debug.Log("SEARCHING AT:" + target.x + " , " + target.y);
-        Collider[] objarr = Physics.OverlapSphere(target, 1);
-        if (objarr.Length == 1) {
-            GameObject ob = objarr[0].gameObject;
-            resourceScript = ob.GetComponent<Stone>();
+        Collider[] collider = Physics.OverlapSphere(target, 1); //look for colliders on target tile
+        if (collider.Length == 1) { //if collider located
+            GameObject obj = collider[0].gameObject; //get their gameobject
+            resourceScript = obj.GetComponent<Resource>(); //get their script
             Debug.Log("FOUND: " + resourceScript.type + ", VALUE: " + resourceScript.value);
             isMining = true;
-            while (ob != null && isMining) {
+            while (obj != null && isMining) {
                 if(miningTimer == resourceScript.duration) {
                     resourceScript.Mine();
-                    ob = null;
+                    obj = null;
                 } else {
                     yield return new WaitForSeconds(1);
-                    input.x = Input.GetAxisRaw("Horizontal");
-                    input.y = Input.GetAxisRaw("Vertical");
                     miningTimer++;
                     Debug.Log("INCREMENTING MINING TIMER");
                 }    
@@ -54,6 +49,5 @@ public class Player_Mining : MonoBehaviour
             isMining = false;
             miningTimer = 0;
         }   
-
     }
 }
