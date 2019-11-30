@@ -1,9 +1,13 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 guid: c960a7f23f831da4a83e941e33617755
 =======
 guid: a0a3629128fe49447bf91c696264b762
 >>>>>>> tower placement
+=======
+guid: a0a3629128fe49447bf91c696264b762
+>>>>>>> d294570e2a34b2784368e8187ec678c25613d4f6
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

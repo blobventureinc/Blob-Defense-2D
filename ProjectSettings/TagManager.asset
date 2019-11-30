@@ -42,10 +42,15 @@ TagManager:
     uniqueID: 0
     locked: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   - name: Top
     uniqueID: 1664460547
 =======
   - name: towers
     uniqueID: 4220055753
 >>>>>>> Tower Platzierung
+=======
+  - name: towers
+    uniqueID: 4220055753
+>>>>>>> d294570e2a34b2784368e8187ec678c25613d4f6
     locked: 0
