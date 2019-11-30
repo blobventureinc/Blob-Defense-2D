@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Tilemaps;
 
 public class Build_onClick : MonoBehaviour {
 
-    public GameObject Tower;    
+    public GameObject Tower;
+    [SerializeField]private Tilemap currentMap;
+    Dictionary<Vector3Int, GameObject> objects = new Dictionary<Vector3Int, GameObject>();
+    public Tile TowerPos;
+    //public int count=1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,22 +18,32 @@ public class Build_onClick : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        if (Input.GetMouseButtonDown(0)) {
+            currentMap = GetComponent<Tilemap>();
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3Int coordinate = currentMap.WorldToCell(new Vector3Int( Mathf.RoundToInt(mouseWorldPos.x), Mathf.RoundToInt(mouseWorldPos.y),0));
+            Tile t = currentMap.GetTile(coordinate) as Tile;
+            TryInstantiateGameObjectAtPosition(coordinate);
+        }
     }
-    void OnMouseDown()
-    {
-        var a = new List<KeyValuePair<Vector3, int>>();
-        GridLayout gridLayout = transform.parent.GetComponentInParent<GridLayout>();
-        Vector3Int cellPosition = gridLayout.WorldToCell(transform.position);
-        transform.position = gridLayout.CellToWorld(cellPosition);
-        Debug.Log(cellPosition);
-        Vector3 towerPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
 
-        Instantiate(Tower,towerPos, Quaternion.identity);
-        a.Add(new KeyValuePair<Vector3, int>(towerPos, 1));
-        
+    void TryInstantiateGameObjectAtPosition(Vector3Int coordinate) {
+        if (!ObjectOnPosition(coordinate)) {
+            //Tower.AddComponent<BoxCollider2D>();  
+            Instantiate(Tower, coordinate, Quaternion.identity);
+            currentMap.SetTile(coordinate, TowerPos);
+            currentMap.RefreshTile(coordinate);
+            objects.Add(coordinate, Tower);
+        }
+    }
 
+    bool ObjectOnPosition(Vector3Int pos) {
+        if (objects.ContainsKey(pos)) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
