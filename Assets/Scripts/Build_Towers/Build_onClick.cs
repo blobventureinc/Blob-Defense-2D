@@ -12,8 +12,7 @@ public class Build_onClick : MonoBehaviour {
     //public int count=1;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
 
     }
 
@@ -29,8 +28,7 @@ public class Build_onClick : MonoBehaviour {
     }
 
     void TryInstantiateGameObjectAtPosition(Vector3Int coordinate) {
-        if (!ObjectOnPosition(coordinate)) {
-            //Tower.AddComponent<BoxCollider2D>();  
+        if (!ObjectOnPosition(coordinate)) {            
             Instantiate(Tower, coordinate, Quaternion.identity);
             currentMap.SetTile(coordinate, TowerPos);
             currentMap.RefreshTile(coordinate);

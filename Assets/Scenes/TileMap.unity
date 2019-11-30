@@ -133,7 +133,6 @@ GameObject:
   - component: {fileID: 385340990}
   - component: {fileID: 385340989}
   - component: {fileID: 385340991}
-  - component: {fileID: 385340992}
   m_Layer: 0
   m_Name: Tilemap_base
   m_TagString: Untagged
@@ -6631,7 +6630,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385340987}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0fe87c84becaf14ebe88c81da7b082e, type: 3}
   m_Name: 
@@ -6639,22 +6638,6 @@ MonoBehaviour:
   Tower: {fileID: 3879885360554346236, guid: cadbcda2a356f7249b12b83ddfb68f8d, type: 3}
   currentMap: {fileID: 0}
   TowerPos: {fileID: 11400000, guid: c69edec0a8e3b3a4987612680531e397, type: 2}
---- !u!19719996 &385340992
-TilemapCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 385340987}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0.5}
-  m_MaximumTileChangeCount: 1000
-  m_ExtrusionFactor: 0.00001
 --- !u!1 &1413038189
 GameObject:
   m_ObjectHideFlags: 0
@@ -6666,6 +6649,8 @@ GameObject:
   - component: {fileID: 1413038190}
   - component: {fileID: 1413038192}
   - component: {fileID: 1413038191}
+  - component: {fileID: 1413038194}
+  - component: {fileID: 1413038193}
   m_Layer: 8
   m_Name: Tilemap_towers
   m_TagString: Untagged
@@ -6743,15 +6728,39 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: NaN
+      e01: NaN
+      e02: 4.8104678e+36
+      e03: 1.26e-43
+      e10: NaN
+      e11: NaN
+      e12: 4.5912e-41
+      e13: 0
+      e20: 0
+      e21: 4.8104653e+36
+      e22: 1.0469247e-38
+      e23: 0.00000036534948
+      e30: 0
+      e31: 4.5912e-41
+      e32: 3.949078e-39
+      e33: 6.11e-43
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 7.86641e-38, g: 7.86641e-38, b: 7.86641e-38, a: 7.86641e-38}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_Origin: {x: 0, y: -2, z: 0}
+  m_Size: {x: 4, y: 4, z: 1}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1
@@ -6770,6 +6779,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1413038193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413038189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0fe87c84becaf14ebe88c81da7b082e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tower: {fileID: 3879885360554346236, guid: cadbcda2a356f7249b12b83ddfb68f8d, type: 3}
+  currentMap: {fileID: 1413038192}
+  TowerPos: {fileID: 11400000, guid: c69edec0a8e3b3a4987612680531e397, type: 2}
+--- !u!19719996 &1413038194
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413038189}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0.00001
 --- !u!1 &1727656867
 GameObject:
   m_ObjectHideFlags: 0
