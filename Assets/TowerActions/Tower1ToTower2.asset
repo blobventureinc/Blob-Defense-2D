@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c289cfa04e932bba2b52483a72e8f6, type: 3}
   m_Name: Tower1ToTower2
   m_EditorClassIdentifier: 
-  name: 
+  name: Tower2
   gold: 0
+  towerUpgradePrefab: {fileID: 2862769924340958055, guid: 2cab5e6618fab703b8697f5e01e6d4f1,
+    type: 3}

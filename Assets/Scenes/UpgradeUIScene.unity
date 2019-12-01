@@ -120,6 +120,100 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &128751030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128751032}
+  - component: {fileID: 128751031}
+  m_Layer: 0
+  m_Name: DebugPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &128751031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128751030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 100
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  skillPoints:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+--- !u!4 &128751032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128751030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.8338666, y: 1.8590655, z: -7.0979567}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &205044689 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8641763123544724263, guid: 8e42943fab67647b2967adefa69a0979,
@@ -144,6 +238,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower1
       objectReference: {fileID: 0}
+    - target: {fileID: 8641763123544724263, guid: 8e42943fab67647b2967adefa69a0979,
+        type: 3}
+      propertyPath: towerActions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641763123544724263, guid: 8e42943fab67647b2967adefa69a0979,
+        type: 3}
+      propertyPath: towerActions.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: cf6433f652ec213eeb3905f0d7203e59,
+        type: 2}
+    - target: {fileID: 8641763123544724263, guid: 8e42943fab67647b2967adefa69a0979,
+        type: 3}
+      propertyPath: towerActions.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a93b2c48d976e756e87bf25460a440a1,
+        type: 2}
     - target: {fileID: 2536609792051910197, guid: 8e42943fab67647b2967adefa69a0979,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -247,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerActionMenu: {fileID: 1415136253}
   tower: {fileID: 205044689}
+  attributeManager: {fileID: 128751031}
 --- !u!114 &873673958
 MonoBehaviour:
   m_ObjectHideFlags: 0
