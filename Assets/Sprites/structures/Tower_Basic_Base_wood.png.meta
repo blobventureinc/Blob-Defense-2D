@@ -1,25 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< master
-guid: 7fef3aae51355644e8b8c49b45ceb477
-=======
-<<<<<<< master
-<<<<<<< HEAD
-<<<<<<< HEAD
 guid: 347b7f4f9633398488f9eeb1b71d7254
-=======
-<<<<<<< HEAD
-guid: 29bd2e73ed9c750faba2d09eb8e059b4
-=======
-guid: a5ee377bbef8946478515dccaa367d88
->>>>>>> master
->>>>>>> master
-=======
-guid: 64965c09ba4b69142b61cdf79cff19f0
->>>>>>> Added first UI Prefab / Created Player Script containing PlayerAttributes / Created Script that updates the UI when PlayerAttributes Change
-=======
-guid: 347b7f4f9633398488f9eeb1b71d7254
->>>>>>> Added tower action menu ui
->>>>>>> Added tower action menu ui
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

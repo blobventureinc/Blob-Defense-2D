@@ -26,6 +26,7 @@ public class AttributeManager : MonoBehaviour
     public Attribute energy;
     public Attribute exp;
     public Attribute level;
+    public Attribute skillPoints;
     public Attribute gold;
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class AttributeManager : MonoBehaviour
         energy = new Attribute(_baseEnergy, _baseEnergy);
         exp = new Attribute(_exp, _expMax);
         level = new Attribute(_level, _levelMax);
+        skillPoints = new Attribute(0);
         gold = new Attribute(_initGold);
 
         exp.onValueChange.AddListener(LevelUp);
@@ -61,6 +63,7 @@ public class AttributeManager : MonoBehaviour
     public void LevelUp() {
         if (exp.value >= exp.valueMax) {
             level.Increase(1);
+            skillPoints.Increase(1);
             exp.Set(0);
         }
     }

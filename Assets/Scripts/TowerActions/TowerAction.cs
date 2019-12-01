@@ -2,13 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class TowerAction
+public abstract class TowerAction: ScriptableObject
 {
     public string name;
 
-    public TowerAction(string name) {
-        this.name = name;
-    }
-
-    public abstract void DoAction(Tower tower);
+    public abstract bool DoAction(AttributeManager attributeManager, Tower tower);
 }

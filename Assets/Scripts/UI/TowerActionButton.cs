@@ -13,6 +13,8 @@ public class TowerActionButton : MonoBehaviour
     public TowerActionMenu towerActionMenu;
     [HideInInspector]
     public Tower tower;
+    [HideInInspector]
+    public AttributeManager attributeManager;
 
     public TowerAction TowerAction {
         get 
@@ -33,7 +35,7 @@ public class TowerActionButton : MonoBehaviour
 
     void DoAction() 
     {
-        _towerAction.DoAction(tower);
+        _towerAction.DoAction(attributeManager, tower);
         towerActionMenu.HideTowerActionMenu();
     }
 }

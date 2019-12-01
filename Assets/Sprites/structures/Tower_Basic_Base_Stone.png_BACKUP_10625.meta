@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 42917c7013f717042ba67cf538090755
+<<<<<<< master
+guid: b03a11b517b356e4699849cf068d6869
+=======
+guid: 52581c4f01983534292951f5ee397d7b
+>>>>>>> Added Skills
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}

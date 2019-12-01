@@ -2,15 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeAction : TowerAction
+[CreateAssetMenu(menuName = "Tower Actions/Upgrade Action", fileName="NewUpgradeAction", order = 0)]
+public class UpgradeAction : PricyTowerAction
 {
-    private GameObject towerUpgradePrefab;
+    public GameObject towerUpgradePrefab;
 
-    public UpgradeAction(string name, GameObject towerUpgradePrefab) : base(name) {
-        this.towerUpgradePrefab = towerUpgradePrefab;
-    }
-
-    public override void DoAction(Tower tower)
+    protected override void DoActionImpl(Tower tower)
     {
         tower.UpgradeTower(towerUpgradePrefab);
     }

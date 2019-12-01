@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SellActionProvider : TowerActionProvider
+/*public class SellActionProvider : TowerActionProvider
 {
     protected override TowerAction[] CreateTowerActions()
     {
@@ -10,4 +10,4 @@ public class SellActionProvider : TowerActionProvider
         towerActions[0] = new SellAction("Sell");
         return towerActions;
     }
-}
+}*/

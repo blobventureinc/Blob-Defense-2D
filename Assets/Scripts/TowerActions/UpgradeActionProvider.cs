@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpgradeActionProvider : TowerActionProvider
+/*public class UpgradeActionProvider : TowerActionProvider
 {
     [SerializeField]
     private GameObject[] upgradeTowers;
@@ -11,8 +11,8 @@ public class UpgradeActionProvider : TowerActionProvider
         TowerAction[] towerActions = new TowerAction[upgradeTowers.Length];
         for(int i = 0; i < upgradeTowers.Length; i++) {
             GameObject upgradeTower = upgradeTowers[i];
-            towerActions[i] = new UpgradeAction(upgradeTower.name, upgradeTower);
+            towerActions[i] = new UpgradeAction(upgradeTower.name, 0, upgradeTower);
         }
         return towerActions;
     }
-}
+}*/

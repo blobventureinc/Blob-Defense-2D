@@ -18,11 +18,11 @@ public class Tower : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 
-    public void DoAction(TowerAction towerAction) 
+    public void DoAction(AttributeManager attributeManager, TowerAction towerAction) 
     {
-        towerAction.DoAction(this);
+        towerAction.DoAction(attributeManager, this);
     }
 
     public void SellTower() 

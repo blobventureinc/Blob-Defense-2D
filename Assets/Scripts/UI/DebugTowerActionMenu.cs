@@ -6,6 +6,7 @@ public class DebugTowerActionMenu : MonoBehaviour
 {
     public TowerActionMenu towerActionMenu;
     public Tower tower;
+    public AttributeManager attributeManager;
 
     private bool state;
 
@@ -18,7 +19,7 @@ public class DebugTowerActionMenu : MonoBehaviour
             {
                 if(tower != null) 
                 {
-                    towerActionMenu.ShowTowerActionMenu(tower);
+                    towerActionMenu.ShowTowerActionMenu(attributeManager, tower);
                 }
             } 
             else 
