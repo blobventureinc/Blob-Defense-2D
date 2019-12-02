@@ -887,6 +887,7 @@ MonoBehaviour:
   attacks_per_sec: 1
   projectile: {fileID: 8956438243761230826, guid: 17cdf4b3f40442745b1d45c632930b6e,
     type: 3}
+  targetfinder: {fileID: 428210196}
 --- !u!1001 &449996586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1391,6 +1392,7 @@ MonoBehaviour:
   attacks_per_sec: 0.033333335
   projectile: {fileID: 4279897782477152410, guid: 439fb981fba41df4ca0d88ef32c2784a,
     type: 3}
+  targetfinder: {fileID: 928356499}
 --- !u!58 &928356501
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2366,6 +2368,7 @@ MonoBehaviour:
   attacks_per_sec: 3
   projectile: {fileID: 836078761720240636, guid: b42f5fba80178b3409d6152b21dbfd7f,
     type: 3}
+  targetfinder: {fileID: 2057046004}
 --- !u!58 &2057046006
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2581,6 +2584,7 @@ MonoBehaviour:
   attacks_per_sec: 0.7
   projectile: {fileID: 920499496550540103, guid: f988067d007219a46bd921385a623c01,
     type: 3}
+  targetfinder: {fileID: 2087983044}
 --- !u!58 &2087983046
 CircleCollider2D:
   m_ObjectHideFlags: 0
