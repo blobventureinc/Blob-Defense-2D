@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 22531159}
   - component: {fileID: 22531158}
   - component: {fileID: 22531157}
+  - component: {fileID: 22531163}
   - component: {fileID: 22531156}
   m_Layer: 0
   m_Name: ExplosiveTarget_1
@@ -154,14 +155,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7c2afd84de55a4e977aac0ff58fb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHealthChange:
-    m_PersistentCalls:
-      m_Calls: []
+  attributeManager: {fileID: 22531163}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _health: 1500
-  _maxHealth: 1500
   _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
@@ -298,6 +295,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &22531163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22531155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 1500
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &58618501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -413,6 +467,7 @@ GameObject:
   - component: {fileID: 309823580}
   - component: {fileID: 309823579}
   - component: {fileID: 309823578}
+  - component: {fileID: 309823584}
   - component: {fileID: 309823577}
   m_Layer: 0
   m_Name: GustTargetMoving
@@ -433,14 +488,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7c2afd84de55a4e977aac0ff58fb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHealthChange:
-    m_PersistentCalls:
-      m_Calls: []
+  attributeManager: {fileID: 309823584}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _health: 1500
-  _maxHealth: 1500
   _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
@@ -577,6 +628,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309823584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309823576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 1500
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &322261253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8835532759603762158, guid: e0ad8131cb14be74598eb24b637affa2,
@@ -597,6 +705,7 @@ GameObject:
   - component: {fileID: 383909141}
   - component: {fileID: 383909140}
   - component: {fileID: 383909139}
+  - component: {fileID: 383909145}
   - component: {fileID: 383909138}
   m_Layer: 0
   m_Name: WaveTargetMoving
@@ -617,14 +726,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7c2afd84de55a4e977aac0ff58fb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHealthChange:
-    m_PersistentCalls:
-      m_Calls: []
+  attributeManager: {fileID: 383909145}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _health: 1500
-  _maxHealth: 1500
   _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
@@ -761,6 +866,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383909145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383909137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 1500
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &428210193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1248,7 @@ GameObject:
   - component: {fileID: 576193811}
   - component: {fileID: 576193810}
   - component: {fileID: 576193809}
+  - component: {fileID: 576193815}
   - component: {fileID: 576193808}
   m_Layer: 0
   m_Name: CannonTargetStatic
@@ -1106,14 +1269,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7c2afd84de55a4e977aac0ff58fb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHealthChange:
-    m_PersistentCalls:
-      m_Calls: []
+  attributeManager: {fileID: 576193815}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _health: 1500
-  _maxHealth: 1500
   _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
@@ -1250,6 +1409,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &576193815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576193807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 1500
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &624087229 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4943702288576193093, guid: e0ad8131cb14be74598eb24b637affa2,
@@ -1492,6 +1708,7 @@ GameObject:
   - component: {fileID: 1027119815}
   - component: {fileID: 1027119814}
   - component: {fileID: 1027119813}
+  - component: {fileID: 1027119819}
   - component: {fileID: 1027119812}
   m_Layer: 0
   m_Name: CannonTargetMoving
@@ -1512,14 +1729,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7c2afd84de55a4e977aac0ff58fb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHealthChange:
-    m_PersistentCalls:
-      m_Calls: []
+  attributeManager: {fileID: 1027119819}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _health: 1500
-  _maxHealth: 1500
   _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
@@ -1656,6 +1869,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1027119819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027119811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 1500
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1047518637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1940,7 @@ GameObject:
   - component: {fileID: 1047518641}
   - component: {fileID: 1047518640}
   - component: {fileID: 1047518639}
+  - component: {fileID: 1047518645}
   - component: {fileID: 1047518638}
   m_Layer: 0
   m_Name: ExplosiveTarget_2
@@ -1690,14 +1961,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7c2afd84de55a4e977aac0ff58fb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHealthChange:
-    m_PersistentCalls:
-      m_Calls: []
+  attributeManager: {fileID: 1047518645}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _health: 1500
-  _maxHealth: 1500
   _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
@@ -1834,6 +2101,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1047518645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047518637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 1500
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1176970780 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8835532759603762158, guid: e0ad8131cb14be74598eb24b637affa2,
@@ -1854,6 +2178,7 @@ GameObject:
   - component: {fileID: 1227813931}
   - component: {fileID: 1227813932}
   - component: {fileID: 1227813934}
+  - component: {fileID: 1227813935}
   - component: {fileID: 1227813933}
   m_Layer: 0
   m_Name: WaveTargetStatic
@@ -1989,14 +2314,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7c2afd84de55a4e977aac0ff58fb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onHealthChange:
-    m_PersistentCalls:
-      m_Calls: []
+  attributeManager: {fileID: 1227813935}
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _health: 1500
-  _maxHealth: 1500
   _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
@@ -2018,6 +2339,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barSpriteContainer: {fileID: 1326420673}
+--- !u!114 &1227813935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227813927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isScalabeByLevel: 1
+  _baseHealth: 1500
+  _baseMana: 10
+  _baseEnergy: 100
+  _initGold: 0
+  _exp: 0
+  _expMax: 1000
+  _level: 0
+  _levelMax: 20
+  health:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  mana:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  energy:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  exp:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  level:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
+  gold:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!4 &1257941821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4943702288576193093, guid: e0ad8131cb14be74598eb24b637affa2,
