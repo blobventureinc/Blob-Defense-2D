@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
 
-[RequireComponent( typeof(WalkAlongPath), typeof(HealthSystem) )]
+[RequireComponent( typeof(WalkAlongPath), typeof(HealthSystem), typeof(AttributeManager))]
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private new string name;
