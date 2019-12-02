@@ -5,16 +5,13 @@ using UnityEngine;
 public abstract class Projectile : MonoBehaviour
 {
     [Header("Projectile attributes")]
-    //Projectilespeed
     [SerializeField] protected float speed;
-    //Damage
     [SerializeField] protected Damage dmg;
-    //Target of the projectile
     protected GameObject _target;
+
     //Message methods
     public abstract void Start();
     public abstract void Update();
-
     //Setter for the target, always use this wehen instantiating a new Projectile
     public void shootAt(GameObject target)
     {
@@ -28,7 +25,6 @@ public abstract class Projectile : MonoBehaviour
     {
         enemy.GetComponent<HealthSystem>().ApplyDamage(damage);
     }
-
     protected void DestroyItself()
     {
         Destroy(gameObject);

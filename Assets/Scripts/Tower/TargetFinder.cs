@@ -14,7 +14,6 @@ public abstract class TargetFinder : MonoBehaviour
             return _targets;
         }
     }
-    // Start is called before the first frame update
     //Maybe will change to virtual
     public void Start()
     {
@@ -23,7 +22,7 @@ public abstract class TargetFinder : MonoBehaviour
     //Do not make this one virtual, it would look good, but there should never be an instance of the class: TargetFinder
     //only specific subclasses like Closest and TimeDependant. Right now we specify through the name exactly what the class does!
     public abstract void Update();
-    //Collision
+
     protected void OnTriggerEnter2D(Collider2D other)
     {
         _targets.Add(other.gameObject);

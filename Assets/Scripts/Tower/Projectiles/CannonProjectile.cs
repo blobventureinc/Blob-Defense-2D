@@ -23,6 +23,6 @@ public class CannonProjectile : Projectile
     protected override void impact(GameObject enemy)
     {
         damage(enemy, dmg);
-        Destroy(gameObject);
+        DestroyItself();
     }
 }

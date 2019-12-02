@@ -5,15 +5,12 @@ using UnityEngine;
 public class GustProjectile : Projectile
 {
     [Header("Gust Projectile attributes")]
-    private float life_time;
+    private float life_time = 0;
     [SerializeField] private float attacks_per_sec = 0;
-    [SerializeField] private float range_radius;
-
+    [SerializeField] private float range_radius = 0;
     private Vector3 start_position;
-    private TowerShooting tower_shooting;
-    private TargetFinder targetfinder;
-
-    //Used for attacking
+    private TowerShooting tower_shooting = null;
+    private TargetFinder targetfinder = null;
     private float time_since_last_shot_ = 1000;
 
     public override void Start()
@@ -22,7 +19,6 @@ public class GustProjectile : Projectile
         start_position = new Vector3(t.position.x, t.position.y, t.position.z);
         targetfinder = t.parent.GetComponent<TargetFinder>() as TargetFinder;
         tower_shooting = t.parent.GetComponent<TowerShooting>() as TowerShooting;
-
 
         life_time = 1 / tower_shooting.attacks_per_sec;
     }
@@ -55,14 +51,12 @@ public class GustProjectile : Projectile
         {
             transform.position = Vector3.MoveTowards(transform.position, start_position, step);
             if (life_time <= 0)
-                Destroy(gameObject);
+                DestroyItself();
         }
         time_since_last_shot_ += step;
         life_time -= step;
     }
-    protected override void OnTriggerEnter2D(Collider2D other)
-    {
-    }
+    protected override void OnTriggerEnter2D(Collider2D other) { }
     protected override void impact(GameObject enemy)
     {
         if (time_since_last_shot_ > 1 / attacks_per_sec)

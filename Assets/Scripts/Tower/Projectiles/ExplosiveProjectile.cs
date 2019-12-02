@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CircleCollider2D))]
 public class ExplosiveProjectile : Projectile
 {
     [Header("Explosive Projectile attributes")]
     [SerializeField] private float max_radius = 0;
     [SerializeField] private Damage explosion_damage = null;
-
-    private bool exploded;
-    private CircleCollider2D explosionCollider;
+    private bool exploded = false;
+    [SerializeField] private CircleCollider2D explosionCollider = null;
 
     public override void Start()
     {
-        exploded = false;
-        explosionCollider = GetComponent<CircleCollider2D>();
         _target.GetComponent<HealthSystem>().onDeath.AddListener(DestroyItself);
     }
+
     public override void Update()
     {
         if (!exploded)
@@ -33,12 +32,13 @@ public class ExplosiveProjectile : Projectile
             explosionCollider.radius += step;
             if (explosionCollider.radius >= max_radius)
             {
-                Destroy(gameObject);
+                DestroyItself();
             }
         }
         if (_target == null)
-            Destroy(gameObject);
+            DestroyItself();
     }
+
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         impact(other.gameObject);

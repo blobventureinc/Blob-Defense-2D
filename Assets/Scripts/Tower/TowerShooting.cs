@@ -2,21 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(TargetFinder))]
 public class TowerShooting : MonoBehaviour
 {
-    //Attacks per second
     public float attacks_per_sec = 0;
     //Projectile prefab
     [SerializeField] private GameObject projectile = null;
-    //The targetfinder
-    private TargetFinder targetfinder;
-    //Used to shoot
+    [SerializeField] private TargetFinder targetfinder = null;
     private float time_since_last_shot_ = 100;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        targetfinder = GetComponent<TargetFinder>();
-    }
+    void Start() { }
     // Update is called once per frame
     void Update()
     {
