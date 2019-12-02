@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 920499496550540098}
   - component: {fileID: 920499496550540101}
-  - component: {fileID: 920499496550540100}
   - component: {fileID: 5099955210051354889}
+  - component: {fileID: 920499496550540100}
   m_Layer: 0
   m_Name: ExplosiveProjectile
   m_TagString: Untagged
@@ -82,22 +82,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &920499496550540100
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 920499496550540103}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.003
 --- !u!114 &5099955210051354889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +98,20 @@ MonoBehaviour:
   dmg: {fileID: 11400000, guid: a17a37ebb4c7cac47ad9621165198191, type: 2}
   max_radius: 0.5
   explosion_damage: {fileID: 11400000, guid: 672f66788abf1d64fadf8703e0577893, type: 2}
+  explosionCollider: {fileID: 920499496550540100}
+--- !u!58 &920499496550540100
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920499496550540103}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.003

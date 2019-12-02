@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8483851487308851866}
   - component: {fileID: 7295932411051273053}
   - component: {fileID: 4745443779060179746}
-  - component: {fileID: 7458258200931939199}
   m_Layer: 0
   m_Name: GustProjectile
   m_TagString: Untagged
@@ -96,22 +95,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   dmg: {fileID: 11400000, guid: ca78831527b27bc4db2ec25a6b0ca8cb, type: 2}
-  life_time: 30
   attacks_per_sec: 6
   range_radius: 1
---- !u!58 &7458258200931939199
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4279897782477152410}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
