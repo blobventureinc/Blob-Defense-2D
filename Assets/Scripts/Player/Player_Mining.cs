@@ -9,6 +9,7 @@ public class Player_Mining : MonoBehaviour
     Resource resourceScript;
     [SerializeField] private Tile_Targeting targetingScript = null;
     [SerializeField] private Player_Movement movementScript = null;
+    [SerializeField] private AttributeManager attributeScript = null;
 
     void Start() {
         isMining = false;
@@ -24,8 +25,8 @@ public class Player_Mining : MonoBehaviour
             Mine();
             movementScript.mouseMovementDone = false;
         }
-        if (Input.GetKeyDown(KeyCode.Return) && !isMining) {
-            StartCoroutine(MiningCoroutine());
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            Mine();
         }
     }
 
@@ -36,8 +37,9 @@ public class Player_Mining : MonoBehaviour
     }
 
     IEnumerator MiningCoroutine() {
-        Vector3Int target = targetingScript.gettargetLoc();
-        Collider[] collider = Physics.OverlapSphere(target, 1); //look for colliders on target tile
+        Vector3 target = targetingScript.gettargetLoc();
+        target.x += (float)0.5; target.y += (float)0.5; 
+        Collider[] collider = Physics.OverlapSphere(target, (float)0.4); //look for colliders on target tile
         if (collider.Length == 1) { //if collider located
             GameObject obj = collider[0].gameObject; //get their gameobject
             resourceScript = obj.GetComponent<Resource>(); //get their script
@@ -45,7 +47,7 @@ public class Player_Mining : MonoBehaviour
             isMining = true;
             while (obj != null && isMining) {
                 if(miningTimer == resourceScript.duration) {
-                    resourceScript.Mine();
+                    attributeScript.gold.Increase(resourceScript.Mine());
                     obj = null;
                 } else {
                     yield return new WaitForSeconds(1);

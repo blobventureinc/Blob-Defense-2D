@@ -95,6 +95,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 
+  value: 0
+  duration: 0
 --- !u!135 &3209539772088974016
 SphereCollider:
   m_ObjectHideFlags: 0

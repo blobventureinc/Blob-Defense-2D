@@ -157,3 +157,4 @@ MonoBehaviour:
   miningTimer: 0
   targetingScript: {fileID: 6132356664680684947}
   movementScript: {fileID: 6132356664680684973}
+  attributeScript: {fileID: 0}
