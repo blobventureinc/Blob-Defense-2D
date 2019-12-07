@@ -14,8 +14,6 @@ public class RaycastBuildingPlacement : MonoBehaviour {
  
     // Update is called once per frame
     void Update () {
- 
- 
         if (Input.GetMouseButtonDown(0)) {
             RaycastHit hit;
             Ray ray = new Ray ( transform.position, transform.forward);
