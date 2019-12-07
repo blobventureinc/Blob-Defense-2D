@@ -36,7 +36,6 @@ public class Tile_Targeting : MonoBehaviour {
         }
     }
     public void MouseTargetTile(Vector3 clickPos) {
-
         targetLoc = new Vector3Int((int)clickPos.x, (int)clickPos.y, 0);
         if (clickPos.x < 0) { targetLoc.x--; }
         if (clickPos.y < 0) { targetLoc.y--; }
