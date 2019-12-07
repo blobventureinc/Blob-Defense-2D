@@ -8,6 +8,7 @@ public class Player_Mining : MonoBehaviour
     public int miningTimer; //Increments to time mining process
     Resource resourceScript;
     [SerializeField] private Tile_Targeting targetingScript = null;
+    [SerializeField] private Player_Movement movementScript = null;
 
     void Start() {
         isMining = false;
@@ -16,6 +17,13 @@ public class Player_Mining : MonoBehaviour
     }
 
     void Update() {
+        if(movementScript.isMoving) {
+            isMining = false;
+        }
+        if(movementScript.mouseMovementDone) {
+            Mine();
+            movementScript.mouseMovementDone = false;
+        }
         if (Input.GetKeyDown(KeyCode.Return) && !isMining) {
             StartCoroutine(MiningCoroutine());
         }

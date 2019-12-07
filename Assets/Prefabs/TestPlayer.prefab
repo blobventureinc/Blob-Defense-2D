@@ -122,7 +122,8 @@ MonoBehaviour:
   rb: {fileID: 6132356664680684972}
   moveSpeedMax: 3
   isMovingByKey: 0
-  isMining: 0
+  isMoving: 0
+  mouseMovementDone: 0
   lastVelocity: {x: 0, y: 0}
 --- !u!114 &6132356664680684947
 MonoBehaviour:
@@ -153,4 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isMining: 0
+  miningTimer: 0
   targetingScript: {fileID: 6132356664680684947}
+  movementScript: {fileID: 6132356664680684973}

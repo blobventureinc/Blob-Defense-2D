@@ -6,13 +6,12 @@ using UnityEngine.Tilemaps;
 public class Player_Movement : MonoBehaviour {
     [SerializeField] private Tilemap tilemap = null;
     [SerializeField] private Tile_Targeting targetingScript = null;
-    [SerializeField] private Player_Mining miningScript = null;
     [SerializeField] private Rigidbody2D rb = null;
     private TileBase clickedTile;
     public float moveSpeedMax = 3f;
     public bool isMovingByKey;
     public bool isMoving;
-    bool mouseMovementDone; //to not repeatedly mine and target, is only false while MOVING by mouse, false when still by mouse
+    public bool mouseMovementDone; //to not repeatedly mine and target, is only false while MOVING by mouse, true when still by mouse
     private Vector3 clickPos;
     private Vector2 input;
     private Vector2 velocity;
@@ -46,7 +45,6 @@ public class Player_Movement : MonoBehaviour {
 
     void FixedUpdate() {
         if (velocity.x != 0 || velocity.y != 0) {
-            miningScript.isMining = false;
             isMoving = true;
             moveTo = rb.position + velocity * Time.fixedDeltaTime;
             rb.MovePosition(moveTo);
@@ -69,11 +67,13 @@ public class Player_Movement : MonoBehaviour {
                     } else { //Stop if close to target
                         velocity = new Vector2(0, 0);
                         targetingScript.MouseTargetTile(clickPos);
-                        miningScript.Mine();
                         mouseMovementDone = true;
                     }
                 }
-            } else { velocity = new Vector2(0, 0); } //when very close by, stop
+            } else { //when very close by, stop
+                velocity = new Vector2(0, 0);
+                mouseMovementDone = true;
+            } 
         }
     }
 
