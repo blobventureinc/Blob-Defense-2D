@@ -31,7 +31,7 @@ public class Player_Movement : MonoBehaviour {
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetMouseButtonDown(1) && !IsMouseOverUI()) {
+        if (Input.GetMouseButtonDown(0) && !IsMouseOverUI()) {
             isMovingByKey = false;
             clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             clickedTile = tilemap.GetTile(new Vector3Int((int)clickPos.x, (int)clickPos.y, 0));

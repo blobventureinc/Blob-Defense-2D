@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 public class Tile_Targeting : MonoBehaviour {
     public Tile tileHighlighter; //Tile used to mark targeted Tile
     [SerializeField] private Tilemap tilemap;
-    public Tile targetedTile; //saves tile "under" tileHighlighter, is the targeted tile
+    private Tile targetedTile; //saves tile "under" tileHighlighter, is the targeted tile
     private Vector3Int playerPos;
     private Vector3Int targetLoc; //Coordinates to be targeted
     private Vector3Int targetLocOld; //Coordinates of last targeted Tile, to restore it if highlighter moves

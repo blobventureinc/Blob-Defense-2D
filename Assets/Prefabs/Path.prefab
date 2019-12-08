@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4001309570449372224
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4001309570449372226}
+  - component: {fileID: 4001309570449372225}
+  - component: {fileID: 4001309570449372227}
+  - component: {fileID: 4001309570449372236}
+  m_Layer: 0
+  m_Name: Path
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4001309570449372226
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001309570449372224}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4001309570449372225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001309570449372224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -2.657053, y: 0.2570672, z: 0}
+      - {x: -1.4801792, y: -0.31828249, z: 0}
+      - {x: -0.3033055, y: -0.8936322, z: 0}
+      - {x: 0.6037873, y: -0.4676823, z: 0}
+      - {x: 1.1832845, y: -0.19556373, z: 0}
+      - {x: 1.8652014, y: 0.8588397, z: 0}
+      - {x: 1.5779823, y: 1.431003, z: 0}
+      - {x: 1.1818444, y: 2.2201416, z: 0}
+      - {x: -0.44320452, y: 1.8671559, z: 0}
+      - {x: -1.3247201, y: 1.9181004, z: 0}
+      - {x: -1.8523761, y: 1.9485946, z: 0}
+      - {x: -2.5950224, y: 2.028688, z: 0}
+      - {x: -3.0842347, y: 1.8286334, z: 0}
+      - {x: -3.5085478, y: 1.6551182, z: 0}
+      - {x: -4.0379415, y: 1.2321035, z: 0}
+      - {x: -4.227422, y: 0.81467587, z: 0}
+      - {x: -4.403697, y: 0.42634204, z: 0}
+      - {x: -4.451376, y: -0.23797023, z: 0}
+      - {x: -4.237363, y: -0.60685295, z: 0}
+      - {x: -3.9076858, y: -1.1751008, z: 0}
+      - {x: -2.9655113, y: -1.5188661, z: 0}
+      - {x: -2.3287368, y: -1.6804552, z: 0}
+      - {x: -0.63464, y: -2.1103525, z: 0}
+      - {x: 2.0548453, y: -2.579051, z: 0}
+      - {x: 3.4965482, y: -1.5909884, z: 0}
+      - {x: 4.0670986, y: -1.199965, z: 0}
+      - {x: 4.471587, y: -0.13657522, z: 0}
+      - {x: 4.3613944, y: 0.54627526, z: 0}
+      - {x: 4.274099, y: 1.0872365, z: 0}
+      - {x: 3.6515756, y: 1.6615641, z: 0}
+      - {x: 3.1784444, y: 1.9379816, z: 0}
+      - {x: 2.8532214, y: 2.127987, z: 0}
+      - {x: 2.3995056, y: 2.1522734, z: 0}
+      - {x: 1.9457902, y: 2.17656, z: 0}
+      isClosed: 0
+      space: 1
+      controlMode: 3
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 2, y: 0.14433756, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 1
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 0
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 0
+    showVertexPathDisplayOptions: 1
+    showVertexPathOptions: 1
+    showNormals: 0
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
+--- !u!114 &4001309570449372227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001309570449372224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa64dd059d135b00bf8e315c3315e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - enemyWaves:
+    - enemyPrefab: {fileID: 5327298809838380058, guid: a8e01371b1dad564aab43be612d7ae3c,
+        type: 3}
+      ammount: 10
+      interval: 2
+      startTime: 0
+    - enemyPrefab: {fileID: 5327298809838380058, guid: a8e01371b1dad564aab43be612d7ae3c,
+        type: 3}
+      ammount: 20
+      interval: 0.5
+      startTime: 5
+  curentWave: 0
+--- !u!114 &4001309570449372236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4001309570449372224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f927b9c295017dfd1bc70b8d7323d8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

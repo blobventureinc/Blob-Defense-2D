@@ -10,7 +10,7 @@ public class HealthBar : MonoBehaviour
 
     public void UpdateHealthBar() {
         barSpriteContainer.localScale = new Vector3(attributeManager.health.GetValuePercent(), 1);
-        Debug.Log("Inside UpdateHealthBar() " + attributeManager.health.GetValuePercent());
+        //Debug.Log("Inside UpdateHealthBar() " + attributeManager.health.GetValuePercent());
     }
 
     public void Init()

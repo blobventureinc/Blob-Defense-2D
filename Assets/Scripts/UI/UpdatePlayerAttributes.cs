@@ -36,6 +36,7 @@ public class UpdatePlayerAttributes : MonoBehaviour
         UpdateEnergyBar();
         UpdateExpBar();
         UpdateLevel();
+        UpdateGold();
     }
 
     public void UpdateLivesBar() {

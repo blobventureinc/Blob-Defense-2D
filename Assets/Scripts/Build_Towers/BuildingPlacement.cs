@@ -11,13 +11,14 @@ public class BuildingPlacement : MonoBehaviour {
     [SerializeField] private Camera camera;
     private bool hasPlaced;
     Dictionary<Vector3Int, bool> objects = new Dictionary<Vector3Int, bool>();
-    private Player_Movement playerMovement;
+    [SerializeField] private Player_Movement playerMovement;
 
+    [SerializeField] private AttributeManager att;
+    [SerializeField] private int cannonTowerGold;
 
     // Use this for initialization
     void Start () {
         Cursor.visible = true;
-        playerMovement = GetComponent<Player_Movement>();
     }
  
     // Update is called once per frame
@@ -32,8 +33,17 @@ public class BuildingPlacement : MonoBehaviour {
                 Debug.Log(currentBuilding.position);
                 hasPlaced = true;
                 Vector3Int coordinate = currentMap.WorldToCell(new Vector3Int(Mathf.RoundToInt(p.x), Mathf.RoundToInt(p.y), 0));
-                TryInstantiateGameObjectAtPosition(coordinate);
-                playerMovement.clickedTile = TowerPos;
+                   Debug.Log(currentMap.GetTile(coordinate));
+                if (att.gold.value >= cannonTowerGold) {
+                    if (currentMap.GetTile(coordinate) != null) {
+                        Destroy(currentBuilding.gameObject);
+                    } else {
+                        att.gold.Decrease(cannonTowerGold);
+                        currentMap.SetTile(coordinate, TowerPos);
+                        currentMap.RefreshTile(coordinate);
+                    }
+                }
+                //playerMovement.clickedTile = TowerPos;
             }
         }
     }

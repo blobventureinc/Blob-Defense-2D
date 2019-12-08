@@ -14,7 +14,7 @@ public class DebugDamage : MonoBehaviour
     {
         enemyObject = GameObject.Find("Enemy");
         healthSystem = enemyObject.GetComponent<HealthSystem>();
-        Debug.Log("Click 'd' to do Damage");
+        //Debug.Log("Click 'd' to do Damage");
     }
 
     // Update is called once per frame

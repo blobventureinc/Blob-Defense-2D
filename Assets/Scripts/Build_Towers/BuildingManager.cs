@@ -6,14 +6,6 @@ public class BuildingManager : MonoBehaviour {
     [SerializeField] private GameObject[] buildings;
     private BuildingPlacement buildingPlacement;
     
- 
-    // Use this for initialization
-    void Start () {
- 
-        buildingPlacement = GetComponent<BuildingPlacement>();
- 
-    }
- 
     // Update is called once per frame
     void Update () {
  
