@@ -5,12 +5,25 @@ using UnityEngine.Tilemaps;
 
 public class Tile_Targeting : MonoBehaviour {
     public Tile tileHighlighter; //Tile used to mark targeted Tile
+<<<<<<< HEAD:Assets/Scripts/Tile_Targeting.cs
     [SerializeField] private Tilemap tilemap;
     private Tile targetedTile; //saves tile "under" tileHighlighter, is the targeted tile
+=======
+    [SerializeField] private Tilemap tilemap = null;
+    public Tile targetedTile; //saves tile "under" tileHighlighter, is the targeted tile
+>>>>>>> fc7b2c1a7303e1e1b0da5519a353d5c36c9238bd:Assets/Scripts/Player/Tile_Targeting.cs
     private Vector3Int playerPos;
     private Vector3Int targetLoc; //Coordinates to be targeted
     private Vector3Int targetLocOld; //Coordinates of last targeted Tile, to restore it if highlighter moves
-    [SerializeField] private Player_Movement movementScript;
+    [SerializeField] private Player_Movement movementScript = null;
+
+    private void Update() {
+        
+    }
+    void Start() {
+      
+        
+    }
 
     private void FixedUpdate() {
         if (movementScript.isMovingByKey) {
@@ -39,5 +52,8 @@ public class Tile_Targeting : MonoBehaviour {
             tilemap.SetTile(targetLoc, tileHighlighter); // set the new tile           
             targetLocOld = targetLoc; // save the new position for restoring next frame
         }
+    }
+    public Vector3Int gettargetLoc() {
+        return targetLoc;
     }
 }
