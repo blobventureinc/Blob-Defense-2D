@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3f568fc9162734d92a4d02f92f015f, type: 3}
   m_Name: CannonDamage
   m_EditorClassIdentifier: 
-  _physicalDmg: 100
+  _physicalDmg: 10
   _poisonDmg: 0
   _fireDmg: 0
   _waterDmg: 0

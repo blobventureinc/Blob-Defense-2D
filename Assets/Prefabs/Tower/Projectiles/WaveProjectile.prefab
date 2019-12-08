@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9878af0c1e200044b91cea6bc60f13f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   dmg: {fileID: 11400000, guid: 2a32dc8fdbbb90549a425d2c4fe3c6d6, type: 2}
   max_radius: 1
   waveCollider: {fileID: 8120860617268611578}
