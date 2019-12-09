@@ -5,7 +5,9 @@ public class BuildingManager : MonoBehaviour {
 
     [SerializeField] private GameObject[] buildings;
     private BuildingPlacement buildingPlacement;
-    
+
+    public int cannonTowerGold;
+
     // Update is called once per frame
     void Update () {
  
@@ -28,6 +30,8 @@ public class BuildingManager : MonoBehaviour {
         //    }
         //}
         buildingPlacement = GetComponent<BuildingPlacement>();
-        buildingPlacement.SetItem(buildings[0]);
+        if (gameObject.GetComponent<AttributeManager>().gold.value >= cannonTowerGold) {
+            buildingPlacement.SetItem(buildings[0]);
+        }
     }
 }

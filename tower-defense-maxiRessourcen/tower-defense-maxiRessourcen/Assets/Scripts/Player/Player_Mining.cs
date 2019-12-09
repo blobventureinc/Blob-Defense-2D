@@ -1,0 +1,63 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Player_Mining : MonoBehaviour
+{
+    public bool isMining; //Toggled off by movement to cancel mining
+    public int miningTimer; //Increments to time mining process
+    Resource resourceScript;
+    [SerializeField] private Tile_Targeting targetingScript = null;
+    [SerializeField] private Player_Movement movementScript = null;
+    [SerializeField] private AttributeManager attributeScript = null;
+
+    void Start() {
+        isMining = false;
+        miningTimer = 0;
+        resourceScript = null;
+    }
+
+    void Update() {
+        if(movementScript.isMoving) {
+            isMining = false;
+        }
+        if(movementScript.mouseMovementDone) {
+            Mine();
+            movementScript.mouseMovementDone = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            Mine();
+        }
+    }
+
+    public void Mine() {
+        if(!isMining) {
+            StartCoroutine(MiningCoroutine());
+        }      
+    }
+
+    IEnumerator MiningCoroutine() {
+        Vector3 target = targetingScript.gettargetLoc();
+        target.x += (float)0.5; target.y += (float)0.5; 
+        Collider[] collider = Physics.OverlapSphere(target, (float)0.4); //look for colliders on target tile
+        if (collider.Length == 1) { //if collider located
+            GameObject obj = collider[0].gameObject; //get their gameobject
+            resourceScript = obj.GetComponent<Resource>(); //get their script
+            Debug.Log("FOUND: " + resourceScript.type + ", VALUE: " + resourceScript.value);
+            isMining = true;
+            while (obj != null && isMining) {
+                if(miningTimer == resourceScript.duration) {
+                    attributeScript.gold.Increase(resourceScript.Mine());
+                    obj = null;
+                } else {
+                    yield return new WaitForSeconds(1);
+                    miningTimer++;
+                    Debug.Log("INCREMENTING MINING TIMER");
+                }    
+            }
+            Debug.Log("MINING DONE/CANCELED");
+            isMining = false;
+            miningTimer = 0;
+        }   
+    }
+}

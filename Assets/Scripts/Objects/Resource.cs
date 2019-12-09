@@ -2,28 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Resource : MonoBehaviour
-{
+public class Resource : MonoBehaviour {
     public string type;
-    public int value;
+    public int goldValue;
+    public int energyDrainValue;
     public int duration;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         type = "stone";
-        value = 3;
-        duration = 3;
+        // value = 3;
+        // duration = 3;
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() { 
     }
 
-    public int Mine() {
+    public void Destroy() {
         Object.Destroy(gameObject);
-        return value;
     }
 
     private void OnDestroy()

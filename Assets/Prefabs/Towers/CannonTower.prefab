@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1617321061083199272}
+  - component: {fileID: 6292750948382036602}
   m_Layer: 0
   m_Name: CannonTower
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,6 +32,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &6292750948382036602
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5986351785546680452}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.17335916, y: 0.21957509}
+  serializedVersion: 2
+  m_Radius: 0.61296564
 --- !u!1 &7893726393440663972
 GameObject:
   m_ObjectHideFlags: 0
@@ -44,10 +61,10 @@ GameObject:
   - component: {fileID: 1060967352044205675}
   - component: {fileID: 5303844438517547499}
   - component: {fileID: 3759735696680177246}
-  - component: {fileID: 3294250872641463903}
   - component: {fileID: 7893726393440663979}
   - component: {fileID: 7893726393440663973}
   - component: {fileID: 7893726393440663978}
+  - component: {fileID: 6209565265207601360}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -156,22 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4779e50239e98f10b9ff8752275939db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &3294250872641463903
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7893726393440663972}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.01}
-  m_Size: {x: 0.29, y: 0.45}
-  m_Direction: 0
 --- !u!58 &7893726393440663979
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -216,3 +217,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86270934963e18408608b6bf9a5da97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &6209565265207601360
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893726393440663972}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0013792068, y: -0.017239273}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5, y: 0.5}
+    newSize: {x: 0.5, y: 0.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 1
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.23520577, y: 0.3579489}
+  m_EdgeRadius: 0
