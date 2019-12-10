@@ -20,7 +20,7 @@ public class GustProjectile : Projectile
         targetfinder = t.parent.GetComponent<TargetFinder>() as TargetFinder;
         tower_shooting = t.parent.GetComponent<TowerShooting>() as TowerShooting;
 
-        life_time = 1 / tower_shooting.attacks_per_sec;
+        life_time = 10 / tower_shooting.attacks_per_sec;
     }
     public override void Update()
     {

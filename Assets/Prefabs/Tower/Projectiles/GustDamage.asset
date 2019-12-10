@@ -16,7 +16,7 @@ MonoBehaviour:
   _poisonDmg: 0
   _fireDmg: 0
   _waterDmg: 0
-  _windDmg: 35
+  _windDmg: 5
   _earthDmg: 0
   _shadowDmg: 0
   _lightDmg: 0
