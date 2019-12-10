@@ -7,23 +7,18 @@ public class Resource : MonoBehaviour {
     public int goldValue;
     public int energyDrainValue;
     public int duration;
-    // Start is called before the first frame update
-    void Start() {
-        type = "stone";
-        // value = 3;
-        // duration = 3;
-    }
 
-    // Update is called once per frame
-    void Update() { 
-    }
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite[] spriteStates = new Sprite[3];
+    private int currentState = 0;
 
     public void Destroy() {
-        Object.Destroy(gameObject);
-    }
-
-    private void OnDestroy()
-    {
-        
+        Debug.Log(spriteStates.Length);
+        if (currentState <= spriteStates.Length-1) {
+            spriteRenderer.sprite = spriteStates[currentState];
+            currentState++;
+        } else {
+            Object.Destroy(gameObject);
+        }
     }
 }

@@ -17,6 +17,8 @@ public class BuildingPlacement : MonoBehaviour {
     [SerializeField] private AttributeManager att;
     [SerializeField] private Tile_Targeting targetingScript;
 
+    [SerializeField] private IngameConsole ingameConsoleUIElement;
+
     private bool wasDecreased;
 
     // Use this for initialization
@@ -40,6 +42,7 @@ public class BuildingPlacement : MonoBehaviour {
             currentBuilding.position = (new Vector3(0, 0, 0));
             Vector3 m = Input.mousePosition;
             m = new Vector3(m.x, m.y, 0);
+            // Second Left-Click Mouse Button Down After Clicking on Button
             if (Input.GetMouseButtonDown(0)) {
                 currentBuilding.GetComponentInChildren<SpriteRenderer>().enabled = false;
                 Vector3 clickPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -72,39 +75,20 @@ public class BuildingPlacement : MonoBehaviour {
         }
         if (currentBuilding != null) {
             if (hasPlaced && currentBuilding.GetComponentInChildren<SpriteRenderer>().enabled && !wasDecreased) {
-                att.gold.Decrease(buildingManager.cannonTowerGold);
+                ingameConsoleUIElement.Add("Decreasing Gold by " + currentBuilding.GetComponentInChildren<Tower>().towerCost);
+                att.gold.Decrease(currentBuilding.GetComponentInChildren<Tower>().towerCost);
                 wasDecreased = true;
+                ingameConsoleUIElement.Add("Tower has Placed");
             }
+        } else if (hasPlaced) {
+            hasPlaced = false;
+            currentBuilding = null;
+            ingameConsoleUIElement.Add("Tower Placement aborted!");
         }
     }
  
     public void SetItem(GameObject b){ 
         hasPlaced = false;
         currentBuilding = ((GameObject) Instantiate (b)).transform;
-    }
-
-    public bool IsMouseOverUI() {
-        return EventSystem.current.IsPointerOverGameObject();
-    }
-
-    //check weather there is an object on this position
-    void TryInstantiateGameObjectAtPosition(Vector3Int coordinate) {
-        if (!ObjectOnPosition(coordinate)) {
-            currentMap.SetTile(coordinate, TowerPos);
-            currentMap.RefreshTile(coordinate);
-            objects.Add(coordinate,  hasPlaced);
-        }
-        else {
-            //remove gameobject frome scene... somehow           
-        }
-    }
-    //check the dictionary for key/value pair of Vector3Int and bool
-    bool ObjectOnPosition(Vector3Int pos) {
-        if (objects.ContainsKey(pos)) {
-            return true;
-        }
-        else {
-            return false;
-        }
     }
 }

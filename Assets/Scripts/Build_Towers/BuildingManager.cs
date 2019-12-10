@@ -1,37 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
  
+[RequireComponent(typeof(BuildingPlacement))]
 public class BuildingManager : MonoBehaviour {
 
-    [SerializeField] private GameObject[] buildings;
+    [SerializeField] private IngameConsole ingameConsoleUIElement;
+    [SerializeField] private GameObject[] buildings = new GameObject[2];
+    private Tower[] towers;
     private BuildingPlacement buildingPlacement;
 
-    public int cannonTowerGold;
-
-    // Update is called once per frame
-    void Update () {
- 
+    public void Start() {
+        // Get all TowerScripts from Tower GameObjects
+        towers = new Tower[buildings.Length];
+        for (int i=0; i<buildings.Length; i++) {
+            towers[i] = buildings[i].GetComponentInChildren<Tower>();
+        }
     }
 
-    //void OnGUI() {
-
-
-    //    for (int i = 0; i < buildings.Length; i++) {
-    //        if (GUI.Button(new Rect(Screen.width / 20, Screen.height / 15 + Screen.height / 12 * i, 100, 30), buildings[i].name)) {
-    //            buildingPlacement.SetItem(buildings[i]);
-    //        }
-    //    }
-    //}
-
-    public void Build() {
-        //for (int i = 0; i < buildings.Length; i++) {
-        //    if (GUI.Button(new Rect(Screen.width / 20, Screen.height / 15 + Screen.height / 12 * i, 100, 30), buildings[i].name)) {
-        //        buildingPlacement.SetItem(buildings[i]);
-        //    }
-        //}
+    public void Build(int tower) {
         buildingPlacement = GetComponent<BuildingPlacement>();
-        if (gameObject.GetComponent<AttributeManager>().gold.value >= cannonTowerGold) {
-            buildingPlacement.SetItem(buildings[0]);
+        Debug.Log(towers[0]);
+        if (gameObject.GetComponent<AttributeManager>().gold.value >= towers[tower].towerCost) {
+            ingameConsoleUIElement.Add("Trying to Build Tower: " + towers[tower].transform.parent.name);
+            buildingPlacement.SetItem(buildings[tower]);
+        } else {
+            ingameConsoleUIElement.Add("Not Enough Gold To Build Tower");
         }
     }
 }
