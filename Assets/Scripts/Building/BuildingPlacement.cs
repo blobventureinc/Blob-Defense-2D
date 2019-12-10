@@ -16,7 +16,7 @@ public class BuildingPlacement : MonoBehaviour {
     [SerializeField] private BuildingManager buildingManager;
     [SerializeField] private AttributeManager att;
     [SerializeField] private Tile_Targeting targetingScript;
-
+    [SerializeField] private TilemapRenderer tilemapRenderer;
     [SerializeField] private IngameConsole ingameConsoleUIElement;
 
     private bool wasDecreased;
@@ -49,10 +49,13 @@ public class BuildingPlacement : MonoBehaviour {
                 Vector3 target = targetingScript.gettargetLoc();
                 target.x += (float)0.5; target.y += (float)0.5;
                 Vector2 point = new Vector2(target.x, target.y);
-                Collider2D collider = Physics2D.OverlapCircle(clickPos, (float)0.5);
-                Debug.Log(collider.gameObject.name);
-                if (!(collider.gameObject.name == "Script")) {
-                    Destroy(currentBuilding.gameObject);
+                Physics2D.alwaysShowColliders = true;
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(clickPos, (float)0.01);
+                for (int i=0; i<colliders.Length;i++) {
+                    if (colliders[i].gameObject.name == "Tilemap_noPlacement" || colliders[i].gameObject.tag == "Resource") {
+                        Destroy(currentBuilding.gameObject);
+                        tilemapRenderer.enabled = false;
+                    }
                 }
                 playerMovement.clickPos.z = 0;
                 playerMovement.MoveTo(clickPos);
@@ -65,6 +68,7 @@ public class BuildingPlacement : MonoBehaviour {
                 Debug.Log(currentMap.GetTile(coordinate));
                 if (currentMap.GetTile(coordinate) != null) {
                     Destroy(currentBuilding.gameObject);
+                    tilemapRenderer.enabled = false;
                 } else {
                     hasPlaced = true;
                     //currentMap.SetTile(coordinate, TowerPos);
@@ -79,11 +83,13 @@ public class BuildingPlacement : MonoBehaviour {
                 att.gold.Decrease(currentBuilding.GetComponentInChildren<Tower>().towerCost);
                 wasDecreased = true;
                 ingameConsoleUIElement.Add("Tower has Placed");
+                tilemapRenderer.enabled = false;
             }
         } else if (hasPlaced) {
             hasPlaced = false;
             currentBuilding = null;
             ingameConsoleUIElement.Add("Tower Placement aborted!");
+            tilemapRenderer.enabled = false;
         }
     }
  

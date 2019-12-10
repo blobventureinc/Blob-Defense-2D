@@ -9,6 +9,7 @@ TagManager:
   - Castle
   - Stone
   - Tree
+  - Resource
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Tilemaps;
  
 [RequireComponent(typeof(BuildingPlacement))]
 public class BuildingManager : MonoBehaviour {
@@ -8,6 +9,7 @@ public class BuildingManager : MonoBehaviour {
     [SerializeField] private GameObject[] buildings = new GameObject[2];
     private Tower[] towers;
     private BuildingPlacement buildingPlacement;
+    [SerializeField] private TilemapRenderer tilemapRenderer;
 
     public void Start() {
         // Get all TowerScripts from Tower GameObjects
@@ -18,6 +20,7 @@ public class BuildingManager : MonoBehaviour {
     }
 
     public void Build(int tower) {
+        tilemapRenderer.enabled = true;
         buildingPlacement = GetComponent<BuildingPlacement>();
         Debug.Log(towers[0]);
         if (gameObject.GetComponent<AttributeManager>().gold.value >= towers[tower].towerCost) {

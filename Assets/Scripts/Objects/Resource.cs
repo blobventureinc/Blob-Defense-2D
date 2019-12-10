@@ -13,8 +13,12 @@ public class Resource : MonoBehaviour {
     private int currentState = 0;
 
     public void Destroy() {
-        GetComponent<Animator>().Play("Go", 0, 0);
-        GetComponent<ParticleSystem>().Play();
+        if (GetComponent<Animator>() != null) {
+            GetComponent<Animator>().Play("Go", 0, 0);
+        }
+        if (GetComponent<ParticleSystem>() != null) {
+            GetComponent<ParticleSystem>().Play();
+        }
         Debug.Log(spriteStates.Length);
         if (currentState <= spriteStates.Length-1) {
             spriteRenderer.sprite = spriteStates[currentState];
