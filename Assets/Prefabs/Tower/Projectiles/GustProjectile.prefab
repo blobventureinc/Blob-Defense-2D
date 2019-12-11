@@ -95,9 +95,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698f24b28460ce543a94b54636a341a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  dmg: {fileID: 11400000, guid: ca78831527b27bc4db2ec25a6b0ca8cb, type: 2}
-  attacks_per_sec: 1
+  speed: 3
+  dmg:
+    _physicalDmg: 0
+    _poisonDmg: 5
+    _fireDmg: 0
+    _waterDmg: 0
+    _windDmg: 0
+    _earthDmg: 0
+    _shadowDmg: 0
+    _lightDmg: 0
+  attacks_per_sec: 4
   range_radius: 4
 --- !u!95 &1367952621550685177
 Animator:

@@ -95,9 +95,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  dmg: {fileID: 11400000, guid: a17a37ebb4c7cac47ad9621165198191, type: 2}
+  dmg:
+    _physicalDmg: 0
+    _poisonDmg: 0
+    _fireDmg: 0
+    _waterDmg: 0
+    _windDmg: 0
+    _earthDmg: 0
+    _shadowDmg: 0
+    _lightDmg: 0
   max_radius: 100
-  explosion_damage: {fileID: 11400000, guid: 672f66788abf1d64fadf8703e0577893, type: 2}
+  explosion_damage:
+    _physicalDmg: 0
+    _poisonDmg: 0
+    _fireDmg: 30
+    _waterDmg: 0
+    _windDmg: 0
+    _earthDmg: 0
+    _shadowDmg: 0
+    _lightDmg: 0
   explosionCollider: {fileID: 920499496550540100}
 --- !u!58 &920499496550540100
 CircleCollider2D:

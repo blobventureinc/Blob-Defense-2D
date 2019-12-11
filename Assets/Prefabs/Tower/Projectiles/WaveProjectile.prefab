@@ -95,7 +95,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  dmg: {fileID: 11400000, guid: 2a32dc8fdbbb90549a425d2c4fe3c6d6, type: 2}
+  dmg:
+    _physicalDmg: 0
+    _poisonDmg: 0
+    _fireDmg: 0
+    _waterDmg: 20
+    _windDmg: 0
+    _earthDmg: 0
+    _shadowDmg: 0
+    _lightDmg: 0
   max_radius: 1
   waveCollider: {fileID: 8120860617268611578}
 --- !u!58 &8120860617268611578

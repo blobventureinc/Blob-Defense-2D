@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Damage", menuName = "Damage")]
-public class Damage : ScriptableObject
+[System.Serializable]
+public class Damage
 {
     public int _physicalDmg;
     public int _poisonDmg;
