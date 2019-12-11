@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea39b20489a56a41a7902584d4821bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks_per_sec: 2
+  attacks_per_sec: 0.033333335
   projectile: {fileID: 4279897782477152410, guid: 439fb981fba41df4ca0d88ef32c2784a,
     type: 3}
   targetfinder: {fileID: 8997217388631991723}
