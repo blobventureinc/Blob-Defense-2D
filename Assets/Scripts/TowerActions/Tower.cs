@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
+    public int towerCost;
+
     public IEnumerator<TowerAction> TowerActions 
     {
         get 

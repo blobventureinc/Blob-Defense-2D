@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [RequireComponent(typeof(AttributeManager))]
 public class HealthSystem : MonoBehaviour {
 
-    [SerializeField] private AttributeManager attributeManager;
+    public AttributeManager attributeManager;
 
     public UnityEvent onDeath;
 

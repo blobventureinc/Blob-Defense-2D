@@ -1,5 +1,8 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+guid: 5218b25aaedf11e46941ca16ca21ee8c
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 guid: 6cc5319a3e65a7343a4370c20fc96e0a
 =======
@@ -8,6 +11,7 @@ guid: fce3c78c974b3c1b0b41639b8afb0b57
 =======
 guid: 2d72b83d221391b46a3924c6473a75a1
 >>>>>>> Added first UI Prefab / Created Player Script containing PlayerAttributes / Created Script that updates the UI when PlayerAttributes Change
+>>>>>>> master
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
