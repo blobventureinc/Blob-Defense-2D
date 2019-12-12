@@ -218,3 +218,4 @@ MonoBehaviour:
   towerCost: 10
   towerActions:
   - {fileID: 11400000, guid: 10de3b3c778abb69cbd1c1a26943a0cb, type: 2}
+  - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}

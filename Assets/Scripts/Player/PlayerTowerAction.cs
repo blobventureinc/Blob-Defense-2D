@@ -20,7 +20,6 @@ public class PlayerTowerAction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U)) 
         {
-            Debug.Log("Trying to Upgrade");
             Vector3 target = targetingScript.gettargetLoc();
             target.x += (float)0.5; target.y += (float)0.5;
             Vector2 point = new Vector2(target.x, target.y);

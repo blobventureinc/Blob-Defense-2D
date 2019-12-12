@@ -16,6 +16,8 @@ public class TowerActionButton : MonoBehaviour
     [HideInInspector]
     public AttributeManager attributeManager;
 
+    private Button button;
+
     public TowerAction TowerAction {
         get 
         {
@@ -30,7 +32,21 @@ public class TowerActionButton : MonoBehaviour
 
     void Start() 
     {
-        GetComponent<Button>().onClick.AddListener(DoAction);
+        button = GetComponent<Button>();
+        button.onClick.AddListener(DoAction);
+        if(TowerAction is PricyTowerAction) 
+        {
+            attributeManager.gold.onValueChange.AddListener(OnGoldChange);
+            OnGoldChange();
+        }
+    }
+
+    void OnGoldChange()
+    {
+        if(TowerAction is PricyTowerAction) 
+        {
+            button.interactable = ((PricyTowerAction) TowerAction).IsDoable(attributeManager);
+        }
     }
 
     void DoAction() 

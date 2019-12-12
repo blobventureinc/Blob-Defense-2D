@@ -29,12 +29,13 @@ public class Tower : MonoBehaviour
 
     public void SellTower() 
     {
-        Destroy(gameObject);
+        Destroy(transform.parent.gameObject);
     }
 
-    public void UpgradeTower(GameObject towerUpgrade) 
+    public void UpgradeTower(GameObject towerUpgrade, int price) 
     {
-        Instantiate(towerUpgrade, transform.parent.position, transform.parent.rotation, transform.parent.parent);
+        var newTower = Instantiate(towerUpgrade, transform.parent.position, transform.parent.rotation, transform.parent.parent);
+        newTower.GetComponentInChildren<Tower>().towerCost = towerCost + price;
         Destroy(transform.parent.gameObject);
     }
 }

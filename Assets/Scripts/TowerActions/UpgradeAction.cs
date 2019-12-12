@@ -9,6 +9,6 @@ public class UpgradeAction : PricyTowerAction
 
     protected override void DoActionImpl(Tower tower)
     {
-        tower.UpgradeTower(towerUpgradePrefab);
+        tower.UpgradeTower(towerUpgradePrefab, gold);
     }
 }
