@@ -6,7 +6,9 @@ public class Tower : MonoBehaviour
 {
     public int towerCost;
 
-    public IEnumerator<TowerAction> TowerActions 
+    public TowerAction[] towerActions;
+
+    /*public IEnumerator<TowerAction> TowerActions 
     {
         get 
         {
@@ -32,7 +34,7 @@ public class Tower : MonoBehaviour
 
     public void UpgradeTower(GameObject towerUpgrade) 
     {
-        Instantiate(towerUpgrade, Vector3.zero, Quaternion.identity, transform.parent);
-        Destroy(gameObject);
+        Instantiate(towerUpgrade, transform.parent.position, transform.parent.rotation, transform.parent.parent);
+        Destroy(transform.parent.gameObject);
     }
 }

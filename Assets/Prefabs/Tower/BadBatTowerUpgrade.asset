@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c289cfa04e932bba2b52483a72e8f6, type: 3}
+  m_Name: BadBatTowerUpgrade
+  m_EditorClassIdentifier: 
+  name: Bad Bat Tower
+  gold: 20
+  towerUpgradePrefab: {fileID: 4774770968634479756, guid: 650f2f42fdf8d3701afb2e654fc8d947,
+    type: 3}

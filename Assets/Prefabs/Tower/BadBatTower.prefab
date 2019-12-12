@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 513778904752220960}
   - component: {fileID: 5045430690147405426}
   m_Layer: 0
-  m_Name: BatTower
+  m_Name: BadBatTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 8997217388631991725}
   - component: {fileID: 5151099186817201368}
   - component: {fileID: 8997217388631991723}
-  - component: {fileID: 4477758560161335000}
+  - component: {fileID: 4389895804344849797}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacks_per_sec: 0.033333335
-  projectile: {fileID: 4279897782477152410, guid: 439fb981fba41df4ca0d88ef32c2784a,
+  projectile: {fileID: 4279897782477152410, guid: 67f9b382d9c710beda6f380e6e16d6cf,
     type: 3}
   targetfinder: {fileID: 8997217388631991723}
 --- !u!61 &5151099186817201368
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86270934963e18408608b6bf9a5da97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4477758560161335000
+--- !u!114 &4389895804344849797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -216,5 +216,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerCost: 10
-  towerActions:
-  - {fileID: 11400000, guid: e17beb603dda406aaa7253f8f47c57ff, type: 2}
+  towerActions: []

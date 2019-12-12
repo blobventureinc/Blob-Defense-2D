@@ -58,13 +58,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2295792722312080921}
   - component: {fileID: 3634621840071477137}
-  - component: {fileID: 1060967352044205675}
-  - component: {fileID: 5303844438517547499}
-  - component: {fileID: 3759735696680177246}
   - component: {fileID: 7893726393440663979}
   - component: {fileID: 7893726393440663973}
   - component: {fileID: 7893726393440663978}
   - component: {fileID: 6209565265207601360}
+  - component: {fileID: 6205664793723516025}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -135,45 +133,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &1060967352044205675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7893726393440663972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd860ab36c7e1406f99f8cb320c3d763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerCost: 10
---- !u!114 &5303844438517547499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7893726393440663972}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ccc1e16c78128f392a3ca5cf419ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upgradeTowers:
-  - {fileID: 7875939914284545428, guid: 8e42943fab67647b2967adefa69a0979, type: 3}
---- !u!114 &3759735696680177246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7893726393440663972}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4779e50239e98f10b9ff8752275939db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &7893726393440663979
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -244,3 +203,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23520577, y: 0.21149862}
   m_EdgeRadius: 0
+--- !u!114 &6205664793723516025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7893726393440663972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd860ab36c7e1406f99f8cb320c3d763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerCost: 10
+  towerActions:
+  - {fileID: 11400000, guid: 10de3b3c778abb69cbd1c1a26943a0cb, type: 2}
