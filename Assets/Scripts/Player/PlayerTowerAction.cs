@@ -6,10 +6,13 @@ using UnityEngine;
 public class PlayerTowerAction : MonoBehaviour
 {
     public TowerActionMenu towerActionMenu;
+    public float reachDistance;
 
     private Tile_Targeting targetingScript = null;
     private AttributeManager attributeScript = null;
     private Player_Movement movementScript = null;
+
+    private Transform selectedTowerTransform;
 
     void Start()
     {
@@ -33,11 +36,12 @@ public class PlayerTowerAction : MonoBehaviour
                 if(tower != null) {
                     towerActionMenu.HideTowerActionMenu();
                     towerActionMenu.ShowTowerActionMenu(attributeScript, tower);
+                    selectedTowerTransform = collider.transform;
                     break;
                 }
             }
         }
-        if(movementScript.isMoving) 
+        if(Vector3.Distance(transform.position, selectedTowerTransform.position) > reachDistance) 
         {
             towerActionMenu.HideTowerActionMenu();
         }
