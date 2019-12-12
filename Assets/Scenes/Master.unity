@@ -163,7 +163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 331.16678, y: 163.89581}
+  m_AnchoredPosition: {x: 318, y: 152}
   m_SizeDelta: {x: -469.59998, y: -156.09137}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &25463116
@@ -1017,7 +1017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &351676985
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1035,7 +1035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0000038147, y: -54.23}
+  m_AnchoredPosition: {x: 0.0000038147, y: -25}
   m_SizeDelta: {x: 104.36, y: 26.11}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351676986
@@ -9807,7 +9807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isScalabeByLevel: 1
+  isScalabeByLevel: 0
   _baseHealth: 10
   _baseMana: 10
   _baseEnergy: 100
@@ -10098,7 +10098,6 @@ GameObject:
   - component: {fileID: 829709621}
   - component: {fileID: 829709620}
   - component: {fileID: 829709623}
-  - component: {fileID: 829709622}
   m_Layer: 0
   m_Name: Path
   m_TagString: Untagged
@@ -10181,18 +10180,6 @@ Transform:
   m_Father: {fileID: 456954450}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &829709622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829709619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f927b9c295017dfd1bc70b8d7323d8c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &829709623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10210,6 +10197,54 @@ MonoBehaviour:
     - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
         type: 3}
       ammount: 25
+      interval: 0.5
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
       interval: 1
       startTime: 0
   - enemyWaves:
@@ -10219,6 +10254,9 @@ MonoBehaviour:
       interval: 1
       startTime: 0
   curentWave: 0
+  waveEnded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &839498295
 GameObject:
   m_ObjectHideFlags: 0
@@ -10510,9 +10548,9 @@ MonoBehaviour:
   gameOverUI: {fileID: 839498295}
   startRoundButton: {fileID: 1219856950}
   roundTimerPanel: {fileID: 351676984}
+  towerMenu: {fileID: 25463114}
   roundText: {fileID: 1553854987}
   spawner: {fileID: 829709623}
-  wave: 0
 --- !u!4 &1205142595
 Transform:
   m_ObjectHideFlags: 0
@@ -24406,7 +24444,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &2582999915523494116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24936,7 +24974,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 1
-  m_Value: 100
+  m_Value: 25
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
