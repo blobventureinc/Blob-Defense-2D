@@ -9,11 +9,13 @@ public class PlayerTowerAction : MonoBehaviour
 
     private Tile_Targeting targetingScript = null;
     private AttributeManager attributeScript = null;
+    private Player_Movement movementScript = null;
 
     void Start()
     {
         targetingScript = GetComponent<Tile_Targeting>();
         attributeScript = GetComponent<AttributeManager>();
+        movementScript = GetComponent<Player_Movement>();
     }
 
     void Update()
@@ -34,6 +36,10 @@ public class PlayerTowerAction : MonoBehaviour
                     break;
                 }
             }
+        }
+        if(movementScript.isMoving) 
+        {
+            towerActionMenu.HideTowerActionMenu();
         }
     }
 }
