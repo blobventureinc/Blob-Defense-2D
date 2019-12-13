@@ -99,12 +99,12 @@ MonoBehaviour:
     _physicalDmg: 0
     _poisonDmg: 0
     _fireDmg: 0
-    _waterDmg: 20
+    _waterDmg: 10
     _windDmg: 0
     _earthDmg: 0
     _shadowDmg: 0
     _lightDmg: 0
-  max_radius: 1
+  max_radius: 3
   waveCollider: {fileID: 8120860617268611578}
 --- !u!58 &8120860617268611578
 CircleCollider2D:

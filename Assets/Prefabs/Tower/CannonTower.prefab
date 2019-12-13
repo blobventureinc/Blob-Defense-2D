@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1617321061083199272}
-  - component: {fileID: 6292750948382036602}
+  - component: {fileID: -5413391989391717338}
   m_Layer: 0
   m_Name: CannonTower
   m_TagString: Tower
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &6292750948382036602
+--- !u!58 &-5413391989391717338
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,9 +45,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.17335916, y: 0.21957509}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.61296564
+  m_Radius: 0.6129656
 --- !u!1 &7893726393440663972
 GameObject:
   m_ObjectHideFlags: 0
