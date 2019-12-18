@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 9089860858176415513}
   m_Layer: 0
   m_Name: Shield_Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
-  speed: 0.3
+  speed: 0.5
 --- !u!1 &8839924900427400844
 GameObject:
   m_ObjectHideFlags: 0
