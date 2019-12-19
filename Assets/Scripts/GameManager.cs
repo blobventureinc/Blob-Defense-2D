@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text roundText;
 
     [Header("Path Spawner")]
-    [SerializeField] private Spawner spawner;
+    [SerializeField] private Spawner[] spawners;
+    private int remaining_waves;
     private int wave = 0;
 
     private bool isInCombat;
@@ -30,40 +31,54 @@ public class GameManager : MonoBehaviour
         //gameMenu.SetActive(false);
         gameOverUI.SetActive(false);
         startRoundButton.SetActive(true);
-        spawner.waveEnded.AddListener(RoundEnd);
+        foreach (Spawner sp in spawners)
+            sp.waveEnded.AddListener(RoundEnd);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isInCombat) {
+        if (isInCombat)
+        {
             roundTimerPanel.SetActive(true);
             startRoundButton.SetActive(false);
             towerMenu.SetActive(false);
-            if (player.health.value <= 0) {
+            if (player.health.value <= 0)
+            {
                 Time.timeScale = 0.00001f;
                 gameOverUI.SetActive(true);
             }
-        } else {
+        }
+        else
+        {
             roundTimerPanel.SetActive(false);
             startRoundButton.SetActive(true);
             towerMenu.SetActive(true);
         }
     }
 
-    public void NextWave() {
+    public void NextWave()
+    {
+        remaining_waves = spawners.Length;
         isInCombat = true;
-        spawner.SpawnNextWave();
+        foreach (Spawner sp in spawners)
+            sp.SpawnNextWave();
         wave++;
-        roundText.text = "Wave " + wave + " / "+spawner.waves.Length;
+        roundText.text = "Wave " + wave + " / " + spawners[0].waves.Length;
     }
 
-    public void RoundEnd() {
-        isInCombat = false;
-        player.level.Increase(1);
+    public void RoundEnd()
+    {
+        remaining_waves--;
+        if (remaining_waves == 0)
+        {
+            isInCombat = false;
+            player.level.Increase(1);
+        }
     }
 
-    public void OpenMainMenu() {
+    public void OpenMainMenu()
+    {
         SceneManager.LoadScene("MainMenu");
     }
 }
