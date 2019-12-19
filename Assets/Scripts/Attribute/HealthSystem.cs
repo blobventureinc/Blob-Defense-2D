@@ -45,4 +45,8 @@ public class HealthSystem : MonoBehaviour {
     public void ApplyHeal (int heal) {
         attributeManager.health.Increase(heal);
     }
+    public void killSelf()
+    {
+        onDeath.Invoke();
+    }
 }
