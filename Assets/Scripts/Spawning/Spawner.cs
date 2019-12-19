@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
         } 
         else 
         {
-            Debug.LogWarning("Tryed to spawn Next wave but there are no next Waves");
+            Debug.LogWarning("Tried to spawn Next wave but there are no next Waves");
         }
     }
 
