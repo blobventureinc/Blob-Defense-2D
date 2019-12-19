@@ -9409,6 +9409,7 @@ Transform:
   - {fileID: 2095863800}
   - {fileID: 829709621}
   - {fileID: 69863281}
+  - {fileID: 697971297}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9944,6 +9945,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 683523164}
   m_CullTransparentMesh: 0
+--- !u!1 &697971296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 697971297}
+  - component: {fileID: 697971299}
+  - component: {fileID: 697971298}
+  m_Layer: 0
+  m_Name: Path (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &697971297
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697971296}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.6225667, y: 0.1526761, z: -45.318886}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456954450}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697971298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697971296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa64dd059d135b00bf8e315c3315e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 2
+      interval: 0.5
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 2
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 2
+      interval: 1
+      startTime: 0
+  curentWave: 0
+  waveEnded:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &697971299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697971296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  editorData:
+    _bezierPath:
+      points:
+      - {x: -13.991135, y: -1.84267, z: 0}
+      - {x: -13.99061, y: -3.3998852, z: 0}
+      - {x: -4.782948, y: -1.8641315, z: 0}
+      - {x: -1.5647635, y: -1.8641315, z: 0}
+      - {x: -0.9622527, y: -1.8641315, z: 0}
+      - {x: -1.158545, y: -4.6318445, z: 0}
+      - {x: -1.1355276, y: -4.868781, z: 0}
+      - {x: -1.1350904, y: -4.8732815, z: 0}
+      - {x: 1.9764304, y: -4.8473196, z: 0}
+      - {x: 1.3969622, y: -4.868781, z: 0}
+      isClosed: 0
+      space: 1
+      controlMode: 0
+      autoControlLength: 0.3
+      boundsUpToDate: 0
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 2, y: 0.14433756, z: 0}
+      perAnchorNormalsAngle:
+      - 0
+      - 0
+      - 0
+      - 0
+      globalNormalsAngle: 0
+      flipNormals: 0
+    vertexPathUpToDate: 0
+    vertexPathMaxAngleError: 0.3
+    vertexPathMinVertexSpacing: 0.01
+    showTransformTool: 1
+    showPathBounds: 0
+    showPerSegmentBounds: 0
+    displayAnchorPoints: 1
+    displayControlPoints: 1
+    bezierHandleScale: 1
+    globalDisplaySettingsFoldout: 0
+    keepConstantHandleSize: 0
+    showNormalsInVertexMode: 0
+    showBezierPathInVertexMode: 0
+    showDisplayOptions: 0
+    showPathOptions: 1
+    showVertexPathDisplayOptions: 0
+    showVertexPathOptions: 1
+    showNormals: 0
+    showNormalsHelpInfo: 0
+    tabIndex: 0
+  initialized: 1
 --- !u!1 &784222201
 GameObject:
   m_ObjectHideFlags: 0
@@ -10200,7 +10329,7 @@ MonoBehaviour:
     _bezierPath:
       points:
       - {x: -13.991135, y: -1.84267, z: 0}
-      - {x: -13.1112, y: -1.799746, z: 0}
+      - {x: -12.939396, y: -0.78532743, z: 0}
       - {x: -4.782948, y: -1.8641315, z: 0}
       - {x: -1.5647635, y: -1.8641315, z: 0}
       - {x: -0.9622527, y: -1.8641315, z: 0}
@@ -10224,7 +10353,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 1
+    vertexPathUpToDate: 0
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -10275,61 +10404,19 @@ MonoBehaviour:
   - enemyWaves:
     - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
         type: 3}
-      ammount: 25
+      ammount: 2
       interval: 0.5
       startTime: 0
   - enemyWaves:
     - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
         type: 3}
-      ammount: 25
+      ammount: 2
       interval: 1
       startTime: 0
   - enemyWaves:
     - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
         type: 3}
-      ammount: 25
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 25
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 25
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 25
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 25
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 25
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 25
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 25
+      ammount: 2
       interval: 1
       startTime: 0
   curentWave: 0
@@ -10639,7 +10726,9 @@ MonoBehaviour:
   roundTimerPanel: {fileID: 351676984}
   towerMenu: {fileID: 25463114}
   roundText: {fileID: 1553854987}
-  spawner: {fileID: 829709623}
+  spawners:
+  - {fileID: 829709623}
+  - {fileID: 697971298}
 --- !u!4 &1205142595
 Transform:
   m_ObjectHideFlags: 0
