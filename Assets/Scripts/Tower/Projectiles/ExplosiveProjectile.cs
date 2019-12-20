@@ -13,7 +13,8 @@ public class ExplosiveProjectile : Projectile
 
     public override void Start()
     {
-        _target.GetComponent<HealthSystem>().onDeath.AddListener(DestroyItself);
+        //_target.GetComponent<HealthSystem>().onDeath.AddListener(DestroyItself);
+        lastTarget = _target.transform.position;
     }
 
     public override void Update()
@@ -23,7 +24,10 @@ public class ExplosiveProjectile : Projectile
             //Go to target
             float step = speed * Time.deltaTime;
             if (_target != null)
-                transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, step);
+                lastTarget = new Vector3(_target.transform.position.x, _target.transform.position.y, _target.transform.position.z);
+            else
+                if (gameObject.transform.position == lastTarget) explode();
+            transform.position = Vector3.MoveTowards(transform.position, lastTarget, step);
         }
         else
         {
@@ -35,8 +39,6 @@ public class ExplosiveProjectile : Projectile
                 DestroyItself();
             }
         }
-        if (_target == null)
-            DestroyItself();
     }
 
     protected override void OnTriggerEnter2D(Collider2D other)
@@ -46,11 +48,12 @@ public class ExplosiveProjectile : Projectile
         {
             explode();
         }
+        Debug.Log("enemyHit");
     }
 
     protected override void impact(GameObject enemy)
     {
-        if (!exploded)
+        if (exploded)
             damage(enemy, explosion_damage);
         else
             damage(enemy, dmg);

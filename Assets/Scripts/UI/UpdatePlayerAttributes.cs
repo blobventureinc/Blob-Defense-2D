@@ -55,9 +55,9 @@ public class UpdatePlayerAttributes : MonoBehaviour
         energyText.text = "EN: "+player.energy.value.ToString() + "%";
     }
     public void UpdateExpBar() {
-        expBar.maxValue = player.exp.valueMax;
-        expBar.value = player.exp.value;
-        expText.text = "Exp: " + player.exp.value.ToString() + " / " + player.exp.valueMax.ToString();
+        expBar.maxValue = player.level.valueMax;
+        expBar.value = player.level.value;
+        //expText.text = "Exp: " + player.exp.value.ToString() + " / " + player.exp.valueMax.ToString();
     }
     public void UpdateLevel() {
         levelText.text = "Level: " + player.level.value.ToString() + " / " + player.level.valueMax.ToString();

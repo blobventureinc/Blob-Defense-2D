@@ -1,17 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class HealthSystemNoEnemyScript : HealthSystem
+public class EnemyHealthSystem: HealthSystem
 {
     private AttributeManager player;
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.tag == "Castle") {
-            Destroy(gameObject);
-            player.health.Decrease(1);
-        }
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +14,14 @@ public class HealthSystemNoEnemyScript : HealthSystem
         onDeath.AddListener(DestroyItself);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Castle")
+        {
+            killSelf();
+            player.health.Decrease(1);
+        }
+    }
     void DestroyItself()
     {
         Destroy(gameObject);

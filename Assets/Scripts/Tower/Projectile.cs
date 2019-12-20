@@ -8,6 +8,7 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField] protected float speed;
     [SerializeField] protected Damage dmg;
     protected GameObject _target;
+    protected Vector3 lastTarget;
 
     //Message methods
     public abstract void Start();
@@ -23,7 +24,8 @@ public abstract class Projectile : MonoBehaviour
 
     protected void damage(GameObject enemy, Damage damage)
     {
-        enemy.GetComponent<HealthSystem>().ApplyDamage(damage);
+        if (enemy.tag != "Player")
+            enemy.GetComponent<HealthSystem>().ApplyDamage(damage);
     }
     protected void DestroyItself()
     {

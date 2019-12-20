@@ -239,7 +239,6 @@ GameObject:
   - component: {fileID: 7257442649975597717}
   - component: {fileID: 7257442649975597718}
   - component: {fileID: 7257442649975597719}
-  - component: {fileID: 7257442649975597704}
   - component: {fileID: 7257442649975597705}
   m_Layer: 0
   m_Name: Normal_Enemy
@@ -458,19 +457,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
   speed: 1.2
---- !u!114 &7257442649975597704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7257442649975597706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89607c556da823c4a85388f3622300bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: 
 --- !u!95 &7257442649975597705
 Animator:
   serializedVersion: 3

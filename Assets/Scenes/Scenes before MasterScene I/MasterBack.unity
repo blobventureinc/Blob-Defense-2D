@@ -158,7 +158,6 @@ RectTransform:
   - {fileID: 415329414}
   - {fileID: 2139734280}
   - {fileID: 468699670}
-  - {fileID: 1399607730}
   m_Father: {fileID: 2582999915154993354}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9409,7 +9408,6 @@ Transform:
   - {fileID: 2095863800}
   - {fileID: 829709621}
   - {fileID: 69863281}
-  - {fileID: 697971297}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9426,7 +9424,7 @@ GameObject:
   - component: {fileID: 468699672}
   - component: {fileID: 468699671}
   m_Layer: 5
-  m_Name: Wave Tower Button
+  m_Name: Bat Tower Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9750,7 +9748,6 @@ MonoBehaviour:
   buildings:
   - {fileID: 5986351785546680452, guid: 4a30e09717dab674580799bd90cc617d, type: 3}
   - {fileID: 2663695383534189764, guid: c7306e411ae52e343b6a10e46c0ed80d, type: 3}
-  - {fileID: 3329764200281828712, guid: 134e17b1cac5248429cd4c3c47dd4682, type: 3}
   - {fileID: 4774770968634479756, guid: adadac8f51d12414d93b5664ea6b20a4, type: 3}
   tilemapRenderer: {fileID: 189710468}
 --- !u!114 &645074665
@@ -9868,211 +9865,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributes: {fileID: 645074667}
---- !u!1 &683523164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 683523165}
-  - component: {fileID: 683523167}
-  - component: {fileID: 683523166}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &683523165
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683523164}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1399607730}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &683523166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683523164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Bat Tower
---- !u!222 &683523167
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 683523164}
-  m_CullTransparentMesh: 0
---- !u!1 &697971296
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 697971297}
-  - component: {fileID: 697971299}
-  - component: {fileID: 697971298}
-  m_Layer: 0
-  m_Name: Path (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &697971297
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697971296}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.6225667, y: 0.1526761, z: -45.318886}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 456954450}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &697971298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697971296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fa64dd059d135b00bf8e315c3315e5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waves:
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 2
-      interval: 0.5
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 2
-      interval: 1
-      startTime: 0
-  - enemyWaves:
-    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
-        type: 3}
-      ammount: 2
-      interval: 1
-      startTime: 0
-  curentWave: 0
-  waveEnded:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &697971299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697971296}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e5ac92bc18f545cc84cd886ece82b4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  editorData:
-    _bezierPath:
-      points:
-      - {x: -13.991135, y: -1.84267, z: 0}
-      - {x: -13.99061, y: -3.3998852, z: 0}
-      - {x: -4.782948, y: -1.8641315, z: 0}
-      - {x: -1.5647635, y: -1.8641315, z: 0}
-      - {x: -0.9622527, y: -1.8641315, z: 0}
-      - {x: -1.158545, y: -4.6318445, z: 0}
-      - {x: -1.1355276, y: -4.868781, z: 0}
-      - {x: -1.1350904, y: -4.8732815, z: 0}
-      - {x: 1.9764304, y: -4.8473196, z: 0}
-      - {x: 1.3969622, y: -4.868781, z: 0}
-      isClosed: 0
-      space: 1
-      controlMode: 0
-      autoControlLength: 0.3
-      boundsUpToDate: 0
-      bounds:
-        m_Center: {x: 0, y: 0, z: 0}
-        m_Extent: {x: 2, y: 0.14433756, z: 0}
-      perAnchorNormalsAngle:
-      - 0
-      - 0
-      - 0
-      - 0
-      globalNormalsAngle: 0
-      flipNormals: 0
-    vertexPathUpToDate: 0
-    vertexPathMaxAngleError: 0.3
-    vertexPathMinVertexSpacing: 0.01
-    showTransformTool: 1
-    showPathBounds: 0
-    showPerSegmentBounds: 0
-    displayAnchorPoints: 1
-    displayControlPoints: 1
-    bezierHandleScale: 1
-    globalDisplaySettingsFoldout: 0
-    keepConstantHandleSize: 0
-    showNormalsInVertexMode: 0
-    showBezierPathInVertexMode: 0
-    showDisplayOptions: 0
-    showPathOptions: 1
-    showVertexPathDisplayOptions: 0
-    showVertexPathOptions: 1
-    showNormals: 0
-    showNormalsHelpInfo: 0
-    tabIndex: 0
-  initialized: 1
 --- !u!1 &784222201
 GameObject:
   m_ObjectHideFlags: 0
@@ -10329,7 +10121,7 @@ MonoBehaviour:
     _bezierPath:
       points:
       - {x: -13.991135, y: -1.84267, z: 0}
-      - {x: -12.939396, y: -0.78532743, z: 0}
+      - {x: -13.1112, y: -1.799746, z: 0}
       - {x: -4.782948, y: -1.8641315, z: 0}
       - {x: -1.5647635, y: -1.8641315, z: 0}
       - {x: -0.9622527, y: -1.8641315, z: 0}
@@ -10353,7 +10145,7 @@ MonoBehaviour:
       - 0
       globalNormalsAngle: 0
       flipNormals: 0
-    vertexPathUpToDate: 0
+    vertexPathUpToDate: 1
     vertexPathMaxAngleError: 0.3
     vertexPathMinVertexSpacing: 0.01
     showTransformTool: 1
@@ -10404,19 +10196,61 @@ MonoBehaviour:
   - enemyWaves:
     - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
         type: 3}
-      ammount: 2
+      ammount: 25
       interval: 0.5
       startTime: 0
   - enemyWaves:
     - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
         type: 3}
-      ammount: 2
+      ammount: 25
       interval: 1
       startTime: 0
   - enemyWaves:
     - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
         type: 3}
-      ammount: 2
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
+      interval: 1
+      startTime: 0
+  - enemyWaves:
+    - enemyPrefab: {fileID: 7257442649975597706, guid: 8854f774acecdf642aa0eda3e25f0d8a,
+        type: 3}
+      ammount: 25
       interval: 1
       startTime: 0
   curentWave: 0
@@ -10726,9 +10560,7 @@ MonoBehaviour:
   roundTimerPanel: {fileID: 351676984}
   towerMenu: {fileID: 25463114}
   roundText: {fileID: 1553854987}
-  spawners:
-  - {fileID: 829709623}
-  - {fileID: 697971298}
+  spawner: {fileID: 829709623}
 --- !u!4 &1205142595
 Transform:
   m_ObjectHideFlags: 0
@@ -11114,135 +10946,6 @@ Transform:
   m_Father: {fileID: 69863281}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1399607729
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1399607730}
-  - component: {fileID: 1399607733}
-  - component: {fileID: 1399607732}
-  - component: {fileID: 1399607731}
-  m_Layer: 5
-  m_Name: Bat Tower Button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1399607730
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399607729}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 683523165}
-  m_Father: {fileID: 25463115}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00036621094, y: -100}
-  m_SizeDelta: {x: 330.4, y: 70.7}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1399607731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399607729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1399607732}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 645074658}
-        m_MethodName: Build
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1399607732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399607729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1399607733
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399607729}
-  m_CullTransparentMesh: 0
 --- !u!1 &1413038189
 GameObject:
   m_ObjectHideFlags: 0
@@ -11515,9 +11218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Wave Tower
-
-'
+  m_Text: Bat Tower
 --- !u!222 &1457515173
 CanvasRenderer:
   m_ObjectHideFlags: 0
