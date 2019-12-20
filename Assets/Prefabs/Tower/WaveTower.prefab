@@ -59,8 +59,6 @@ GameObject:
   - component: {fileID: 3638375563545832594}
   - component: {fileID: 1147878571507427318}
   - component: {fileID: 6997868960684602611}
-  - component: {fileID: 3309299131479373914}
-  - component: {fileID: 6423476750091862057}
   - component: {fileID: 8278203149359281929}
   - component: {fileID: 8070212281575970577}
   - component: {fileID: 1440001727714851000}
@@ -148,32 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerCost: 10
---- !u!114 &3309299131479373914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4043377205759099627}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ccc1e16c78128f392a3ca5cf419ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upgradeTowers:
-  - {fileID: 7875939914284545428, guid: 8e42943fab67647b2967adefa69a0979, type: 3}
---- !u!114 &6423476750091862057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4043377205759099627}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4779e50239e98f10b9ff8752275939db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  towerActions: []
 --- !u!58 &8278203149359281929
 CircleCollider2D:
   m_ObjectHideFlags: 0
