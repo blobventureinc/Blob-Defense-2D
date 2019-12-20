@@ -8,20 +8,6 @@ public class Tower : MonoBehaviour
 
     public TowerAction[] towerActions;
 
-    /*public IEnumerator<TowerAction> TowerActions 
-    {
-        get 
-        {
-            foreach(TowerActionProvider provider in GetComponents<TowerActionProvider>()) 
-            {
-                foreach(TowerAction towerAction in provider.TowerActions) 
-                {
-                    yield return towerAction;
-                }
-            }
-        }
-    }*/
-
     public void DoAction(AttributeManager attributeManager, TowerAction towerAction) 
     {
         towerAction.DoAction(attributeManager, this);
