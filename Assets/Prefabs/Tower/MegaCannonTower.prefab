@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1617321061083199272}
-  - component: {fileID: -5413391989391717338}
+  - component: {fileID: 6292750948382036602}
   m_Layer: 0
-  m_Name: CannonTower
+  m_Name: MegaCannonTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &-5413391989391717338
+--- !u!58 &6292750948382036602
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,9 +45,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.17335916, y: 0.21957509}
   serializedVersion: 2
-  m_Radius: 0.6129656
+  m_Radius: 0.61296564
 --- !u!1 &7893726393440663972
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 7893726393440663973}
   - component: {fileID: 7893726393440663978}
   - component: {fileID: 6209565265207601360}
-  - component: {fileID: 6205664793723516025}
+  - component: {fileID: 4295263905017777332}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacks_per_sec: 1
-  projectile: {fileID: 836078761720240636, guid: b42f5fba80178b3409d6152b21dbfd7f,
+  projectile: {fileID: 836078761720240636, guid: 215628daa98c08850910c5424914a148,
     type: 3}
   targetfinder: {fileID: 7893726393440663978}
 --- !u!114 &7893726393440663978
@@ -203,7 +203,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23520577, y: 0.21149862}
   m_EdgeRadius: 0
---- !u!114 &6205664793723516025
+--- !u!114 &4295263905017777332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -217,5 +217,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerCost: 10
   towerActions:
-  - {fileID: 11400000, guid: 10de3b3c778abb69cbd1c1a26943a0cb, type: 2}
   - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}

@@ -58,13 +58,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1048464118384816657}
   - component: {fileID: 2531140160596286361}
-  - component: {fileID: 2299650498718263907}
-  - component: {fileID: 6398389891453050339}
-  - component: {fileID: 2701575302420435542}
   - component: {fileID: 8997217388631991715}
   - component: {fileID: 8997217388631991725}
   - component: {fileID: 5151099186817201368}
   - component: {fileID: 8997217388631991723}
+  - component: {fileID: 4477758560161335000}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -135,45 +133,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &2299650498718263907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8997217388631991724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd860ab36c7e1406f99f8cb320c3d763, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerCost: 10
---- !u!114 &6398389891453050339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8997217388631991724}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ccc1e16c78128f392a3ca5cf419ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upgradeTowers:
-  - {fileID: 7875939914284545428, guid: 8e42943fab67647b2967adefa69a0979, type: 3}
---- !u!114 &2701575302420435542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8997217388631991724}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4779e50239e98f10b9ff8752275939db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &8997217388631991715
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -244,3 +203,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86270934963e18408608b6bf9a5da97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4477758560161335000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8997217388631991724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd860ab36c7e1406f99f8cb320c3d763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerCost: 10
+  towerActions:
+  - {fileID: 11400000, guid: e17beb603dda406aaa7253f8f47c57ff, type: 2}
+  - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}

@@ -6,6 +6,7 @@ using UnityEngine;
 public class DebugTowerActionExecutor : MonoBehaviour
 {
     private Tower tower;
+    private AttributeManager attributeManager;
 
     void Start() 
     {
@@ -16,9 +17,8 @@ public class DebugTowerActionExecutor : MonoBehaviour
     {
         if(Input.GetButtonDown("Jump")) 
         {
-            IEnumerator<TowerAction> towerActions = tower.TowerActions;
-            if(towerActions.MoveNext()) {
-                tower.DoAction(towerActions.Current);
+            if(tower.towerActions.Length > 0) {
+                tower.DoAction(attributeManager, tower.towerActions[0]);
             }
         }
     }
