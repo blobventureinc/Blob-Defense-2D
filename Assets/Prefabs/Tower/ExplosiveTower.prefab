@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 7509990683830688345}
   - component: {fileID: 5013727545619149777}
   - component: {fileID: 8745361291621663275}
-  - component: {fileID: 4503486959887005099}
-  - component: {fileID: 4884664380564994590}
   - component: {fileID: 1902970648608230891}
   - component: {fileID: 1902970648608230885}
   - component: {fileID: 2434298233164635280}
@@ -84,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 0.5, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!114 &8745361291621663275
@@ -100,32 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerCost: 10
---- !u!114 &4503486959887005099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902970648608230884}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81ccc1e16c78128f392a3ca5cf419ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upgradeTowers:
-  - {fileID: 7875939914284545428, guid: 8e42943fab67647b2967adefa69a0979, type: 3}
---- !u!114 &4884664380564994590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902970648608230884}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4779e50239e98f10b9ff8752275939db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  towerActions: []
 --- !u!58 &1902970648608230891
 CircleCollider2D:
   m_ObjectHideFlags: 0
