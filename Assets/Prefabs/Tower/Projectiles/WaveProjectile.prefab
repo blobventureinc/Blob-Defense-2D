@@ -104,7 +104,7 @@ MonoBehaviour:
     _earthDmg: 0
     _shadowDmg: 0
     _lightDmg: 0
-  max_radius: 3
+  max_radius: 2
   waveCollider: {fileID: 8120860617268611578}
 --- !u!58 &8120860617268611578
 CircleCollider2D:

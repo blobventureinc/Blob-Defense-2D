@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverUI;
     [SerializeField] private GameObject startRoundButton;
     [SerializeField] private GameObject roundTimerPanel;
-    [SerializeField] private GameObject towerMenu;
     [SerializeField] private Text roundText;
 
     [Header("Path Spawner")]
@@ -42,7 +41,6 @@ public class GameManager : MonoBehaviour
         {
             roundTimerPanel.SetActive(true);
             startRoundButton.SetActive(false);
-            towerMenu.SetActive(false);
             if (player.health.value <= 0)
             {
                 Time.timeScale = 0.00001f;
@@ -53,7 +51,6 @@ public class GameManager : MonoBehaviour
         {
             roundTimerPanel.SetActive(false);
             startRoundButton.SetActive(true);
-            towerMenu.SetActive(true);
         }
     }
 

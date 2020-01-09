@@ -21,10 +21,10 @@ public class Tile_Targeting : MonoBehaviour {
                     tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
                 }
                 targetedTile = (Tile)tilemap.GetTile(targetLoc);
-                //tilemap.SetTile(targetLoc, tileHighlighter);  // set the new tile              
+                tilemap.SetTile(targetLoc, tileHighlighter);  // set the new tile              
                 targetLocOld = targetLoc; // save the new position for restoring next frame
             }
-            //tilemap.SetTile(targetLoc, tileHighlighter);
+            tilemap.SetTile(targetLoc, tileHighlighter);
         }
     }
     public void MouseTargetTile(Vector3 clickPos) {
@@ -33,10 +33,10 @@ public class Tile_Targeting : MonoBehaviour {
         if (clickPos.y < 0) { targetLoc.y--; }
         if (targetLoc != targetLocOld) {
             if (targetedTile != null) {
-                //tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
+                tilemap.SetTile(targetLocOld, targetedTile); //restore old tile
             }
             targetedTile = (Tile)tilemap.GetTile(targetLoc);
-            //tilemap.SetTile(targetLoc, tileHighlighter); // set the new tile           
+            tilemap.SetTile(targetLoc, tileHighlighter); // set the new tile           
             targetLocOld = targetLoc; // save the new position for restoring next frame
         }
     }

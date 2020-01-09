@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerActioneer : MonoBehaviour
 {
     [SerializeField] Tile_Targeting targeter = null;
-    [SerializeField] GameObject tower = null;
     [SerializeField] Player_Mining mining = null;
     [SerializeField] AttributeManager attributeManager = null;
     [SerializeField] PlayerTowerAction playerTowerAction = null;

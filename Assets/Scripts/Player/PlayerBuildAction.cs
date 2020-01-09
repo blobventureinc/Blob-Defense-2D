@@ -45,6 +45,7 @@ public class PlayerBuildAction : MonoBehaviour
     public void buildTower(int i)
     {
         GameObject t = Instantiate(towers[i], selectedPosition, Quaternion.identity) as GameObject;
+        Debug.Log(selectedPosition);
         hideUI();
     }
 }
