@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(AttributeManager))]
 public class EnergySystem : MonoBehaviour {
-    [SerializeField] private AttributeManager attributeManager;
+    [SerializeField] private AttributeManager attributeManager = null;
 
     [Header("Resistances")]
     [SerializeField] private float _energyburnRes = 0.1f;

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UpdatePlayerAttributes : MonoBehaviour
 {
-    [SerializeField] private AttributeManager player;
+    [SerializeField] private AttributeManager player = null;
 
     [SerializeField] private Slider livesBar = null;
     [SerializeField] private Text livesText = null;
@@ -18,7 +18,6 @@ public class UpdatePlayerAttributes : MonoBehaviour
 
     [SerializeField] private Slider expBar = null;
     [SerializeField] private Text levelText = null;
-    [SerializeField] private Text expText = null;
 
     [SerializeField] private Text goldText = null;
 

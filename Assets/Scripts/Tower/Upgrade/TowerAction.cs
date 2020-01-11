@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class TowerAction: ScriptableObject
 {
-    public string name;
+    public string actionName;
 
     public abstract bool DoAction(AttributeManager attributeManager, Tower tower);
 }

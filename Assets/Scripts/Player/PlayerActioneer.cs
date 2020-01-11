@@ -6,7 +6,6 @@ public class PlayerActioneer : MonoBehaviour
 {
     [SerializeField] Tile_Targeting targeter = null;
     [SerializeField] Player_Mining mining = null;
-    [SerializeField] AttributeManager attributeManager = null;
     [SerializeField] PlayerTowerAction playerTowerAction = null;
     [SerializeField] PlayerBuildAction playerBuildAction = null;
 

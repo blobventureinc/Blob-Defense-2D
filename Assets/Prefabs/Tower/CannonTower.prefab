@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 1137054096395054197}
   - component: {fileID: 3243754219959914081}
   - component: {fileID: 5841899240412541499}
+  - component: {fileID: 266195678675645029}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -202,3 +203,16 @@ MonoBehaviour:
   towerActions:
   - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}
   - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}
+--- !u!114 &266195678675645029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7051282933711315176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f4124b9ea294a4cb93b6e225ce3a61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: 0

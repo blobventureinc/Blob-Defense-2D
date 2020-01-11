@@ -7,17 +7,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private AttributeManager player;
+    [SerializeField] private AttributeManager player = null;
     //[SerializeField] private GameObject gameMenu;
 
     [Header("UI Elements")]
-    [SerializeField] private GameObject gameOverUI;
-    [SerializeField] private GameObject startRoundButton;
-    [SerializeField] private GameObject roundTimerPanel;
-    [SerializeField] private Text roundText;
+    [SerializeField] private GameObject gameOverUI = null;
+    [SerializeField] private GameObject startRoundButton = null;
+    [SerializeField] private GameObject roundTimerPanel = null;
+    [SerializeField] private Text roundText = null;
 
     [Header("Path Spawner")]
-    [SerializeField] private Spawner[] spawners;
+    [SerializeField] private Spawner[] spawners = null;
     private int remaining_waves;
     private int wave = 0;
 

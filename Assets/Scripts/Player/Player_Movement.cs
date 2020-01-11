@@ -18,7 +18,7 @@ public class Player_Movement : MonoBehaviour {
     public Vector2 lastVelocity;
     private Vector2 moveTo;
 
-    [SerializeField] Animator anim;
+    [SerializeField] Animator anim = null;
 
     private void Start() {
         isMovingByKey = true;

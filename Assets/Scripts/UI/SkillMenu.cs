@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SkillMenu : MonoBehaviour
 {
-    public GameObject skillButtonPrefab;
-    private List<GameObject> buttons;
+    public GameObject skillButtonPrefab = null;
+    private List<GameObject> buttons = null;
 
     // TODO: This Method has to be wired up to an Event
-    public void ShowSkillMenu(SkillManager skillManager, AttributeManager attributeManager) 
+    public void ShowSkillMenu(SkillManager skillManager, AttributeManager attributeManager)
     {
         var avaliableSkills = skillManager.GetAvaliableSkills(attributeManager);
         while (avaliableSkills.MoveNext())
@@ -28,8 +28,10 @@ public class SkillMenu : MonoBehaviour
     }
 
     // TODO: This Method has to be wired up to an Event
-    public void HideSkillMenu() {
-        foreach(var button in buttons) {
+    public void HideSkillMenu()
+    {
+        foreach (var button in buttons)
+        {
             Destroy(button);
         }
         buttons.Clear();

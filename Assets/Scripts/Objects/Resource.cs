@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Resource : MonoBehaviour {
-    public string type;
+    public string type = null;
     public int goldValue;
     public int energyDrainValue;
     public int duration;
 
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private SpriteRenderer spriteRenderer = null;
     [SerializeField] private Sprite[] spriteStates = new Sprite[3];
     private int currentState = 0;
 

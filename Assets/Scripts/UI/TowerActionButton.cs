@@ -26,7 +26,7 @@ public class TowerActionButton : MonoBehaviour
         set 
         {
             _towerAction = value;
-            text.text = _towerAction.name;
+            text.text = _towerAction.actionName;
         }
     }
 
