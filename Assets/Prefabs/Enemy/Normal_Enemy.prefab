@@ -413,6 +413,12 @@ MonoBehaviour:
     onValueChange:
       m_PersistentCalls:
         m_Calls: []
+  skillPoints:
+    value: 0
+    valueMax: 0
+    onValueChange:
+      m_PersistentCalls:
+        m_Calls: []
   gold:
     value: 0
     valueMax: 0
@@ -443,6 +449,9 @@ MonoBehaviour:
   _earthRes: 0
   _shadowRes: 0
   _lightRes: 0
+  pathScript: {fileID: 7257442649975597719}
+  healthBar: {fileID: 7257442648775399691}
+  anim: {fileID: 7257442649975597705}
 --- !u!114 &7257442649975597719
 MonoBehaviour:
   m_ObjectHideFlags: 0

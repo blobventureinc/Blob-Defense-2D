@@ -200,4 +200,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerCost: 20
   towerActions:
-  - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}
+  - {fileID: 0}
