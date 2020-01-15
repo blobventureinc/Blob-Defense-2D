@@ -5,31 +5,27 @@ using UnityEngine;
 public class Tooltip : MonoBehaviour
 {
 
-    [SerializeField] GameObject textField = null;
+    [SerializeField] GameObject tooltip = null;
 
     // Start is called before the first frame update
-    void Start()
-    {
-    }
+    void Start() { }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-    }
+    void FixedUpdate() { }
     public void ShowTooltip()
     {
-        textField.SetActive(true);
+        tooltip.SetActive(true);
         Debug.Log("ToolTip Show");
     }
     public void HideTooltip()
     {
-        textField.SetActive(false);
+        tooltip.SetActive(false);
         Debug.Log("ToolTip Hide");
     }
 
     public void ShowOrHideTooltip()
     {
-        if (gameObject.activeSelf)
+        if (tooltip.activeSelf)
             HideTooltip();
         else
             ShowTooltip();
