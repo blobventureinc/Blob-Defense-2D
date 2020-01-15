@@ -21,16 +21,8 @@ public class TowerShooting : MonoBehaviour
         {
             if (targetfinder.targets.Count != 0)
             {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
                 if (targetfinder.targets[0].tag == "Enemy")
                 {
-=======
-                if (targetfinder.targets[0].tag == "Enemy") {
->>>>>>> Stashed changes
-=======
-                if (targetfinder.targets[0].tag == "Enemy") {
->>>>>>> Stashed changes
                     shoot(targetfinder.targets[0]);
                     resetShootTime();
                 }
