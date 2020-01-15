@@ -21,8 +21,11 @@ public class TowerShooting : MonoBehaviour
         {
             if (targetfinder.targets.Count != 0)
             {
-                shoot(targetfinder.targets[0]);
-                resetShootTime();
+                if (targetfinder.targets[0].tag == "Enemy")
+                {
+                    shoot(targetfinder.targets[0]);
+                    resetShootTime();
+                }
             }
         }
     }
