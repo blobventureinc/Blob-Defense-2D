@@ -140,9 +140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd860ab36c7e1406f99f8cb320c3d763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerCost: 10
+  towerCost: 30
   towerActions:
-  - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}
   - {fileID: 11400000, guid: 1ecc300e5e96b6483be8d76c69fcd42d, type: 2}
 --- !u!1 &7568302192244332532
 GameObject:

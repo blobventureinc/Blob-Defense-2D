@@ -20,7 +20,7 @@ public class PlayerActioneer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Vector3 targetLoc = targeter.gettargetLoc() + new Vector3(0.5f,0.5f,0);
+            Vector3 targetLoc = targeter.gettargetLoc() + new Vector3(0.5f, 0.5f, 0);
             Collider2D[] colliders = Physics2D.OverlapCircleAll(targetLoc, 0.3f);
             Debug.Log(Action(colliders, targetLoc));
         }

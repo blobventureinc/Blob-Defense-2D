@@ -38,31 +38,37 @@ public class UpdatePlayerAttributes : MonoBehaviour
         UpdateGold();
     }
 
-    public void UpdateLivesBar() {
+    public void UpdateLivesBar()
+    {
         livesBar.maxValue = player.health.valueMax;
         livesBar.value = player.health.value;
-        livesText.text = "HP: " + player.health.value.ToString()+" / "+ player.health.valueMax.ToString();
+        livesText.text = "HP: " + player.health.value.ToString() + " / " + player.health.valueMax.ToString();
     }
-    public void UpdateManaBar() {
+    public void UpdateManaBar()
+    {
         manaBar.maxValue = player.mana.valueMax;
         manaBar.value = player.mana.value;
         manaText.text = "MP: " + player.mana.value.ToString() + " / " + player.mana.valueMax.ToString();
     }
-    public void UpdateEnergyBar() {
+    public void UpdateEnergyBar()
+    {
         energyBar.maxValue = player.energy.valueMax;
         energyBar.value = player.energy.value;
-        energyText.text = "EN: "+player.energy.value.ToString() + "%";
+        energyText.text = "EN: " + player.energy.value.ToString() + "%";
     }
-    public void UpdateExpBar() {
+    public void UpdateExpBar()
+    {
         expBar.maxValue = player.level.valueMax;
         expBar.value = player.level.value;
         //expText.text = "Exp: " + player.exp.value.ToString() + " / " + player.exp.valueMax.ToString();
     }
-    public void UpdateLevel() {
+    public void UpdateLevel()
+    {
         levelText.text = "Level: " + player.level.value.ToString() + " / " + player.level.valueMax.ToString();
     }
 
-    public void UpdateGold() {
+    public void UpdateGold()
+    {
         goldText.text = player.gold.value.ToString();
     }
 }

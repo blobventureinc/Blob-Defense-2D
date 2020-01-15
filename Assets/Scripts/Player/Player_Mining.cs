@@ -27,15 +27,6 @@ public class Player_Mining : MonoBehaviour
         {
             isMining = false;
         }
-        //if(movementScript.mouseMovementDone) {
-        //    Mine();
-        //    movementScript.mouseMovementDone = false;
-        //}
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            Debug.Log("Mining Start");
-            Mine();
-        }
     }
 
     public void Mine()

@@ -7,7 +7,7 @@ public class SellAction : TowerAction
 {
     public override bool DoAction(AttributeManager attributeManager, Tower tower)
     {
-        attributeManager.gold.Increase(tower.towerCost);
+        attributeManager.gold.Increase(cost);
         tower.SellTower();
         return true;
     }
