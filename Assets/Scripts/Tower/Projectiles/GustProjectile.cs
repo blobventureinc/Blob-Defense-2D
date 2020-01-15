@@ -35,7 +35,7 @@ public class GustProjectile : Projectile
             //Go to target or start_position
             if (_target != null)
             {
-                if (_target.tag = "enemy")
+                if (_target.tag == "enemy")
                 {
                     transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, step);
                     //Damage
