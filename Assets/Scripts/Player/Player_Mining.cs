@@ -34,13 +34,11 @@ public class Player_Mining : MonoBehaviour
         if (!isMining)
         {
             StartCoroutine(MiningCoroutine());
-            Debug.Log("Start Mining Coroutine");
         }
     }
 
     IEnumerator MiningCoroutine()
     {
-        Debug.Log("Inside Coroutine");
         Vector3 target = targetingScript.gettargetLoc();
         target.x += (float)0.5; target.y += (float)0.5;
         Vector2 point = new Vector2(target.x, target.y);
@@ -49,7 +47,6 @@ public class Player_Mining : MonoBehaviour
         { //if collider located
             GameObject obj = collider[0].gameObject; //get their gameobject
             resourceScript = obj.GetComponent<Resource>(); //get their script
-            Debug.Log("FOUND: " + resourceScript.type + ", VALUE: " + resourceScript.goldValue);
             isMining = true;
             while (obj != null && isMining)
             {
@@ -65,15 +62,12 @@ public class Player_Mining : MonoBehaviour
                     {
                         playerActionBar.SetActive(true);
                     }
-                    Debug.Log(((100 / resourceScript.duration) * miningTimer) * 0.01);
                     if (bar != null)
                     {
                         bar.localScale = new Vector3((float)(((100 / resourceScript.duration) * miningTimer) * 0.01), 1);
                     }
-                    Debug.Log("INCREMENTING MINING TIMER");
                 }
             }
-            Debug.Log("MINING DONE/CANCELED");
             if (playerActionBar != null)
             {
                 playerActionBar.SetActive(false);

@@ -50,9 +50,6 @@ public class Player_Movement : MonoBehaviour
         {
             lastVelocity = velocity;
         }
-        //if (mouseMovementDone == true) {
-        //    Debug.Log("DONE WALKING");
-        //}
     }
 
     public void MoveTo(Vector3 clickPos)
@@ -102,7 +99,6 @@ public class Player_Movement : MonoBehaviour
                     }
                     else
                     { //Stop if close to target
-                        //Debug.Log("Close To Target");
                         velocity = new Vector2(0, 0);
                         targetingScript.MouseTargetTile(clickPos);
                         mouseMovementDone = true;
@@ -111,7 +107,6 @@ public class Player_Movement : MonoBehaviour
             }
             else
             { //when very close by, stop
-                //Debug.Log("Very Close By To Target");
                 velocity = new Vector2(0, 0);
                 mouseMovementDone = true;
             }

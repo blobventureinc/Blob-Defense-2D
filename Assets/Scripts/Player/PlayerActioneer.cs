@@ -22,7 +22,7 @@ public class PlayerActioneer : MonoBehaviour
         {
             Vector3 targetLoc = targeter.gettargetLoc() + new Vector3(0.5f, 0.5f, 0);
             Collider2D[] colliders = Physics2D.OverlapCircleAll(targetLoc, 0.3f);
-            Debug.Log(Action(colliders, targetLoc));
+            Action(colliders, targetLoc);
         }
     }
     string Action(Collider2D[] colliders, Vector3 targetLoc)

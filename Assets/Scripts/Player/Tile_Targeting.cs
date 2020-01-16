@@ -10,7 +10,7 @@ public class Tile_Targeting : MonoBehaviour
     private Vector3Int playerPos;
     private Vector3Int targetLoc; //Coordinates to be targeted
     private Vector3Int targetLocOld; //Coordinates of last targeted Tile, to restore it if highlighter moves
-    [SerializeField] private GameObject tileHighlighting;
+    [SerializeField] private GameObject tileHighlighting = null;
     [SerializeField] private Player_Movement movementScript = null;
 
     private void FixedUpdate()

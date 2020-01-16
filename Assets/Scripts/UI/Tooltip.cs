@@ -15,12 +15,10 @@ public class Tooltip : MonoBehaviour
     public void ShowTooltip()
     {
         tooltip.SetActive(true);
-        Debug.Log("ToolTip Show");
     }
     public void HideTooltip()
     {
         tooltip.SetActive(false);
-        Debug.Log("ToolTip Hide");
     }
 
     public void ShowOrHideTooltip()

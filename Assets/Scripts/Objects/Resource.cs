@@ -23,7 +23,6 @@ public class Resource : MonoBehaviour
         {
             GetComponent<ParticleSystem>().Play();
         }
-        Debug.Log(spriteStates.Length);
         if (currentState <= spriteStates.Length - 1)
         {
             spriteRenderer.sprite = spriteStates[currentState];

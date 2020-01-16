@@ -48,7 +48,6 @@ public class ExplosiveProjectile : Projectile
         {
             explode();
         }
-        Debug.Log("enemyHit");
     }
 
     protected override void impact(GameObject enemy)
