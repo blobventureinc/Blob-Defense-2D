@@ -36,7 +36,7 @@ public class PlayerActioneer : MonoBehaviour
             }
             else if (colliders[i].gameObject.tag == "Resource")
             {
-                mining.Mine();
+                mining.Mine(colliders[i].gameObject);
                 result += "Mining";
             }
             else if (colliders[i].gameObject.tag == "Tower")

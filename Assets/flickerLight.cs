@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.LWRP;
 
-public class flickerLight : MonoBehaviour
+public class FlickerLight : MonoBehaviour
 {
     [SerializeField] private UnityEngine.Experimental.Rendering.Universal.Light2D lightSource = null;
     public float flickerTimer;

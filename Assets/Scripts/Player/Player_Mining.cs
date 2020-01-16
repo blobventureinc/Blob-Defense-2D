@@ -29,57 +29,49 @@ public class Player_Mining : MonoBehaviour
         }
     }
 
-    public void Mine()
+    public void Mine(GameObject obj)
     {
         if (!isMining)
         {
-            StartCoroutine(MiningCoroutine());
+            StartCoroutine(MiningCoroutine(obj));
         }
     }
 
-    IEnumerator MiningCoroutine()
+    IEnumerator MiningCoroutine(GameObject obj)
     {
-        Vector3 target = targetingScript.gettargetLoc();
-        target.x += (float)0.5; target.y += (float)0.5;
-        Vector2 point = new Vector2(target.x, target.y);
-        Collider2D[] collider = Physics2D.OverlapCircleAll(point, (float)0.5); //look for colliders on target tile
-        if (collider.Length >= 1)
-        { //if collider located
-            GameObject obj = collider[0].gameObject; //get their gameobject
-            resourceScript = obj.GetComponent<Resource>(); //get their script
-            isMining = true;
-            while (obj != null && isMining)
+        resourceScript = obj.GetComponent<Resource>(); //get their script
+        isMining = true;
+        while (obj != null && isMining)
+        {
+            if (miningTimer == resourceScript.duration)
             {
-                if (miningTimer == resourceScript.duration)
+                obj = null;
+            }
+            else
+            {
+                yield return new WaitForSeconds(1);
+                miningTimer++;
+                if (playerActionBar != null)
                 {
-                    obj = null;
+                    playerActionBar.SetActive(true);
                 }
-                else
+                if (bar != null)
                 {
-                    yield return new WaitForSeconds(1);
-                    miningTimer++;
-                    if (playerActionBar != null)
-                    {
-                        playerActionBar.SetActive(true);
-                    }
-                    if (bar != null)
-                    {
-                        bar.localScale = new Vector3((float)(((100 / resourceScript.duration) * miningTimer) * 0.01), 1);
-                    }
+                    bar.localScale = new Vector3((float)(((100 / resourceScript.duration) * miningTimer) * 0.01), 1);
                 }
             }
-            if (playerActionBar != null)
-            {
-                playerActionBar.SetActive(false);
-            }
-            if (isMining && attributeScript != null)
-            {
-                attributeScript.gold.Increase(resourceScript.goldValue);
-                attributeScript.energy.Decrease(resourceScript.energyDrainValue);
-                resourceScript.Destroy();
-            }
-            isMining = false;
-            miningTimer = 0;
         }
+        if (playerActionBar != null)
+        {
+            playerActionBar.SetActive(false);
+        }
+        if (isMining && attributeScript != null)
+        {
+            attributeScript.gold.Increase(resourceScript.goldValue);
+            attributeScript.energy.Decrease(resourceScript.energyDrainValue);
+            resourceScript.Destroy();
+        }
+        isMining = false;
+        miningTimer = 0;
     }
 }
