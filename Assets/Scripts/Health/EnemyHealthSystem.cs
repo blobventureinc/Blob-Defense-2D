@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EnemyHealthSystem: HealthSystem
+public class EnemyHealthSystem : HealthSystem
 {
     private AttributeManager player;
-    [SerializeField] WalkAlongPath pathScript;
+    [SerializeField] WalkAlongPath pathScript = null;
     private IEnumerator animCoroutine;
 
-    [SerializeField] GameObject healthBar;
-    [SerializeField] Animator anim;
+    [SerializeField] GameObject healthBar = null;
+    [SerializeField] Animator anim = null;
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +39,10 @@ public class EnemyHealthSystem: HealthSystem
         StartCoroutine(animCoroutine);
     }
 
-    private IEnumerator WaitAndPrint(float waitTime) {
-        while (true) {
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+        while (true)
+        {
             yield return new WaitForSeconds(waitTime);
             //print("WaitAndPrint " + Time.time);
             Destroy(gameObject);

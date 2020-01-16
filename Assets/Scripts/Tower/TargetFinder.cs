@@ -10,7 +10,24 @@ public abstract class TargetFinder : MonoBehaviour
     {
         get
         {
-            _targets.RemoveAll(item => item == null);
+            _targets.RemoveAll((GameObject item) =>
+            {
+                if (item == null)
+                {
+                    return true;
+                }
+                else
+                {
+                    if (item.tag != "Enemy")
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+            });
             return _targets;
         }
     }
@@ -25,7 +42,8 @@ public abstract class TargetFinder : MonoBehaviour
 
     protected void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy") {
+        if (other.gameObject.tag == "Enemy")
+        {
             _targets.Add(other.gameObject);
         }
     }

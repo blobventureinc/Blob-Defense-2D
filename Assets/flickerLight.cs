@@ -5,7 +5,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class flickerLight : MonoBehaviour
 {
-    [SerializeField] private UnityEngine.Experimental.Rendering.Universal.Light2D light;
+    [SerializeField] private UnityEngine.Experimental.Rendering.Universal.Light2D lightSource = null;
     public float flickerTimer;
     public float flickerRadius;
     private float timer;
@@ -13,7 +13,7 @@ public class flickerLight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialIntensity = light.intensity;
+        initialIntensity = lightSource.intensity;
     }
 
     // Update is called once per frame
@@ -21,9 +21,9 @@ public class flickerLight : MonoBehaviour
     {
         timer += Time.deltaTime;
         if (timer >= flickerTimer) {
-            light.pointLightOuterRadius = Random.Range(flickerRadius, flickerRadius + Random.Range(0.0f, 0.4f));
+            lightSource.pointLightOuterRadius = Random.Range(flickerRadius, flickerRadius + Random.Range(0.0f, 0.4f));
             timer = 0;
-            light.intensity = Random.Range(initialIntensity, initialIntensity+0.1f);
+            lightSource.intensity = Random.Range(initialIntensity, initialIntensity+0.1f);
         }
     }
 }

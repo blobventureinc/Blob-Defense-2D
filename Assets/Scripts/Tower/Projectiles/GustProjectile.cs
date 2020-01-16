@@ -44,6 +44,10 @@ public class GustProjectile : Projectile
                         impact(_target);
                     }
                 }
+                else
+                {
+                    _target = targetfinder.targets[0];
+                }
             }
             else
             {
