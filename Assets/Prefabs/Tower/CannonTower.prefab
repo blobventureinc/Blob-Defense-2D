@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 1137054096395054197}
   - component: {fileID: 3243754219959914081}
   - component: {fileID: 5841899240412541499}
+  - component: {fileID: 5582278874014708231}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -107,10 +108,11 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -201,3 +203,39 @@ MonoBehaviour:
   towerCost: 20
   towerActions:
   - {fileID: 0}
+--- !u!114 &5582278874014708231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7051282933711315176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000ad75f0599ddd79d98dca5ec79d74e106
+  m_ShapePath:
+  - {x: 0.08395432, y: -0.2159383, z: 0}
+  - {x: 0.1079769, y: -0.18496741, z: 0}
+  - {x: 0.10853178, y: -0.13211477, z: 0}
+  - {x: 0.09956756, y: -0.085153304, z: 0}
+  - {x: 0.07440153, y: -0.04706848, z: 0}
+  - {x: 0.0348304, y: -0.026683373, z: 0}
+  - {x: -0.0011431526, y: -0.025484286, z: 0}
+  - {x: -0.050307132, y: -0.03627638, z: 0}
+  - {x: -0.08388251, y: -0.07225009, z: 0}
+  - {x: -0.100670196, y: -0.12021483, z: 0}
+  - {x: -0.100670196, y: -0.17657349, z: 0}
+  - {x: -0.07027501, y: -0.2118596, z: 0}
+  - {x: -0.0215281, y: -0.23053381, z: 0}
+  - {x: 0.036029644, y: -0.23173305, z: 0}
+  m_ShapePathHash: -1055919535
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -127598
