@@ -5,7 +5,7 @@ using UnityEngine.Experimental.Rendering.LWRP;
 
 public class flickerLight : MonoBehaviour
 {
-    [SerializeField] private Light2D light;
+    [SerializeField] private UnityEngine.Experimental.Rendering.Universal.Light2D light;
     public float flickerTimer;
     public float flickerRadius;
     private float timer;
