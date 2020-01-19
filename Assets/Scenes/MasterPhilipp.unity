@@ -18894,7 +18894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towers:
-  - {fileID: 1610730044229783527, guid: 4a30e09717dab674580799bd90cc617d, type: 3}
+  - {fileID: 1610730044229783527, guid: a40b806eeeb1108ed8aaa98348f5edb1, type: 3}
   - {fileID: 7568302192244332532, guid: c7306e411ae52e343b6a10e46c0ed80d, type: 3}
   - {fileID: 2331502401780244668, guid: 134e17b1cac5248429cd4c3c47dd4682, type: 3}
   - {fileID: 3871615510078008736, guid: d1a0c1083d9359c4892b2587464c282a, type: 3}

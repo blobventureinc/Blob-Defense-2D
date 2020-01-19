@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3217171575755915060}
   - component: {fileID: 9207108060336340311}
+  - component: {fileID: 2986559226074806458}
   m_Layer: 0
-  m_Name: CannonTower
+  m_Name: CannonTowerParticle
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,6 +30,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4905712525845764956}
+  - {fileID: 155782620857683765}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -58,6 +60,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2555643, y: 0.19564846}
   m_EdgeRadius: 0
+--- !u!114 &2986559226074806458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610730044229783527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3270bbbdb9172603288e0414a3a13cbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 8447694403428378154, guid: f1118d41de3718ce5a0a7c7916245d5c, type: 3}
 --- !u!1 &7051282933711315176
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +217,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerCost: 20
   towerActions:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: cf6433f652ec213eeb3905f0d7203e59, type: 2}
 --- !u!114 &5582278874014708231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,4 +253,79 @@ MonoBehaviour:
   - {x: 0.036029644, y: -0.23173305, z: 0}
   m_ShapePathHash: -1055919535
   m_Mesh: {fileID: 0}
-  m_InstanceId: 127912
+  m_InstanceId: 134538
+--- !u!1001 &2154119498552428459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3217171575755915060}
+    m_Modifications:
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877841748085117064, guid: c7c306fc21a688be3b13a061d2be2e83,
+        type: 3}
+      propertyPath: m_Name
+      value: BuildParticles
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c7c306fc21a688be3b13a061d2be2e83, type: 3}
+--- !u!4 &155782620857683765 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2291640835362719902, guid: c7c306fc21a688be3b13a061d2be2e83,
+    type: 3}
+  m_PrefabInstance: {fileID: 2154119498552428459}
+  m_PrefabAsset: {fileID: 0}
