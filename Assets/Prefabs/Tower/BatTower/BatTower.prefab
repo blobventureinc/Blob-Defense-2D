@@ -54,6 +54,8 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 5.4
@@ -79,7 +81,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1284746350460418693}
-  - component: {fileID: 6167852443358875808}
+  - component: {fileID: 149315484830809653}
+  - component: {fileID: 619917801749469522}
   m_Layer: 0
   m_Name: BatTower
   m_TagString: Tower
@@ -98,12 +101,12 @@ Transform:
   m_LocalPosition: {x: -8.5, y: -4.5, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
-  - {fileID: 3453100579455979171}
   - {fileID: 1908841482904372438}
+  - {fileID: 3453100579455979171}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &6167852443358875808
+--- !u!61 &149315484830809653
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00655438, y: -0.013109043}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -127,8 +130,21 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2555643, y: 0.19564846}
+  m_Size: {x: 0.23532492, y: 0.23969406}
   m_EdgeRadius: 0
+--- !u!114 &619917801749469522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3871615510078008736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c82dfa43787d5d48a5c5111a7da328d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 3283926593470175593}
 --- !u!1 &4367400344992880591
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +154,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1908841482904372438}
-  - component: {fileID: 2833029138116095961}
   - component: {fileID: 7759639172747669283}
   m_Layer: 0
   m_Name: Tooltip
@@ -160,21 +175,8 @@ Transform:
   m_Children:
   - {fileID: 2361806133472798829}
   m_Father: {fileID: 1284746350460418693}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2833029138116095961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4367400344992880591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c82dfa43787d5d48a5c5111a7da328d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltip: {fileID: 3283926593470175593}
 --- !u!61 &7759639172747669283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -182,13 +184,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4367400344992880591}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000008940697, y: 0.08756615}
+  m_Offset: {x: 0.019663334, y: 0.26453376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -199,7 +201,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3472761, y: 0.483057}
+  m_Size: {x: 0.989604, y: 1.5186439}
   m_EdgeRadius: 0
 --- !u!1 &7648957009249364492
 GameObject:
@@ -234,7 +236,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1284746350460418693}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6502462890796001357
 SpriteRenderer:
@@ -250,6 +252,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
