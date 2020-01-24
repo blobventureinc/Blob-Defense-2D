@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private AttributeManager player = null;
     //[SerializeField] private GameObject gameMenu;
+    [SerializeField] private Animator dayNightCycle = null;
 
     [Header("UI Elements")]
     [SerializeField] private GameObject gameOverUI = null;
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
             sp.SpawnNextWave();
         wave++;
         roundText.text = "Wave " + wave + " / " + spawners[0].waves.Length;
+        dayNightCycle.SetBool("isDay", false);
     }
 
     public void RoundEnd()
@@ -71,6 +73,7 @@ public class GameManager : MonoBehaviour
         {
             isInCombat = false;
             player.level.Increase(1);
+            dayNightCycle.SetBool("isDay", true);
         }
     }
 
