@@ -1091,6 +1091,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 228730012550864856, guid: ebb221e9c0106d14eae27e0b605bb27c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 228730012553433878, guid: ebb221e9c0106d14eae27e0b605bb27c,
         type: 3}
       propertyPath: spawners.Array.data[0]
