@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4496214735971990434}
   - component: {fileID: 8802579707418562951}
   m_Layer: 0
-  m_Name: CatapultTower 1
+  m_Name: CatTower 1
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,7 +170,7 @@ Transform:
   m_GameObject: {fileID: 1876641285881146503}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 25462678365130628}
   - {fileID: 3876481841818699249}
@@ -277,12 +277,13 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 71a99cc54df264040b342d51d773cf13, type: 3}
+  m_Sprite: {fileID: 3395656851343202646, guid: 2262ba7be528d1644b9b1d8bde5c8954,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 1
   m_WasSpriteAssigned: 1

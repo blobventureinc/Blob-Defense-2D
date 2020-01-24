@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 1876641285881146503, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
       propertyPath: m_Name
-      value: CatapultTower 2
+      value: CatTower 2
       objectReference: {fileID: 0}
     - target: {fileID: 3478855575405915023, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
@@ -84,5 +84,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8470414420292315498, guid: 88263ed2c7ee37149b34dc7db8285d6b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7131748918469768627, guid: 6cf56e2c3e5f8c64dbf2af1baf53230d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88263ed2c7ee37149b34dc7db8285d6b, type: 3}
