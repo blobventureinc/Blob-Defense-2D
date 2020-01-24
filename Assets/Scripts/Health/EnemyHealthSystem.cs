@@ -13,7 +13,7 @@ public class EnemyHealthSystem : HealthSystem
     [SerializeField] GameObject healthBar = null;
     [SerializeField] Animator anim = null;
 
-    [SerializeField] bool isHiddenEnemy;
+    [SerializeField] bool isHiddenEnemy = true;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     bool resetted;

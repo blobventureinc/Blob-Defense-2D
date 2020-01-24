@@ -8,6 +8,7 @@ public class PlayerBuildAction : MonoBehaviour
     public GameObject[] towers;
     public GameObject buildActionMenu;
     public float reachDistance;
+    [SerializeField] AttributeManager attributeManager = null;
     bool active = false;
 
     private Vector3 selectedPosition;
@@ -40,11 +41,16 @@ public class PlayerBuildAction : MonoBehaviour
     {
         buildActionMenu.SetActive(true); active = true;
     }
-
+    public bool canBuildTower(int i)
+    {
+        int towerCost = towers[i].GetComponentInChildren<Tower>().towerCost;
+        return attributeManager.gold.value >= towerCost;
+    }
 
     public void buildTower(int i)
     {
-        GameObject t = Instantiate(towers[i], selectedPosition, Quaternion.identity) as GameObject;
-        hideUI();
+        attributeManager.gold.Decrease(towers[i].GetComponentInChildren<Tower>().towerCost);
+            GameObject t = Instantiate(towers[i], selectedPosition, Quaternion.identity) as GameObject;
+            hideUI();
     }
 }
