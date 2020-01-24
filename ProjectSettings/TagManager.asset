@@ -10,6 +10,7 @@ TagManager:
   - Stone
   - Tree
   - Resource
+  - Light
   layers:
   - Default
   - TransparentFX

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class EnemyHealthSystem : HealthSystem
 {
@@ -12,11 +13,45 @@ public class EnemyHealthSystem : HealthSystem
     [SerializeField] GameObject healthBar = null;
     [SerializeField] Animator anim = null;
 
+    [SerializeField] bool isHiddenEnemy;
+    [SerializeField] SpriteRenderer spriteRenderer;
+
+    bool resetted;
+    bool hasLight;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<AttributeManager>();
         onDeath.AddListener(DestroyItself);
+    }
+
+    private void FixedUpdate() {
+        if (isHiddenEnemy) {
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(gameObject.transform.position, 0.3f);
+            if (GetLightColliderCount(colliders) != 0) {
+                if (resetted == false) {
+                    gameObject.SetActive(false);
+                    gameObject.SetActive(true);
+                    resetted = true;
+                }
+                gameObject.tag = "Enemy";
+                return;
+            } else {
+                resetted = false;
+            }
+            gameObject.tag = "Untagged";
+        }
+    }
+
+    private int GetLightColliderCount(Collider2D[] colliders) {
+        int count = 0;
+        for (int i = 0; i < colliders.Length; i++) {
+            if (colliders[i].gameObject.tag == "Light") {
+                count++;
+            }
+        }
+        return count;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,6 +66,7 @@ public class EnemyHealthSystem : HealthSystem
     void DestroyItself()
     {
         healthBar.SetActive(false);
+        GetComponent<ShadowCaster2D>().enabled = false;
         gameObject.tag = "Untagged";
         anim.SetBool("DeathTrigger", true);
         pathScript.speed = 0.0f;

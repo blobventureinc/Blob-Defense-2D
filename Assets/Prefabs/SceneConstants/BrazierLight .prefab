@@ -86,8 +86,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightSource: {fileID: 6368704435989046100}
-  flickerTimer: 0.1
-  flickerRadius: 6.79
+  flickerTimer: 0.5
+  flickerRadius: 5.07
 --- !u!1 &2910458875599582547
 GameObject:
   m_ObjectHideFlags: 0
