@@ -5,10 +5,11 @@ using UnityEngine;
 public abstract class PricyTowerAction : TowerAction
 {
     public int gold;
+    public int energy;
 
     public bool IsDoable(AttributeManager attributeManager) 
     {
-        return attributeManager.gold.value >= gold;
+        return attributeManager.gold.value >= gold && attributeManager.energy.value >= energy;
     }
 
     public override bool DoAction(AttributeManager attributeManager, Tower tower) 
@@ -16,6 +17,7 @@ public abstract class PricyTowerAction : TowerAction
         if(IsDoable(attributeManager)) 
         {
             attributeManager.gold.Decrease(gold);
+            attributeManager.energy.Decrease(energy);
             DoActionImpl(tower);
             return true;
         }
