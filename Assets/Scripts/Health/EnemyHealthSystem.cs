@@ -32,6 +32,7 @@ public class EnemyHealthSystem : HealthSystem
         onDeath.AddListener(DestroyItself);
         step = true;
         destroyed = false;
+        gameObject.tag = "Untagged";
     }
 
     private void Update() {
@@ -49,16 +50,6 @@ public class EnemyHealthSystem : HealthSystem
             }
             step = true;
         }
-    }
-
-    private int GetLightColliderCount(Collider2D[] colliders) {
-        int count = 0;
-        for (int i = 0; i < colliders.Length; i++) {
-            if (colliders[i].gameObject.tag == "Light") {
-                count++;
-            }
-        }
-        return count;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

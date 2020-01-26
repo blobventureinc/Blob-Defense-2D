@@ -16,9 +16,9 @@ public class ZoomCamera : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") < 0) {
             if (Camera.main.orthographicSize < 7.0f) {
-                Debug.Log(gameObject.transform.position.y);
+                //Debug.Log(gameObject.transform.position.y);
                 gameObject.transform.position = new Vector3(transform.position.x, transform.position.y + 0.05f, -100f);
-                Debug.Log(gameObject.transform.position.y);
+                //Debug.Log(gameObject.transform.position.y);
                 Camera.main.orthographicSize += 0.2f;
             }
         }
