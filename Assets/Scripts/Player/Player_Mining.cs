@@ -7,7 +7,6 @@ public class Player_Mining : MonoBehaviour
     public bool isMining; //Toggled off by movement to cancel mining
     public int miningTimer; //Increments to time mining process
     private Resource resourceScript = null;
-    [SerializeField] private Tile_Targeting targetingScript = null;
     [SerializeField] private Player_Movement movementScript = null;
     [SerializeField] private AttributeManager attributeScript = null;
 
