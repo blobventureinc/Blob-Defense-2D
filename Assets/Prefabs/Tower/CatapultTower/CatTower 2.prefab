@@ -84,6 +84,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5574693813635621691, guid: 88263ed2c7ee37149b34dc7db8285d6b,
+        type: 3}
+      propertyPath: tooltipText
+      value: "Katapultturm \\n\\nStufe 2 \\n\\n \"Etwas macht Aufzieh-Ger\xE4usche.\" "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149892805807410136, guid: 88263ed2c7ee37149b34dc7db8285d6b,
+        type: 3}
+      propertyPath: m_InstanceId
+      value: -639190
+      objectReference: {fileID: 0}
     - target: {fileID: 8470414420292315498, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
       propertyPath: m_Sprite

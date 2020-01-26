@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4020605118987572891}
   - component: {fileID: 1951774942151654568}
   - component: {fileID: 1984491344313930079}
+  - component: {fileID: 4618327499574828824}
+  - component: {fileID: 9108083170788193245}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Resource
@@ -30,7 +32,6 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 8282109785406532457}
-  - {fileID: 4564472618576452138}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,6 +79,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7761812, y: 0.6269706}
   m_EdgeRadius: 0
+--- !u!58 &4618327499574828824
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020605118987572889}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.030890927, y: -0.022064894}
+  serializedVersion: 2
+  m_Radius: 0.5529557
+--- !u!114 &9108083170788193245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4020605118987572889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: Stein \n\n Kann einmal abgebaut werden. \nAbbauen kostet 30 Energie.
+    \n\n"Sieht nicht sehr beweglich aus!"
 --- !u!1 &6356147621499829525
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +122,7 @@ GameObject:
   - component: {fileID: 8282109785406532457}
   - component: {fileID: 5883095811791004428}
   - component: {fileID: 1363553966165510749}
+  - component: {fileID: 5329715434883655280}
   m_Layer: 0
   m_Name: Stone
   m_TagString: Resource
@@ -207,79 +241,30 @@ MonoBehaviour:
   - {x: -0.38492817, y: -0.28125244, z: 0.0000019073486}
   m_ShapePathHash: 243829487
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1458
---- !u!1001 &6036210276709459635
-PrefabInstance:
+  m_InstanceId: 58150
+--- !u!61 &5329715434883655280
+BoxCollider2D:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4020605118987572891}
-    m_Modifications:
-    - target: {fileID: 3854623819274944620, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_Name
-      value: Tooltip
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 090aa367013933c46b141adf5d2744ce, type: 3}
---- !u!4 &4564472618576452138 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7826322573815938201, guid: 090aa367013933c46b141adf5d2744ce,
-    type: 3}
-  m_PrefabInstance: {fileID: 6036210276709459635}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6356147621499829525}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.017651826, y: -0.03530395}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.78817695, y: 0.6293099}
+  m_EdgeRadius: 0

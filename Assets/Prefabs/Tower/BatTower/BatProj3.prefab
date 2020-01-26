@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
       propertyPath: attacks_per_sec
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
       propertyPath: dmg._poisonDmg
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8483851487308851866, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}

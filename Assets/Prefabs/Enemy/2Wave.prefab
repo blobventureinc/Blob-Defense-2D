@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 0}
-  speed: 1.2
+  speed: 1.6
 --- !u!95 &6743655755348722400
 Animator:
   serializedVersion: 3

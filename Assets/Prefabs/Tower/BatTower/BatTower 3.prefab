@@ -94,6 +94,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BatTower 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4574051875595239469, guid: d1a0c1083d9359c4892b2587464c282a,
+        type: 3}
+      propertyPath: tooltipText
+      value: "Fledermausturm \\n\\nStufe 3 \\n\\n \"Du h\xF6rst etwas fiepen.\" "
+      objectReference: {fileID: 0}
     - target: {fileID: 4832450438904168581, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
       propertyPath: m_Radius
@@ -105,5 +110,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 6215847ed7c24d54ca7e143364d474af,
         type: 3}
+    - target: {fileID: 8867359583120362710, guid: d1a0c1083d9359c4892b2587464c282a,
+        type: 3}
+      propertyPath: m_InstanceId
+      value: -619378
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1a0c1083d9359c4892b2587464c282a, type: 3}

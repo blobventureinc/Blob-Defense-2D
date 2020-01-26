@@ -32,7 +32,7 @@ public class PlayerTowerAction : MonoBehaviour
 
     public void Actioning(GameObject gameObject)
     {
-        Tower tower = gameObject.GetComponentInChildren<Tower>();
+        Tower tower = gameObject.transform.parent.gameObject.GetComponentInChildren<Tower>();
         towerActionMenu.HideTowerActionMenu();
         towerActionMenu.ShowTowerActionMenu(attributeScript, tower);
         selectedTowerTransform = gameObject.transform;

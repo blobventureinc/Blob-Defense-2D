@@ -77,5 +77,10 @@ PrefabInstance:
       propertyPath: explosion_damage._fireDmg
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
+        type: 3}
+      propertyPath: dmg._physicalDmg
+      value: 150
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f988067d007219a46bd921385a623c01, type: 3}

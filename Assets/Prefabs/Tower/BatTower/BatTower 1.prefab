@@ -82,7 +82,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1284746350460418693}
   - component: {fileID: 6167852443358875808}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BatTower 1
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -101,7 +101,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3453100579455979171}
-  - {fileID: 1908841482904372438}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -118,7 +117,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003417343, y: -0.26332337}
+  m_Offset: {x: 0.003417343, y: -0.06417948}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -129,7 +128,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.98687667, y: 0.7339927}
+  m_Size: {x: 0.98687667, y: 0.6637069}
   m_EdgeRadius: 0
 --- !u!1 &4367400344992880591
 GameObject:
@@ -142,9 +141,10 @@ GameObject:
   - component: {fileID: 1908841482904372438}
   - component: {fileID: 2183989364911539281}
   - component: {fileID: 8732408345739288853}
+  - component: {fileID: 4574051875595239469}
   m_Layer: 0
   m_Name: Tooltip
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,12 +157,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4367400344992880591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.22, z: 0}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_Children:
   - {fileID: 2361806133472798829}
-  m_Father: {fileID: 1284746350460418693}
-  m_RootOrder: 1
+  m_Father: {fileID: 3453100579455979171}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2183989364911539281
 BoxCollider2D:
@@ -177,7 +177,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07245916, y: 0.7599306}
+  m_Offset: {x: -0.07245922, y: 1.3573626}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -188,7 +188,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2191963, y: 5.417082}
+  m_Size: {x: 3.2191963, y: 5.2062235}
   m_EdgeRadius: 0
 --- !u!114 &8732408345739288853
 MonoBehaviour:
@@ -203,6 +203,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 3283926593470175593}
+--- !u!114 &4574051875595239469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4367400344992880591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: "Fledermausturm \\n\\nStufe 1 \\n\\n \"Du h\xF6rst etwas fiepen.\" "
 --- !u!1 &7648957009249364492
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +233,7 @@ GameObject:
   - component: {fileID: 3413505482853501984}
   - component: {fileID: 2303298960533777064}
   - component: {fileID: 8867359583120362710}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,9 +248,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7648957009249364492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1908841482904372438}
   m_Father: {fileID: 1284746350460418693}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -380,4 +396,4 @@ MonoBehaviour:
   - {x: -0.3974122, y: -0.09018496, z: 0}
   m_ShapePathHash: 2132695273
   m_Mesh: {fileID: 0}
-  m_InstanceId: 531738
+  m_InstanceId: 1161738

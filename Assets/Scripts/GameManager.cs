@@ -111,6 +111,7 @@ public class GameManager : MonoBehaviour
 
     public void NextWave()
     {
+        player.gameObject.GetComponent<PlayerActioneer>().enabled = false;
         foreach (Spawner sp in spawners) {
             remaining_waves += sp.waves[wave].enemyWaves.Length;
         }
@@ -131,6 +132,7 @@ public class GameManager : MonoBehaviour
             player.level.Increase(1);
             dayNightCycle.SetBool("isDay", true);
         }
+        player.gameObject.GetComponent<PlayerActioneer>().enabled = true;
     }
 
     public void OpenMainMenu()

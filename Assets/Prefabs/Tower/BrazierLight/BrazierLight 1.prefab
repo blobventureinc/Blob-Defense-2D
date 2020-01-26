@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5396280646330366263}
   - component: {fileID: 7088213620907237816}
   - component: {fileID: 3293447699043543448}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 'BrazierLight '
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -178,6 +178,21 @@ MonoBehaviour:
   m_ShapePathHash: 1929367605
   m_Mesh: {fileID: 0}
   m_InstanceId: 519388
+--- !u!114 &2670215681395199051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129448036205629886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: Kohlepfanne \n\nStufe 1 \n\n"Es knistert ein bisschen."
 --- !u!1 &2662173490236443087
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +205,7 @@ GameObject:
   - component: {fileID: 8878702736610823285}
   - component: {fileID: 6428298351341910803}
   - component: {fileID: 7382834150977338223}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -234,7 +249,7 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 5
   m_AlphaBlendOnOverlap: 1
-  m_ShadowIntensity: 0.2
+  m_ShadowIntensity: 0.14
   m_ShadowVolumeIntensity: 0.586
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
@@ -325,6 +340,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653002497303162852, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
       objectReference: {fileID: 0}
     - target: {fileID: 7535350780809002237, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
         type: 3}
@@ -438,6 +458,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182058041ce2c1646a3fe1b2db4a2e5d, type: 3}
+--- !u!1 &1129448036205629886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5653002497303162852, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4746764128107511386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2976058359091757735 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7535350780809002237, guid: 182058041ce2c1646a3fe1b2db4a2e5d,

@@ -73,6 +73,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1651582036568171084, guid: 2dc11308c0b4e654a99c40c4ccac49c4,
+        type: 3}
+      propertyPath: m_InstanceId
+      value: -635978
+      objectReference: {fileID: 0}
     - target: {fileID: 3102153908092383067, guid: 2dc11308c0b4e654a99c40c4ccac49c4,
         type: 3}
       propertyPath: m_Name
@@ -84,6 +89,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3191362395833809340, guid: 5e6bad04f1914924c9e36379f7871d3c,
         type: 3}
+    - target: {fileID: 4430492441159099229, guid: 2dc11308c0b4e654a99c40c4ccac49c4,
+        type: 3}
+      propertyPath: tooltipText
+      value: "Kanonenturm \\n\\nStufe 3 \\n\\n \"Es riecht nach Schie\xDFpulver.\" "
+      objectReference: {fileID: 0}
     - target: {fileID: 4938987317478435510, guid: 2dc11308c0b4e654a99c40c4ccac49c4,
         type: 3}
       propertyPath: m_Sprite

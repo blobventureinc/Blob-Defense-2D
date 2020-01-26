@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6906080392232192685}
   - component: {fileID: 9067375339789286859}
   - component: {fileID: 3819490164616595084}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point Light 2D
   m_TagString: Light
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_UseNormalMap: 0
   m_LightOrder: 5
   m_AlphaBlendOnOverlap: 1
-  m_ShadowIntensity: 0.2
+  m_ShadowIntensity: 0.14
   m_ShadowVolumeIntensity: 0.586
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5029378261061399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed282119f4fd55f4b8fab955e6615707, type: 3}
   m_Name: 
@@ -104,7 +104,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.02627786}
   serializedVersion: 2
-  m_Radius: 2.6729383
+  m_Radius: 2.1
 --- !u!1 &3445671093931629738
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7927283355532820463}
   - component: {fileID: 5097593353536710496}
   - component: {fileID: 2008935530227888298}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 'BrazierLight '
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -281,6 +281,21 @@ MonoBehaviour:
   m_ShapePathHash: 1225113285
   m_Mesh: {fileID: 0}
   m_InstanceId: 519510
+--- !u!114 &589983562747435693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157683990012666014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: Kohlepfanne \n\nStufe 3 \n\n"Es knistert und flackert."
 --- !u!1 &8323127101670389723
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8323127101670389720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BrazierLight3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,6 +338,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653002497303162852, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653002497303162852, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6880859752568529218, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7535350780809002237, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
         type: 3}
@@ -436,6 +466,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182058041ce2c1646a3fe1b2db4a2e5d, type: 3}
+--- !u!1 &5157683990012666014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5653002497303162852, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 711772774322540410}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7021753991211987847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7535350780809002237, guid: 182058041ce2c1646a3fe1b2db4a2e5d,

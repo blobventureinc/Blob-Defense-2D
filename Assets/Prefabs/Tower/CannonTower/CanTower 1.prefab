@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 345154803421382189}
   - component: {fileID: 70011959158802090}
   - component: {fileID: 4912296901370627842}
+  - component: {fileID: 4430492441159099229}
   m_Layer: 0
   m_Name: Tooltip
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +73,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 3685480059466390418}
+--- !u!114 &4430492441159099229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462257581188453684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: "Kanonenturm \\n\\nStufe 1 \\n\\n \"Es riecht nach Schie\xDFpulver.\" "
 --- !u!1 &3102153908092383067
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +98,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109003435284641918}
   - component: {fileID: 5417602058278031963}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CanTower 1
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -190,7 +206,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 6
+  m_PointLightOuterRadius: 8.01
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -218,7 +234,7 @@ GameObject:
   - component: {fileID: 3596291869047049947}
   - component: {fileID: 90454019442239571}
   - component: {fileID: 1651582036568171084}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8399530650212952311}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1109003435284641918}
@@ -304,7 +320,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 8
 --- !u!114 &3618586193252739806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,4 +393,4 @@ MonoBehaviour:
   - {x: -0.2927723, y: 0.09595215, z: 0}
   m_ShapePathHash: 1813992061
   m_Mesh: {fileID: 0}
-  m_InstanceId: 212024
+  m_InstanceId: 70296

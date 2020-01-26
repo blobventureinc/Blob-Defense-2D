@@ -23,6 +23,7 @@ public class EnemyHealthSystem : HealthSystem
 
     bool resetted;
     bool hasLight;
+    bool destroyed;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class EnemyHealthSystem : HealthSystem
         player = GameObject.Find("Player").GetComponent<AttributeManager>();
         onDeath.AddListener(DestroyItself);
         step = true;
+        destroyed = false;
     }
 
     private void Update() {
@@ -55,7 +57,7 @@ public class EnemyHealthSystem : HealthSystem
     }
 
     private void FixedUpdate() {
-        if (isHiddenEnemy) {
+        if (isHiddenEnemy && !destroyed) {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(gameObject.transform.position, 0.3f);
             if (GetLightColliderCount(colliders) != 0) {
                 if (resetted == false) {
@@ -93,6 +95,7 @@ public class EnemyHealthSystem : HealthSystem
 
     void DestroyItself()
     {
+        destroyed = true;
         healthBar.SetActive(false);
         if (GetComponent<ShadowCaster2D>() != null) {
             GetComponent<ShadowCaster2D>().enabled = false;
@@ -100,7 +103,7 @@ public class EnemyHealthSystem : HealthSystem
         gameObject.tag = "Untagged";
         anim.SetBool("DeathTrigger", true);
         pathScript.speed = 0.0f;
-        //Debug.Log("DestroyItself Called");
+        Debug.Log("DestroyItself Called");
         animCoroutine = WaitAndPrint(0.7f);
         StartCoroutine(animCoroutine);
     }

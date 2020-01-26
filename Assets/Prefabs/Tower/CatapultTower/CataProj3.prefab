@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 836078761720240636, guid: b42f5fba80178b3409d6152b21dbfd7f,
         type: 3}
       propertyPath: m_Name
-      value: CatapultProj3
+      value: CataProj3
       objectReference: {fileID: 0}
     - target: {fileID: 836078761720240638, guid: b42f5fba80178b3409d6152b21dbfd7f,
         type: 3}
@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 4480471631854831151, guid: b42f5fba80178b3409d6152b21dbfd7f,
         type: 3}
       propertyPath: dmg._physicalDmg
-      value: 30
+      value: 70
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b42f5fba80178b3409d6152b21dbfd7f, type: 3}

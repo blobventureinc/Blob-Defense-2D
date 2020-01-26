@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5574693813635621691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381912376733374184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: "Katapultturm \\n\\nStufe 1 \\n\\n \"Etwas macht Aufzieh-Ger\xE4usche.\" "
 --- !u!1 &1876641285881146503
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +25,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4496214735971990434}
   - component: {fileID: 8802579707418562951}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CatTower 1
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -74,7 +89,7 @@ GameObject:
   - component: {fileID: 67170969202216199}
   - component: {fileID: 3478855575405915023}
   - component: {fileID: 7149892805807410136}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5014506787493800747}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.32, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4496214735971990434}
@@ -161,7 +176,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 6
 --- !u!114 &230236897880762626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +255,7 @@ MonoBehaviour:
   - {x: -0.15249783, y: -0.045708477, z: 0}
   m_ShapePathHash: 95237465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 211824
+  m_InstanceId: 70392
 --- !u!1001 &6728085571367745804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,6 +267,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tooltip
+      objectReference: {fileID: 0}
+    - target: {fileID: 5653002497303162852, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920459453632778310, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 7535350780809002237, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
         type: 3}
@@ -310,6 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8391467000546035501, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
         type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391467000546035501, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+        type: 3}
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
@@ -333,13 +363,14 @@ PrefabInstance:
       propertyPath: m_PointLightInnerRadius
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8391467000546035501, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
-        type: 3}
-      propertyPath: m_FalloffIntensity
-      value: 0.33
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 182058041ce2c1646a3fe1b2db4a2e5d, type: 3}
+--- !u!1 &1381912376733374184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5653002497303162852, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 6728085571367745804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3876481841818699249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7535350780809002237, guid: 182058041ce2c1646a3fe1b2db4a2e5d,
