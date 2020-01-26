@@ -15,5 +15,6 @@ MonoBehaviour:
   actionName: Aufw.
   cost: 30
   gold: 30
+  energy: 10
   towerUpgradePrefab: {fileID: 394589360952987748, guid: f76a1b1685327414787f50c068655310,
     type: 3}

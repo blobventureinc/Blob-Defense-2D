@@ -10,6 +10,8 @@ public class HealthSystem : MonoBehaviour {
 
     public UnityEvent onDeath;
 
+    int count = 0;
+
     [Header("DmgRes as Percent e.g. 0.1f for 10%")]
     [SerializeField] private float _physicalRes = 0;
     [SerializeField] private float _poisonRes = 0;
@@ -38,15 +40,18 @@ public class HealthSystem : MonoBehaviour {
     public void ApplyDamage (Damage dmg) {
         attributeManager.health.Decrease(CalculateDamage(dmg));
         if (isDead) {
-            onDeath.Invoke();
+            count++;
+            killSelf(count);
         }
     }
 
     public void ApplyHeal (int heal) {
         attributeManager.health.Increase(heal);
     }
-    public void killSelf()
+    public void killSelf(int count)
     {
-        onDeath.Invoke();
+        if (count == 1) {
+            onDeath.Invoke();
+        }
     }
 }

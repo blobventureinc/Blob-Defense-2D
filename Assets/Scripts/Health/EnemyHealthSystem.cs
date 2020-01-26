@@ -16,6 +16,11 @@ public class EnemyHealthSystem : HealthSystem
     [SerializeField] bool isHiddenEnemy = true;
     [SerializeField] SpriteRenderer spriteRenderer;
 
+    Vector3 oldPosition;
+    Vector3 newPosition;
+    Vector3 direction;
+    bool step;
+
     bool resetted;
     bool hasLight;
 
@@ -24,6 +29,29 @@ public class EnemyHealthSystem : HealthSystem
     {
         player = GameObject.Find("Player").GetComponent<AttributeManager>();
         onDeath.AddListener(DestroyItself);
+        step = true;
+    }
+
+    private void Update() {
+        if (step) {
+            oldPosition = transform.position;
+            step = false;
+        } else {
+            newPosition = transform.position;
+            //Debug.Log("oldPosition: " + oldPosition);
+            //Debug.Log("newPosition: " + newPosition);
+            var heading = newPosition - oldPosition;
+            //Debug.Log("heading: " + heading);
+            var distance = heading.magnitude;
+            //Debug.Log("distance: " + distance);
+            Vector3 direction = heading / distance;
+            //Debug.Log(direction);
+            if (!float.IsNaN(direction.x)) {
+                anim.SetFloat("SpeedX", direction.x);
+                anim.SetFloat("SpeedY", direction.y);
+            }
+            step = true;
+        }
     }
 
     private void FixedUpdate() {
@@ -58,7 +86,7 @@ public class EnemyHealthSystem : HealthSystem
     {
         if (collision.gameObject.tag == "Castle")
         {
-            killSelf();
+            killSelf(1);
             player.health.Decrease(1);
         }
     }
@@ -66,7 +94,9 @@ public class EnemyHealthSystem : HealthSystem
     void DestroyItself()
     {
         healthBar.SetActive(false);
-        GetComponent<ShadowCaster2D>().enabled = false;
+        if (GetComponent<ShadowCaster2D>() != null) {
+            GetComponent<ShadowCaster2D>().enabled = false;
+        }
         gameObject.tag = "Untagged";
         anim.SetBool("DeathTrigger", true);
         pathScript.speed = 0.0f;

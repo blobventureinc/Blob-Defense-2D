@@ -44,13 +44,14 @@ public class PlayerBuildAction : MonoBehaviour
     public bool canBuildTower(int i)
     {
         int towerCost = towers[i].GetComponentInChildren<Tower>().towerCost;
-        return attributeManager.gold.value >= towerCost;
+        return attributeManager.gold.value >= towerCost && attributeManager.energy.value >= 20;
     }
 
     public void buildTower(int i)
     {
         attributeManager.gold.Decrease(towers[i].GetComponentInChildren<Tower>().towerCost);
-            GameObject t = Instantiate(towers[i], selectedPosition, Quaternion.identity) as GameObject;
+        attributeManager.energy.Decrease(20);
+        GameObject t = Instantiate(towers[i], selectedPosition, Quaternion.identity) as GameObject;
             hideUI();
     }
 }
