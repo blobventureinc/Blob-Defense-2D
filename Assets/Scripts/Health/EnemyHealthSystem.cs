@@ -13,7 +13,7 @@ public class EnemyHealthSystem : HealthSystem
     [SerializeField] GameObject healthBar = null;
     [SerializeField] Animator anim = null;
 
-    [SerializeField] bool isHiddenEnemy = true;
+    bool isHiddenEnemy = true;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     Vector3 oldPosition;
@@ -40,37 +40,14 @@ public class EnemyHealthSystem : HealthSystem
             step = false;
         } else {
             newPosition = transform.position;
-            //Debug.Log("oldPosition: " + oldPosition);
-            //Debug.Log("newPosition: " + newPosition);
             var heading = newPosition - oldPosition;
-            //Debug.Log("heading: " + heading);
             var distance = heading.magnitude;
-            //Debug.Log("distance: " + distance);
             Vector3 direction = heading / distance;
-            //Debug.Log(direction);
             if (!float.IsNaN(direction.x)) {
                 anim.SetFloat("SpeedX", direction.x);
                 anim.SetFloat("SpeedY", direction.y);
             }
             step = true;
-        }
-    }
-
-    private void FixedUpdate() {
-        if (isHiddenEnemy && !destroyed) {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(gameObject.transform.position, 0.3f);
-            if (GetLightColliderCount(colliders) != 0) {
-                if (resetted == false) {
-                    gameObject.SetActive(false);
-                    gameObject.SetActive(true);
-                    resetted = true;
-                }
-                gameObject.tag = "Enemy";
-                return;
-            } else {
-                resetted = false;
-            }
-            gameObject.tag = "Untagged";
         }
     }
 
@@ -86,10 +63,27 @@ public class EnemyHealthSystem : HealthSystem
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.tag == "Light") {
+            if (isHiddenEnemy && !destroyed) {
+                gameObject.tag = "Enemy";
+                isHiddenEnemy = false;
+                gameObject.SetActive(false);
+                gameObject.SetActive(true);
+            }
+        }
         if (collision.gameObject.tag == "Castle")
         {
             killSelf(1);
             player.health.Decrease(1);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision) {
+        if (collision.gameObject.tag == "Light") {
+            if (!isHiddenEnemy) {
+                isHiddenEnemy = true;
+                gameObject.tag = "Untagged";
+            }
         }
     }
 

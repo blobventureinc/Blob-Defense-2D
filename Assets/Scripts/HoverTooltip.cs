@@ -12,7 +12,6 @@ public class HoverTooltip : MonoBehaviour
     private void Start() {
         GameObject temp = GameObject.Find("GeneralToolTip");
         tooltip = temp.GetComponent<Tooltip>();
-        Debug.Log("Awake!");
     }
 
 
