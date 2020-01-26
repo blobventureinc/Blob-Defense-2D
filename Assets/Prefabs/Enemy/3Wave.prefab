@@ -18,9 +18,10 @@ GameObject:
   - component: {fileID: 6743655755348722430}
   - component: {fileID: 6743655755348722400}
   - component: {fileID: 6743655755348722402}
+  - component: {fileID: 8980388511252086761}
   m_Layer: 0
   m_Name: 3Wave
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,12 +123,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.022463143}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.31714228
 --- !u!114 &6743655755348722429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 1
-  _baseHealth: 200
+  _baseHealth: 120
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -221,7 +222,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _physicalRes: 0
-  _poisonRes: 0
+  _poisonRes: 0.5
   _fireRes: 0
   _waterRes: 0
   _windRes: 0
@@ -231,7 +232,6 @@ MonoBehaviour:
   pathScript: {fileID: 6743655755348722430}
   healthBar: {fileID: 3722379158108896889}
   anim: {fileID: 6743655755348722400}
-  isHiddenEnemy: 1
   spriteRenderer: {fileID: 6743655755348722424}
 --- !u!114 &6743655755348722430
 MonoBehaviour:
@@ -302,7 +302,23 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 302910
+  m_InstanceId: 193670
+--- !u!114 &8980388511252086761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743655755348722403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
+    Dance!"'
 --- !u!1001 &3309161707346291509
 PrefabInstance:
   m_ObjectHideFlags: 0

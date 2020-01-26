@@ -62,6 +62,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 920499496550540098, guid: f988067d007219a46bd921385a623c01,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920499496550540098, guid: f988067d007219a46bd921385a623c01,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 920499496550540103, guid: f988067d007219a46bd921385a623c01,
         type: 3}
       propertyPath: m_Name
@@ -70,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
         type: 3}
       propertyPath: max_radius
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
         type: 3}
@@ -80,7 +90,7 @@ PrefabInstance:
     - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
         type: 3}
       propertyPath: dmg._physicalDmg
-      value: 150
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f988067d007219a46bd921385a623c01, type: 3}

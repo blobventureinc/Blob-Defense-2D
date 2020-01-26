@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea39b20489a56a41a7902584d4821bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks_per_sec: 0.3
+  attacks_per_sec: 0.15
   projectile: {fileID: 920499496550540103, guid: f988067d007219a46bd921385a623c01,
     type: 3}
   targetfinder: {fileID: 3596291869047049947}
@@ -393,4 +393,4 @@ MonoBehaviour:
   - {x: -0.2927723, y: 0.09595215, z: 0}
   m_ShapePathHash: 1813992061
   m_Mesh: {fileID: 0}
-  m_InstanceId: 70296
+  m_InstanceId: 308264

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: BatUpg2
   m_EditorClassIdentifier: 
   actionName: Aufw.
-  cost: 200
-  gold: 200
+  cost: 100
+  gold: 100
   energy: 10
   towerUpgradePrefab: {fileID: 5140101643015421028, guid: 52b4526c6fe3e6349b6f8dfeaf5c82b9,
     type: 3}

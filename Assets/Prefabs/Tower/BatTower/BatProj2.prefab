@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
       propertyPath: dmg._poisonDmg
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
@@ -25,6 +25,11 @@ PrefabInstance:
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
       propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
+        type: 3}
+      propertyPath: range_radius
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8483851487308851866, guid: 439fb981fba41df4ca0d88ef32c2784a,
@@ -81,6 +86,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483851487308851866, guid: 439fb981fba41df4ca0d88ef32c2784a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483851487308851866, guid: 439fb981fba41df4ca0d88ef32c2784a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 439fb981fba41df4ca0d88ef32c2784a, type: 3}
