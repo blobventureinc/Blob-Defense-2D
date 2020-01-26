@@ -32,7 +32,6 @@ public class EnemyHealthSystem : HealthSystem
         onDeath.AddListener(DestroyItself);
         step = true;
         destroyed = false;
-        gameObject.tag = "Untagged";
     }
 
     private void Update() {
@@ -54,12 +53,15 @@ public class EnemyHealthSystem : HealthSystem
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Debug.Log("Triggered by: " + collision.gameObject.tag);
         if (collision.gameObject.tag == "Light") {
             if (isHiddenEnemy && !destroyed) {
-                gameObject.tag = "Enemy";
-                isHiddenEnemy = false;
+                //Debug.Log("Inside isHiddenEnemy If");
+                //Debug.Log(gameObject.tag);
                 gameObject.SetActive(false);
                 gameObject.SetActive(true);
+                isHiddenEnemy = false;
+                gameObject.tag = "Enemy";
             }
         }
         if (collision.gameObject.tag == "Castle")

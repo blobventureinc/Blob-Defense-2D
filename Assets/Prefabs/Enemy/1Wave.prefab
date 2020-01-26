@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 9077909230815753457}
   m_Layer: 0
   m_Name: 1Wave
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -347,7 +347,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.03347972}
@@ -456,7 +456,6 @@ MonoBehaviour:
   pathScript: {fileID: 6743655755348722430}
   healthBar: {fileID: 5871630407576048141}
   anim: {fileID: 6743655755348722400}
-  isHiddenEnemy: 1
   spriteRenderer: {fileID: 6743655755348722424}
 --- !u!114 &6743655755348722430
 MonoBehaviour:
@@ -527,7 +526,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 160150
+  m_InstanceId: 25722
 --- !u!114 &9077909230815753457
 MonoBehaviour:
   m_ObjectHideFlags: 0
