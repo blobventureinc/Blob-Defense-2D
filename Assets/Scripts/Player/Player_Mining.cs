@@ -30,6 +30,7 @@ public class Player_Mining : MonoBehaviour
 
     public void Mine(GameObject obj)
     {
+        Debug.Log(obj);
         if (!isMining)
         {
             StartCoroutine(MiningCoroutine(obj));

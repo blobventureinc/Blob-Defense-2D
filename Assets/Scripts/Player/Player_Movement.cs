@@ -21,8 +21,6 @@ public class Player_Movement : MonoBehaviour
 
     [SerializeField] Animator anim = null;
 
-    bool test = false;
-
     private void Start()
     {
         isMovingByKey = true;
@@ -47,7 +45,7 @@ public class Player_Movement : MonoBehaviour
             clickedTile = null;
         }
         if (isMovingByKey) { KeyBoardMovement(); }
-        if (!isMovingByKey || test) { MouseMovement(); }
+        if (!isMovingByKey) { MouseMovement(); }
         if (velocity != new Vector2(0, 0))
         {
             lastVelocity = velocity;
@@ -56,7 +54,6 @@ public class Player_Movement : MonoBehaviour
 
     public void MoveTo(Vector3 clickPos)
     {
-        test = true;
         isMovingByKey = false;
         mouseMovementDone = false;
         this.clickPos = clickPos;
@@ -76,7 +73,7 @@ public class Player_Movement : MonoBehaviour
         }
         else
         {
-            //isMoving = false;
+            isMoving = false;
             //anim.SetBool("isMoving", false);
         }
     }
@@ -112,7 +109,6 @@ public class Player_Movement : MonoBehaviour
             { //when very close by, stop
                 velocity = new Vector2(0, 0);
                 mouseMovementDone = true;
-                test = false;
             }
         }
     }
