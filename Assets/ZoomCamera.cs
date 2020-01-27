@@ -10,6 +10,10 @@ public class ZoomCamera : MonoBehaviour
         Camera.main.orthographicSize = 4.0f;
         gameObject.transform.localPosition = new Vector3(0, 0.4f, -100f);
     }
+    private void Awake() {
+        Camera.main.orthographicSize = 4.0f;
+        gameObject.transform.localPosition = new Vector3(0, 0.4f, -100f);
+    }
 
     // Update is called once per frame
     void Update()

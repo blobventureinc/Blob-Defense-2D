@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class FlickerLight : MonoBehaviour
 {
-    [SerializeField] private UnityEngine.Experimental.Rendering.Universal.Light2D lightSource = null;
+    [SerializeField] private Light2D lightSource = null;
     public float flickerTimer;
     public float flickerRadius;
     private float timer;
