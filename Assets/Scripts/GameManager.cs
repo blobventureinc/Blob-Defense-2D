@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AttributeManager player = null;
     //[SerializeField] private GameObject gameMenu;
     [SerializeField] private Animator dayNightCycle = null;
+    [SerializeField] private GameObject tileHighlightingLight = null;
 
     [Header("UI Elements")]
     [SerializeField] private GameObject gameOverUI = null;
@@ -111,7 +112,10 @@ public class GameManager : MonoBehaviour
 
     public void NextWave()
     {
+        //Disable the actioneer and tileHighlighting on waveStart. You can not build in combat phase
         player.gameObject.GetComponent<PlayerActioneer>().enabled = false;
+        tileHighlightingLight.SetActive(false);
+
         foreach (Spawner sp in spawners) {
             remaining_waves += sp.waves[wave].enemyWaves.Length;
         }
@@ -132,7 +136,10 @@ public class GameManager : MonoBehaviour
             player.level.Increase(1);
             dayNightCycle.SetBool("isDay", true);
         }
+
+        //Reenable the actioneer and highlighting
         player.gameObject.GetComponent<PlayerActioneer>().enabled = true;
+        tileHighlightingLight.SetActive(true);
     }
 
     public void OpenMainMenu()
