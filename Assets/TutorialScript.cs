@@ -6,31 +6,31 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class TutorialScript : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] UpdatePlayerAttributes updateUI;
+    [SerializeField] GameObject player = null;
+    [SerializeField] UpdatePlayerAttributes updateUI = null;
     // CINEMATIC
-    [SerializeField] Camera camera;
-    [SerializeField] Light2D globalLight;
-    [SerializeField] Animator dayLightAnimator;
+    [SerializeField] Camera cam = null;
+    [SerializeField] Light2D globalLight = null;
+    [SerializeField] Animator dayLightAnimator = null;
 
     // TO DEACTIVATE - dont forget to activate again
-    [SerializeField] Tile_Targeting tileTargeting;
-    [SerializeField] Player_Movement playerMovement;
-    [SerializeField] GameObject gameManager;
+    [SerializeField] Tile_Targeting tileTargeting = null;
+    [SerializeField] Player_Movement playerMovement = null;
+    [SerializeField] GameObject gameManager = null;
     GameManager gm;
     ZoomCamera zoom;
-    [SerializeField] GameObject ui;
-    [SerializeField] GameObject tutorialTooltips;
+    [SerializeField] GameObject ui = null;
+    [SerializeField] GameObject tutorialTooltips = null;
 
     // SHOW STUFF
-    [SerializeField] GameObject tooltip1;
-    [SerializeField] GameObject tooltip2;
-    [SerializeField] GameObject tooltip3;
-    [SerializeField] GameObject tooltip4;
-    [SerializeField] GameObject tooltip5;
-    [SerializeField] GameObject tooltip6;
+    [SerializeField] GameObject tooltip1 = null;
+    [SerializeField] GameObject tooltip2 = null;
+    [SerializeField] GameObject tooltip3 = null;
+    [SerializeField] GameObject tooltip4 = null;
+    [SerializeField] GameObject tooltip5 = null;
+    [SerializeField] GameObject tooltip6 = null;
 
-    [SerializeField] Transform wp1, wp2, wp3, wp4, wp5, wp6, wp7, wp8, wp9, wp10;
+    [SerializeField] Transform wp1 = null, wp2 = null, wp3 = null, wp4 = null, wp5 = null, wp6 = null, wp7 = null, wp8 = null, wp9 = null, wp10 = null;
 
     int state;
 
@@ -74,8 +74,8 @@ public class TutorialScript : MonoBehaviour
         // CINEMATIC STUFF
         globalLight.intensity = 0.9f;
         globalLight.color = new Color(0.0f, 0.0f, 0.5f, 1.0f);
-        camera.orthographicSize = 2.0f;
-        camera.transform.localPosition = new Vector3(0, 0.1f, -100f);
+        cam.orthographicSize = 2.0f;
+        cam.transform.localPosition = new Vector3(0, 0.1f, -100f);
 
         timer = 0;
         state = 1;

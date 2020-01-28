@@ -18,11 +18,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject startRoundButton = null;
     [SerializeField] private GameObject roundTimerPanel = null;
     [SerializeField] private Text roundText = null;
-    [SerializeField] private Canvas textTooltip;
-    [SerializeField] private Text textTooltipText;
-    [SerializeField] private GameObject tutorialTooltip;
-    [SerializeField] private Text tutorialToolTipText;
-    [SerializeField] private Text enemyCheckerText;
+    [SerializeField] private Canvas textTooltip = null;
+    [SerializeField] private Text textTooltipText = null;
+    [SerializeField] private GameObject tutorialTooltip = null;
+    [SerializeField] private Text tutorialToolTipText = null;
+    [SerializeField] private Text enemyCheckerText = null;
 
     [Header("Path Spawner")]
     [SerializeField] private Spawner[] spawners = null;
@@ -227,14 +227,14 @@ public class GameManager : MonoBehaviour
         remaining_waves--;
         if (remaining_waves == 0)
         {
+            //Reenable the actioneer and highlighting
+            player.gameObject.GetComponent<PlayerActioneer>().enabled = true;
+            tileHighlightingLight.SetActive(true);
+
             isInCombat = false;
             player.level.Increase(1);
             dayNightCycle.SetBool("isDay", true);
         }
-
-        //Reenable the actioneer and highlighting
-        player.gameObject.GetComponent<PlayerActioneer>().enabled = true;
-        tileHighlightingLight.SetActive(true);
     }
 
     public void OpenMainMenu()

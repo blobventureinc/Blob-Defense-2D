@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class TowerBuildButton : MonoBehaviour
 {
 
-    [SerializeField] private int index;
-    [SerializeField] private PlayerBuildAction playerBuildAction;
-    [SerializeField] private Button button;
+    [SerializeField] private int index = 0;
+    [SerializeField] private PlayerBuildAction playerBuildAction = null;
+    [SerializeField] private Button button = null;
 
     // Start is called before the first frame update
     void Start()

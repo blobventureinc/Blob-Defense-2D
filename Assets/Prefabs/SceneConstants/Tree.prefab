@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: 3712967161374138088}
   - component: {fileID: 4437105740662663458}
   - component: {fileID: 8255179114736073902}
-  - component: {fileID: 7557379614475473102}
+  - component: {fileID: 7592753919518707842}
+  - component: {fileID: 8351284652440518293}
   m_Layer: 10
   m_Name: Tree
   m_TagString: Untagged
@@ -4877,8 +4878,8 @@ MonoBehaviour:
   - {x: -0.101674795, y: -0.2409538, z: 0.0000019073486}
   m_ShapePathHash: -10569993
   m_Mesh: {fileID: 0}
-  m_InstanceId: 525898
---- !u!61 &7557379614475473102
+  m_InstanceId: 117100
+--- !u!61 &7592753919518707842
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4888,10 +4889,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016397111, y: -0.30129677}
+  m_Offset: {x: 0.009000167, y: 0.04753983}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4902,8 +4903,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.33872467, y: 0.21703827}
+  m_Size: {x: 0.56886566, y: 0.92815995}
   m_EdgeRadius: 0
+--- !u!114 &8351284652440518293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823121073922032878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tooltip: {fileID: 0}
+  text: {fileID: 0}
+  tooltipText: "Baum \\n\\nKann mehrfach abgebaut werden. \\nAbbauen kostet 20 Energie. 
+    \\n\\n\"Du h\xF6rst Rascheln in den \xC4sten, gruselig!\""
 --- !u!1 &8316786349853247893
 GameObject:
   m_ObjectHideFlags: 0
@@ -4914,8 +4931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8606748111114998860}
   - component: {fileID: 7436588266239718250}
-  - component: {fileID: 6411572790010298876}
-  - component: {fileID: 7836991314161965050}
+  - component: {fileID: 5575028849582839234}
   m_Layer: 10
   m_Name: Tree
   m_TagString: Resource
@@ -4959,23 +4975,7 @@ MonoBehaviour:
   - {fileID: 2447982919857106782, guid: 18e8df27023b0c44787a54611e17525e, type: 3}
   - {fileID: -5565646898293548738, guid: 18e8df27023b0c44787a54611e17525e, type: 3}
   - {fileID: -961380951494643761, guid: 18e8df27023b0c44787a54611e17525e, type: 3}
---- !u!114 &6411572790010298876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8316786349853247893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f5f75a7aa5384408df4de7d4852628, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tooltip: {fileID: 0}
-  text: {fileID: 0}
-  tooltipText: "Baum \\n\\nKann mehrfach abgebaut werden. \\nAbbauen kostet 20 Energie. 
-    \\n\\n\"Du h\xF6rst Rascheln in den \xC4sten, gruselig!\""
---- !u!61 &7836991314161965050
+--- !u!61 &5575028849582839234
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4985,19 +4985,19 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.032794207, y: 0.020496368}
+  m_Offset: {x: -0.031148091, y: -0.6012328}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.6666667, y: 1}
+    newSize: {x: 0.6666667, y: 1}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8196319, y: 1.6312885}
+  m_Size: {x: 0.6435778, y: 0.32521212}
   m_EdgeRadius: 0
