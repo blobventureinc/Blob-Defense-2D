@@ -25,6 +25,8 @@ public class EnemyHealthSystem : HealthSystem
     bool hasLight;
     bool destroyed;
 
+    int overlapping;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,9 @@ public class EnemyHealthSystem : HealthSystem
                 gameObject.SetActive(false);
                 gameObject.SetActive(true);
                 isHiddenEnemy = false;
+                if (gameObject.tag == "Enemy") {
+                    overlapping++;
+                }
                 gameObject.tag = "Enemy";
             }
         }
@@ -74,8 +79,12 @@ public class EnemyHealthSystem : HealthSystem
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.tag == "Light") {
             if (!isHiddenEnemy) {
-                isHiddenEnemy = true;
-                gameObject.tag = "Untagged";
+                if (overlapping < 1) {
+                    isHiddenEnemy = true;
+                    gameObject.tag = "Untagged";
+                } else {
+                    overlapping--;
+                }
             }
         }
     }

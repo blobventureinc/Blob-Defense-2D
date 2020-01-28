@@ -6,6 +6,8 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class TutorialScript : MonoBehaviour
 {
+    [SerializeField] GameObject player;
+    [SerializeField] UpdatePlayerAttributes updateUI;
     // CINEMATIC
     [SerializeField] Camera camera;
     [SerializeField] Light2D globalLight;
@@ -18,6 +20,7 @@ public class TutorialScript : MonoBehaviour
     GameManager gm;
     ZoomCamera zoom;
     [SerializeField] GameObject ui;
+    [SerializeField] GameObject tutorialTooltips;
 
     // SHOW STUFF
     [SerializeField] GameObject tooltip1;
@@ -35,8 +38,30 @@ public class TutorialScript : MonoBehaviour
 
     bool done0;
 
+    bool breaky = false;
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            breaky = true;
+            Debug.Log("Escape");
+            player.transform.position = new Vector3(-8.0f, 4.0f, 0.0f);
+            playerMovement.enabled = true;
+            tileTargeting.enabled = true;
+            dayLightAnimator.enabled = true;
+            ui.SetActive(true);
+            zoom.enabled = true;
+            gm.enabled = true;
+            tutorialTooltips.SetActive(true);
+            Camera.main.orthographicSize = 4.0f;
+            Camera.main.transform.localPosition = new Vector3(0, 0.4f, -100f);
+            updateUI.Init();
+            gameObject.SetActive(false);
+        }
+    }
+
     private void Start() {
         // DEACTIVATE STUFF
+        tutorialTooltips.SetActive(false);
         gm = gameManager.GetComponent<GameManager>();
         zoom = gameManager.GetComponent<ZoomCamera>();
         playerMovement.enabled = false;
@@ -137,12 +162,16 @@ public class TutorialScript : MonoBehaviour
             state++;
             timer = 0;
         }
+        if (breaky == true) {
+            yield break;
+        }
         playerMovement.enabled = true;
         tileTargeting.enabled = true;
         dayLightAnimator.enabled = true;
         ui.SetActive(true);
         zoom.enabled = true;
         gm.enabled = true;
+        tutorialTooltips.SetActive(true);
         Camera.main.orthographicSize = 4.0f;
         Camera.main.transform.localPosition = new Vector3(0, 0.4f, -100f);
         gameObject.SetActive(false);

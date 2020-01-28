@@ -36,7 +36,15 @@ public class PlayerActioneer : MonoBehaviour
             }
             else if (colliders[i].gameObject.tag == "Resource")
             {
-                mining.Mine(colliders[i].gameObject);
+                if (colliders[i].gameObject.GetComponent<Resource>().type == "Stone") {
+                    if (gameObject.GetComponent<AttributeManager>().energy.value >= 30) {
+                        mining.Mine(colliders[i].gameObject);
+                    }
+                } else if (colliders[i].gameObject.GetComponent<Resource>().type == "Tree") {
+                    if (gameObject.GetComponent<AttributeManager>().energy.value >= 20) {
+                        mining.Mine(colliders[i].gameObject);
+                    }
+                }
                 result += "Mining";
             }
             else if (colliders[i].gameObject.tag == "Tower")

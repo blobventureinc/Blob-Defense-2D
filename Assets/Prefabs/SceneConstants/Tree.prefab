@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 4437105740662663458}
   - component: {fileID: 8255179114736073902}
   - component: {fileID: 7557379614475473102}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tree
-  m_TagString: Resource
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4877,7 +4877,7 @@ MonoBehaviour:
   - {x: -0.101674795, y: -0.2409538, z: 0.0000019073486}
   m_ShapePathHash: -10569993
   m_Mesh: {fileID: 0}
-  m_InstanceId: 520162
+  m_InstanceId: 525898
 --- !u!61 &7557379614475473102
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4916,7 +4916,7 @@ GameObject:
   - component: {fileID: 7436588266239718250}
   - component: {fileID: 6411572790010298876}
   - component: {fileID: 7836991314161965050}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tree
   m_TagString: Resource
   m_Icon: {fileID: 0}

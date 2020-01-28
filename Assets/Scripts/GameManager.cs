@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject roundTimerPanel = null;
     [SerializeField] private Text roundText = null;
     [SerializeField] private Canvas textTooltip;
-    [SerializeField] private Text tooltipText;
+    [SerializeField] private Text textTooltipText;
+    [SerializeField] private GameObject tutorialTooltip;
+    [SerializeField] private Text tutorialToolTipText;
 
     [Header("Path Spawner")]
     [SerializeField] private Spawner[] spawners = null;
@@ -34,10 +36,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textTooltip.gameObject.SetActive(true);
-        tooltipText.text = "\n Willkommen im Spiel!\n \n" +
-            "Abbauen/Benutzen : Leertaste \n " +
-            "Bewegung : WASD \n";
+        //textTooltip.gameObject.SetActive(true);
+        //textTooltipText.text = "\n Willkommen im Spiel!\n \n" +
+        //    "Abbauen/Benutzen : Leertaste \n " +
+        //    "Bewegung : WASD \n";
+        tutorialTooltip.gameObject.SetActive(true);
+        //tutorialToolTipText.text = "\n Willkommen im Spiel! \n\n" +
+        //    "Wenn du neu im Spiel bist, solltest du das Tutorial aufmerksam lesen. \n" +
+        //    "Wir wünschen dir viel Spass im Spiel!";
         Time.timeScale = 1.0f;
         //gameMenu.SetActive(false);
         gameOverUI.SetActive(false);
@@ -70,14 +76,14 @@ public class GameManager : MonoBehaviour
                 int rndEvent = Random.Range(1, 5);
                 if (rndEvent == 1) {
                     player.energy.Increase(100);
-                    tooltipText.text =
+                    textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Du hast den Rest der Nacht ruhig in deinen Gemächern verbracht. \n" +
                     "100% Energie wurden wiederhergestellt.";
                 } else if (rndEvent == 2) {
                     player.energy.Increase(75);
-                    tooltipText.text =
+                    textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Du hast den Rest der Nacht in deinen Gemächern verbracht. \n" +
@@ -85,20 +91,20 @@ public class GameManager : MonoBehaviour
                     "75% Energie wurden wiederhergestellt.";
                 } else if (rndEvent ==  3) {
                     player.energy.Increase(50);
-                    tooltipText.text =
+                    textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Du hast den Rest der Nacht in einer Taverne verbracht. \n" +
                     "50% Energie wurden wiederhergestellt.";
                 } else if (rndEvent == 4) {
                     player.energy.Increase(25);
-                    tooltipText.text =
+                    textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Du hast den Rest der Nacht sturzbetrunken in einer Scheune verbracht. \n" +
                     "25% Energie wurden wiederhergestellt.";
                 } else if (rndEvent == 5) {
-                    tooltipText.text =
+                    textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Auf dem Weg nach Hause bist du überfallen worden. \n" +
