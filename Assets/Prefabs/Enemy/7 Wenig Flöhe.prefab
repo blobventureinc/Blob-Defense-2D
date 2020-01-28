@@ -127,9 +127,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.0048813224}
+  m_Offset: {x: 0, y: -0.023998065}
   serializedVersion: 2
-  m_Radius: 0.26578298
+  m_Radius: 0.12718618
 --- !u!114 &6743655755348722429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 0
-  _baseHealth: 190
+  _baseHealth: 160
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -225,7 +225,7 @@ MonoBehaviour:
   _physicalRes: 0.4
   _poisonRes: 0.4
   _fireRes: 0
-  _waterRes: 0.4
+  _waterRes: 0
   _windRes: 0
   _earthRes: 0
   _shadowRes: 0
@@ -318,8 +318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: "Aggressive Fl\xF6he \\n\\nLeben: 250\\nResistenzen: 40% auf Alles\\n\\n\"Klein
-    und Fies. Sie krabbeln dir die Beine hoch.\""
+  tooltipText: "Aggressive Fl\xF6he \\n\\nLeben: 250\\nResistenzen: 40% auf Alles
+    au\xDFer Wasser\\n\\n\"Klein und Fies. Sie krabbeln dir die Beine hoch.\""
 --- !u!198 &8458888796780104945
 ParticleSystem:
   m_ObjectHideFlags: 0

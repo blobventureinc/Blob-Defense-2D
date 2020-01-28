@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public void StartNewGame() {
-        SceneManager.LoadScene("Master");
+        SceneManager.LoadScene("FromPrefabs");
     }
 
     public void LoadGame() {

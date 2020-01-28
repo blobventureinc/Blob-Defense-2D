@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject tileHighlightingLight = null;
 
     [Header("UI Elements")]
+    [SerializeField] private GameObject winGameUI = null;
     [SerializeField] private GameObject gameOverUI = null;
     [SerializeField] private GameObject startRoundButton = null;
     [SerializeField] private GameObject roundTimerPanel = null;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Text textTooltipText;
     [SerializeField] private GameObject tutorialTooltip;
     [SerializeField] private Text tutorialToolTipText;
+    [SerializeField] private Text enemyCheckerText;
 
     [Header("Path Spawner")]
     [SerializeField] private Spawner[] spawners = null;
@@ -64,6 +66,10 @@ public class GameManager : MonoBehaviour
             {
                 Time.timeScale = 0.00001f;
                 gameOverUI.SetActive(true);
+            }
+            if (player.level.value == 16) {
+                Time.timeScale = 0.00001f;
+                winGameUI.SetActive(true);
             }
         }
         else
@@ -113,6 +119,89 @@ public class GameManager : MonoBehaviour
                 }
                 textTooltip.gameObject.SetActive(true);
             }
+        }
+        if (player.level.value == 0) {
+            enemyCheckerText.text = "Name: Grüner Blob \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 5 \n" +
+                "Geschwindigkeit: Langsam \n" +
+                "Resistenzen: 10% Physisch \n\n" +
+                "Verwilderter Blob aus dem Wald. Hat lange" +
+                "kein Tageslicht mehr erblickt.";
+
+        }
+        if (player.level.value == 1) {
+            enemyCheckerText.text = "Name: Grüner Blob \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 10 \n" +
+                "Geschwindigkeit: Langsam \n" +
+                "Resistenzen: 10% Physisch \n\n" +
+                "Verwilderter Blob aus dem Wald. Hat lange" +
+                "kein Tageslicht mehr erblickt.";
+
+        }
+        if (player.level.value == 2) {
+            enemyCheckerText.text = "Name: Kleine Fledermaus \n" +
+                "Lebenspunkte: 150 \n" +
+                "Anzahl: 10 \n" +
+                "Geschwindigkeit: Langsam \n" +
+                "Resistenzen: - \n\n" +
+                "Die Augen funkeln bedrohlich!";
+
+        }
+        if (player.level.value == 3) {
+            enemyCheckerText.text = "Name: Kleine Schabe \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 24 \n" +
+                "Geschwindigkeit: Normal \n" +
+                "Resistenzen: 50% Gift \n\n" +
+                "\"Dance Dance Dance!\"";
+
+        }
+        if (player.level.value == 4) {
+            enemyCheckerText.text = "Name: Roter Blob \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 20 \n" +
+                "Geschwindigkeit: Normal \n" +
+                "Resistenzen: 40% Physisch \n\n" +
+                "Natürlische Schleim Rüstung.";
+
+        }
+        if (player.level.value == 5) {
+            enemyCheckerText.text = "Name: Roter Blob \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 20 \n" +
+                "Geschwindigkeit: Normal \n" +
+                "Resistenzen: 40% Physisch \n\n" +
+                "Natürlische Schleim Rüstung.";
+
+        }
+        if (player.level.value == 6) {
+            enemyCheckerText.text = "Name: Roter Blob \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 20 \n" +
+                "Geschwindigkeit: Normal \n" +
+                "Resistenzen: 40% Physisch \n\n" +
+                "Natürlische Schleim Rüstung.";
+
+        }
+        if (player.level.value == 7) {
+            enemyCheckerText.text = "Name: Roter Blob \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 20 \n" +
+                "Geschwindigkeit: Normal \n" +
+                "Resistenzen: 40% Physisch \n\n" +
+                "Natürlische Schleim Rüstung.";
+
+        }
+        if (player.level.value == 8) {
+            enemyCheckerText.text = "Name: Roter Blob \n" +
+                "Lebenspunkte: 100 \n" +
+                "Anzahl: 20 \n" +
+                "Geschwindigkeit: Normal \n" +
+                "Resistenzen: 40% Physisch \n\n" +
+                "Natürlische Schleim Rüstung.";
+
         }
     }
 

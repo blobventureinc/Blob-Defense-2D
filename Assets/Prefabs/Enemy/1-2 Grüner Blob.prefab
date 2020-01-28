@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 6743655755348722402}
   - component: {fileID: 9077909230815753457}
   m_Layer: 0
-  m_Name: 1Wave
+  m_Name: "1-2 Gr\xFCner Blob"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,7 +445,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0
+  _physicalRes: 0.1
   _poisonRes: 0
   _fireRes: 0
   _waterRes: 0

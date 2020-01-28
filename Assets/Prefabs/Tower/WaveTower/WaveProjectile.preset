@@ -14,11 +14,11 @@ Preset:
   m_Properties:
   - target: {fileID: 0}
     propertyPath: lengthInSec
-    value: 5
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: simulationSpeed
-    value: 1
+    value: 3
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: stopAction
@@ -42,7 +42,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: looping
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: prewarm
@@ -262,7 +262,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InitialModule.startLifetime.scalar
-    value: 3.14
+    value: 8
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InitialModule.startLifetime.minScalar
@@ -622,11 +622,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InitialModule.startColor.maxColor.r
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InitialModule.startColor.maxColor.g
-    value: 0.8601885
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InitialModule.startColor.maxColor.b
@@ -2082,7 +2082,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InitialModule.maxNumParticles
-    value: 1000
+    value: 5000
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InitialModule.size3D
@@ -2978,7 +2978,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: EmissionModule.rateOverTime.scalar
-    value: 1000
+    value: 5000
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: EmissionModule.rateOverTime.minScalar
@@ -3326,7 +3326,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: SizeModule.enabled
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: SizeModule.curve.minMaxState
@@ -7130,7 +7130,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: VelocityModule.inWorldSpace
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: InheritVelocityModule.enabled
@@ -7314,7 +7314,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ForceModule.enabled
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ForceModule.x.minMaxState
@@ -7666,7 +7666,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ForceModule.z.scalar
-    value: 0
+    value: -0.47
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ForceModule.z.minScalar
@@ -8554,7 +8554,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ClampVelocityModule.magnitude.scalar
-    value: 1.29
+    value: 2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ClampVelocityModule.magnitude.minScalar
@@ -8746,7 +8746,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ClampVelocityModule.drag.scalar
-    value: 0
+    value: 15
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: ClampVelocityModule.drag.minScalar
@@ -12190,15 +12190,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.enabled
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.type
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.collisionMode
-    value: 0
+    value: 1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.colliderForce
@@ -12246,7 +12246,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.m_Dampen.scalar
-    value: 0
+    value: 0.2
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.m_Dampen.minScalar
@@ -12418,7 +12418,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.m_Bounce.scalar
-    value: 1
+    value: 0.4
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.m_Bounce.minScalar
@@ -12590,7 +12590,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-    value: 0
+    value: 0.1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.m_EnergyLossOnCollision.minScalar
@@ -12766,15 +12766,15 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.radiusScale
-    value: 1
+    value: 0.1
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.collidesWith.m_Bits
-    value: 4294967295
+    value: 2147485491
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.maxCollisionShapes
-    value: 256
+    value: 512
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: CollisionModule.quality

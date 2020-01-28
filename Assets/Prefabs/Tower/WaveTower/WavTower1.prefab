@@ -106,7 +106,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.049553335, y: 0.70176363}
+  m_Offset: {x: 0.049553394, y: 1.074991}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -117,7 +117,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.5738993, y: 5.584832}
+  m_Size: {x: 2.5738993, y: 4.8383775}
   m_EdgeRadius: 0
 --- !u!114 &5028917977770974700
 MonoBehaviour:
@@ -172,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4128672676941399933}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.7224504}
+  m_LocalPosition: {x: 0, y: 0.61, z: 1.7224504}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1055167283099343554}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 3.54
+  m_PointLightOuterRadius: 3
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -320,7 +320,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 3
 --- !u!114 &4060352967327741489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea39b20489a56a41a7902584d4821bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks_per_sec: 0.3
+  attacks_per_sec: 0.25
   projectile: {fileID: 8956438243761230826, guid: 17cdf4b3f40442745b1d45c632930b6e,
     type: 3}
   targetfinder: {fileID: 4289134507184837172}
@@ -395,4 +395,4 @@ MonoBehaviour:
   - {x: -0.14674401, y: 0.066781044, z: 0}
   m_ShapePathHash: 1977336830
   m_Mesh: {fileID: 0}
-  m_InstanceId: 642984
+  m_InstanceId: 375706
