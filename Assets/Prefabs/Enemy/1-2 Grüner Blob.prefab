@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 0
-  _baseHealth: 200
+  _baseHealth: 180
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0

@@ -81,16 +81,16 @@ public class GameManager : MonoBehaviour
             ui.SetActive(false);
             winGameUI.SetActive(true);
         }
+        if (player.health.value <= 0) {
+            Time.timeScale = 0.00001f;
+            gameOverUI.SetActive(true);
+            gameObject.SetActive(false);
+        }
         if (isInCombat)
         {
             wasIncreased = false;
             roundTimerPanel.SetActive(true);
             startRoundButton.SetActive(false);
-            if (player.health.value <= 0)
-            {
-                Time.timeScale = 0.00001f;
-                gameOverUI.SetActive(true);
-            }
         }
         else
         {
