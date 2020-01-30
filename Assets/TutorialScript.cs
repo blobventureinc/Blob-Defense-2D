@@ -49,6 +49,7 @@ public class TutorialScript : MonoBehaviour
     bool breaky = false;
 
     private void Update() {
+        Time.timeScale = 1.0f;
         if (Input.GetKeyDown(KeyCode.Escape)) {
             breaky = true;
             Debug.Log("Escape");
