@@ -80,22 +80,27 @@ PrefabInstance:
     - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
         type: 3}
       propertyPath: max_radius
-      value: 3
+      value: 2.2
       objectReference: {fileID: 0}
     - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
         type: 3}
       propertyPath: explosion_damage._fireDmg
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
         type: 3}
       propertyPath: dmg._physicalDmg
-      value: 500
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099955210051354889, guid: f988067d007219a46bd921385a623c01,
+        type: 3}
+      propertyPath: explosion_damage._physicalDmg
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f988067d007219a46bd921385a623c01, type: 3}

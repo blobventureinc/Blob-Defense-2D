@@ -19,8 +19,9 @@ GameObject:
   - component: {fileID: 6743655755348722400}
   - component: {fileID: 6743655755348722402}
   - component: {fileID: 8980388511252086761}
+  - component: {fileID: 5073221624874135567}
   m_Layer: 0
-  m_Name: 3Wave
+  m_Name: 4 Kleine Schabe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 1
-  _baseHealth: 120
+  _baseHealth: 400
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _physicalRes: 0
-  _poisonRes: 0.5
+  _poisonRes: 0
   _fireRes: 0
   _waterRes: 0
   _windRes: 0
@@ -302,7 +303,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 193670
+  m_InstanceId: 425642
 --- !u!114 &8980388511252086761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +320,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &5073221624874135567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743655755348722403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1001 &3309161707346291509
 PrefabInstance:
   m_ObjectHideFlags: 0

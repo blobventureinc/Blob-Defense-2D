@@ -9,23 +9,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 476003243267931910, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 9
+      propertyPath: m_FalloffIntensity
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 476003243267931910, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
-      propertyPath: m_PointLightInnerRadius
-      value: 8.4
+      propertyPath: m_PointLightOuterRadius
+      value: 7.34
       objectReference: {fileID: 0}
     - target: {fileID: 1284746350460418693, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7.492158
       objectReference: {fileID: 0}
     - target: {fileID: 1284746350460418693, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.1100992
       objectReference: {fileID: 0}
     - target: {fileID: 1284746350460418693, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
@@ -102,7 +102,7 @@ PrefabInstance:
     - target: {fileID: 4832450438904168581, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
       propertyPath: m_Radius
-      value: 3
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 6502462890796001357, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
@@ -113,7 +113,7 @@ PrefabInstance:
     - target: {fileID: 8867359583120362710, guid: d1a0c1083d9359c4892b2587464c282a,
         type: 3}
       propertyPath: m_InstanceId
-      value: -619378
+      value: -263368
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1a0c1083d9359c4892b2587464c282a, type: 3}

@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 698f24b28460ce543a94b54636a341a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   dmg:
     _physicalDmg: 0
-    _poisonDmg: 10
+    _poisonDmg: 25
     _fireDmg: 0
     _waterDmg: 0
     _windDmg: 0

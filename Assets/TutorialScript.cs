@@ -23,6 +23,14 @@ public class TutorialScript : MonoBehaviour
     [SerializeField] GameObject tutorialTooltips = null;
 
     // SHOW STUFF
+    [SerializeField] GameObject credits0 = null;
+    [SerializeField] GameObject credits1 = null;
+    [SerializeField] GameObject credits2 = null;
+    [SerializeField] GameObject credits3 = null;
+    [SerializeField] GameObject credits4 = null;
+    [SerializeField] GameObject credits5 = null;
+    [SerializeField] GameObject credits6 = null;
+
     [SerializeField] GameObject tooltip1 = null;
     [SerializeField] GameObject tooltip2 = null;
     [SerializeField] GameObject tooltip3 = null;
@@ -112,6 +120,8 @@ public class TutorialScript : MonoBehaviour
                 tooltip3.SetActive(true);
             }
             yield return new WaitForSeconds(2.0f);
+            credits0.SetActive(true);
+            credits1.SetActive(true);
             tooltip3.SetActive(false);
             tileTargeting.enabled = false;
             playerMovement.enabled = true;
@@ -120,18 +130,26 @@ public class TutorialScript : MonoBehaviour
             //ebug.Log("Waypoint Position: " + waypoint1.position);
             //Debug.Log("Waypoint Position LocaL: " + waypoint1.localPosition);
             yield return new WaitForSeconds(0.7f);
+            credits0.SetActive(false);
             playerMovement.MoveTo(wp2.position);
             yield return new WaitForSeconds(1.1f);
             playerMovement.MoveTo(wp3.position);
             yield return new WaitForSeconds(1.0f);
+            credits1.SetActive(false);
+            credits2.SetActive(true);
             playerMovement.MoveTo(wp4.position);
             yield return new WaitForSeconds(1.3f);
+            credits3.SetActive(true);
             playerMovement.MoveTo(wp5.position);
             yield return new WaitForSeconds(2.8f);
+            credits2.SetActive(false);
+            credits4.SetActive(true);
             playerMovement.MoveTo(wp6.position);
             yield return new WaitForSeconds(1.4f);
+            credits3.SetActive(false);
             playerMovement.MoveTo(wp7.position);
             yield return new WaitForSeconds(2.0f);
+            credits4.SetActive(false);
             state++;
             timer = 0;
         }
@@ -157,8 +175,14 @@ public class TutorialScript : MonoBehaviour
             }
             yield return new WaitForSeconds(5.0f);
             tooltip6.SetActive(false);
+            credits5.SetActive(true);
             playerMovement.MoveTo(wp8.position);
-            yield return new WaitForSeconds(8.0f);
+            yield return new WaitForSeconds(4.0f);
+            credits5.SetActive(false);
+            credits6.SetActive(true);
+            playerMovement.MoveTo(wp8.position);
+            yield return new WaitForSeconds(4.0f);
+            credits6.SetActive(false);
             state++;
             timer = 0;
         }

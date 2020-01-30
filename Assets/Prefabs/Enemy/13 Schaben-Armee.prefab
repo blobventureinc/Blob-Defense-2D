@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4832969486777833679}
   - component: {fileID: 8538420757201706553}
   - component: {fileID: 9067172044242802746}
+  - component: {fileID: 5475781141145978454}
   m_Layer: 0
   m_Name: 13 Schaben-Armee (6)
   m_TagString: Untagged
@@ -162,7 +163,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107988
+  m_InstanceId: 426952
 --- !u!114 &9067172044242802746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +180,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &5475781141145978454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524097166466852347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &1419229883923808251
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +207,7 @@ GameObject:
   - component: {fileID: 4580132787663106975}
   - component: {fileID: 8556956143569257729}
   - component: {fileID: 6949490072473915516}
+  - component: {fileID: 6275841066162149016}
   m_Layer: 0
   m_Name: 13 Schaben-Armee (4)
   m_TagString: Untagged
@@ -341,7 +356,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107990
+  m_InstanceId: 426954
 --- !u!114 &6949490072473915516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -358,6 +373,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &6275841066162149016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419229883923808251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &2098106179251859319
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +400,7 @@ GameObject:
   - component: {fileID: 2812149207381692792}
   - component: {fileID: 603083271431491735}
   - component: {fileID: 5955512013382994850}
+  - component: {fileID: 6301252082820463674}
   m_Layer: 0
   m_Name: 13 Schaben-Armee (5)
   m_TagString: Untagged
@@ -520,7 +549,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107882
+  m_InstanceId: 426846
 --- !u!114 &5955512013382994850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,6 +566,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &6301252082820463674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098106179251859319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &2795856608964031598
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +593,7 @@ GameObject:
   - component: {fileID: 1395152874003628158}
   - component: {fileID: 1777300704711267405}
   - component: {fileID: 8959793534059684539}
+  - component: {fileID: 2117476074842504057}
   m_Layer: 0
   m_Name: 13 Schaben-Armee
   m_TagString: Untagged
@@ -699,7 +742,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107896
+  m_InstanceId: 426860
 --- !u!114 &8959793534059684539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,6 +759,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &2117476074842504057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795856608964031598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &3074373134117151999
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +786,7 @@ GameObject:
   - component: {fileID: 3176892421658039533}
   - component: {fileID: 174042151873722293}
   - component: {fileID: 2799020858316525358}
+  - component: {fileID: 8438715920898210751}
   m_Layer: 0
   m_Name: 13 Schaben-Armee (1)
   m_TagString: Untagged
@@ -878,7 +935,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107878
+  m_InstanceId: 426842
 --- !u!114 &2799020858316525358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -895,6 +952,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &8438715920898210751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3074373134117151999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &6743655755348722403
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,6 +984,7 @@ GameObject:
   - component: {fileID: 6743655755348722400}
   - component: {fileID: 6743655755348722402}
   - component: {fileID: 8980388511252086761}
+  - component: {fileID: -3562867934590280939}
   m_Layer: 0
   m_Name: 13 Schaben-Armee
   m_TagString: Untagged
@@ -1056,8 +1127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b20ad835e17e14f8177719a15b10f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isScalabeByLevel: 1
-  _baseHealth: 500
+  isScalabeByLevel: 0
+  _baseHealth: 1600
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -1204,7 +1275,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107956
+  m_InstanceId: 426920
 --- !u!114 &8980388511252086761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,8 +1290,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
+  tooltipText: 'Schaben-Armee \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &-3562867934590280939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743655755348722403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &7197107549630258131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,6 +1319,7 @@ GameObject:
   - component: {fileID: 3260810011658714136}
   - component: {fileID: 70210654891272648}
   - component: {fileID: 5773241382985600724}
+  - component: {fileID: 9116568884776701987}
   m_Layer: 0
   m_Name: 13 Schaben-Armee (2)
   m_TagString: Untagged
@@ -1383,7 +1468,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107876
+  m_InstanceId: 426840
 --- !u!114 &5773241382985600724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,6 +1485,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &9116568884776701987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197107549630258131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &8835891460849699137
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,6 +1512,7 @@ GameObject:
   - component: {fileID: 818527403291032002}
   - component: {fileID: 8780852255436179626}
   - component: {fileID: 2489331144560318278}
+  - component: {fileID: 5179809685718260856}
   m_Layer: 0
   m_Name: 13 Schaben-Armee (3)
   m_TagString: Untagged
@@ -1562,7 +1661,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 107992
+  m_InstanceId: 426956
 --- !u!114 &2489331144560318278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1579,6 +1678,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
+--- !u!114 &5179809685718260856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8835891460849699137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1001 &3309161707346291509
 PrefabInstance:
   m_ObjectHideFlags: 0

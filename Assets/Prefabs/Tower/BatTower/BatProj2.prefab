@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
       propertyPath: dmg._poisonDmg
-      value: 20
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4745443779060179746, guid: 439fb981fba41df4ca0d88ef32c2784a,
         type: 3}

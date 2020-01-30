@@ -13,8 +13,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject tileHighlightingLight = null;
 
     [Header("UI Elements")]
+    [SerializeField] private GameObject ui;
     [SerializeField] private GameObject winGameUI = null;
     [SerializeField] private GameObject gameOverUI = null;
+    [SerializeField] private GameObject escapeMenuUI;
     [SerializeField] private GameObject startRoundButton = null;
     [SerializeField] private GameObject roundTimerPanel = null;
     [SerializeField] private Text roundText = null;
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
     public int goldPerRound;
 
     private bool isInCombat;
+
+    bool escaped = false;
 
     bool wasIncreased = true;
 
@@ -52,11 +56,27 @@ public class GameManager : MonoBehaviour
         startRoundButton.SetActive(true);
         foreach (Spawner sp in spawners)
             sp.waveEnded.AddListener(RoundEnd);
+        enemyCheckerText.text = spawners[0].waves[player.level.value].enemyWaves[0].enemyPrefab.GetComponent<HoverTooltip>().tooltipText;
+        enemyCheckerText.text = enemyCheckerText.text.Replace("\\n", "\n");
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape) && escaped == false) {
+            Time.timeScale = 0.00001f;
+            escapeMenuUI.SetActive(true);
+            escaped = true;
+        } else if (Input.GetKeyDown(KeyCode.Escape) && escaped == true) {
+            escapeMenuUI.SetActive(false);
+            Time.timeScale = 1.0f;
+            escaped = false;
+        }
+        if (player.level.value == spawners[0].waves.Length) {
+            Time.timeScale = 0.00001f;
+            ui.SetActive(false);
+            winGameUI.SetActive(true);
+        }
         if (isInCombat)
         {
             wasIncreased = false;
@@ -66,10 +86,6 @@ public class GameManager : MonoBehaviour
             {
                 Time.timeScale = 0.00001f;
                 gameOverUI.SetActive(true);
-            }
-            if (player.level.value == 16) {
-                Time.timeScale = 0.00001f;
-                winGameUI.SetActive(true);
             }
         }
         else
@@ -88,128 +104,132 @@ public class GameManager : MonoBehaviour
                     "Du hast den Rest der Nacht ruhig in deinen Gemächern verbracht. \n" +
                     "100% Energie wurden wiederhergestellt.";
                 } else if (rndEvent == 2) {
-                    player.energy.Increase(75);
+                    player.energy.Increase(80);
                     textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Du hast den Rest der Nacht in deinen Gemächern verbracht. \n" +
                     "Schlechte Träume haben dich heimgesucht. \n" +
-                    "75% Energie wurden wiederhergestellt.";
+                    "80% Energie wurden wiederhergestellt.";
                 } else if (rndEvent ==  3) {
-                    player.energy.Increase(50);
+                    player.energy.Increase(60);
                     textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Du hast den Rest der Nacht in einer Taverne verbracht. \n" +
-                    "50% Energie wurden wiederhergestellt.";
+                    "60% Energie wurden wiederhergestellt.";
                 } else if (rndEvent == 4) {
-                    player.energy.Increase(25);
+                    player.energy.Increase(40);
                     textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Du hast den Rest der Nacht sturzbetrunken in einer Scheune verbracht. \n" +
-                    "25% Energie wurden wiederhergestellt.";
+                    "Nur 40% Energie wurden wiederhergestellt.";
                 } else if (rndEvent == 5) {
+                    player.energy.Increase(20);
                     textTooltipText.text =
                     "Du hast die Nacht überlebt. \n" +
                     "Deine Beute hat dir 50 Gold eingebracht. \n" +
                     "Auf dem Weg nach Hause bist du überfallen worden. \n" +
                     "Man hat dich KO geschlagen. Du wachst auf der Straße wieder auf. \n" +
-                    "0% Energie wurden wiederhergestellt.";
+                    "Nur 20% Energie wurden wiederhergestellt.";
                 }
                 textTooltip.gameObject.SetActive(true);
             }
         }
-        if (player.level.value == 0) {
-            enemyCheckerText.text = "Name: Grüner Blob \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 5 \n" +
-                "Geschwindigkeit: Langsam \n" +
-                "Resistenzen: 10% Physisch \n\n" +
-                "Verwilderter Blob aus dem Wald. Hat lange" +
-                "kein Tageslicht mehr erblickt.";
-
+        if (!isInCombat && player.energy.value <= 0) {
+            isInCombat = true;
+            NextWave();
         }
-        if (player.level.value == 1) {
-            enemyCheckerText.text = "Name: Grüner Blob \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 10 \n" +
-                "Geschwindigkeit: Langsam \n" +
-                "Resistenzen: 10% Physisch \n\n" +
-                "Verwilderter Blob aus dem Wald. Hat lange" +
-                "kein Tageslicht mehr erblickt.";
+        //if (player.level.value == 0) {
+        //    enemyCheckerText.text = "Name: Grüner Blob \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 5 \n" +
+        //        "Geschwindigkeit: Langsam \n" +
+        //        "Resistenzen: 10% Physisch \n\n" +
+        //        "Verwilderter Blob aus dem Wald. Hat lange" +
+        //        "kein Tageslicht mehr erblickt.";
 
-        }
-        if (player.level.value == 2) {
-            enemyCheckerText.text = "Name: Kleine Fledermaus \n" +
-                "Lebenspunkte: 150 \n" +
-                "Anzahl: 10 \n" +
-                "Geschwindigkeit: Langsam \n" +
-                "Resistenzen: - \n\n" +
-                "Die Augen funkeln bedrohlich!";
+        //}
+        //if (player.level.value == 1) {
+        //    enemyCheckerText.text = "Name: Grüner Blob \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 10 \n" +
+        //        "Geschwindigkeit: Langsam \n" +
+        //        "Resistenzen: 10% Physisch \n\n" +
+        //        "Verwilderter Blob aus dem Wald. Hat lange" +
+        //        "kein Tageslicht mehr erblickt.";
 
-        }
-        if (player.level.value == 3) {
-            enemyCheckerText.text = "Name: Kleine Schabe \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 24 \n" +
-                "Geschwindigkeit: Normal \n" +
-                "Resistenzen: 50% Gift \n\n" +
-                "\"Dance Dance Dance!\"";
+        //}
+        //if (player.level.value == 2) {
+        //    enemyCheckerText.text = "Name: Kleine Fledermaus \n" +
+        //        "Lebenspunkte: 150 \n" +
+        //        "Anzahl: 10 \n" +
+        //        "Geschwindigkeit: Langsam \n" +
+        //        "Resistenzen: - \n\n" +
+        //        "Die Augen funkeln bedrohlich!";
 
-        }
-        if (player.level.value == 4) {
-            enemyCheckerText.text = "Name: Roter Blob \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 20 \n" +
-                "Geschwindigkeit: Normal \n" +
-                "Resistenzen: 40% Physisch \n\n" +
-                "Natürlische Schleim Rüstung.";
+        //}
+        //if (player.level.value == 3) {
+        //    enemyCheckerText.text = "Name: Kleine Schabe \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 24 \n" +
+        //        "Geschwindigkeit: Normal \n" +
+        //        "Resistenzen: 50% Gift \n\n" +
+        //        "\"Dance Dance Dance!\"";
 
-        }
-        if (player.level.value == 5) {
-            enemyCheckerText.text = "Name: Roter Blob \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 20 \n" +
-                "Geschwindigkeit: Normal \n" +
-                "Resistenzen: 40% Physisch \n\n" +
-                "Natürlische Schleim Rüstung.";
+        //}
+        //if (player.level.value == 4) {
+        //    enemyCheckerText.text = "Name: Roter Blob \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 20 \n" +
+        //        "Geschwindigkeit: Normal \n" +
+        //        "Resistenzen: 40% Physisch \n\n" +
+        //        "Natürlische Schleim Rüstung.";
 
-        }
-        if (player.level.value == 6) {
-            enemyCheckerText.text = "Name: Roter Blob \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 20 \n" +
-                "Geschwindigkeit: Normal \n" +
-                "Resistenzen: 40% Physisch \n\n" +
-                "Natürlische Schleim Rüstung.";
+        //}
+        //if (player.level.value == 5) {
+        //    enemyCheckerText.text = "Name: Roter Blob \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 20 \n" +
+        //        "Geschwindigkeit: Normal \n" +
+        //        "Resistenzen: 40% Physisch \n\n" +
+        //        "Natürlische Schleim Rüstung.";
 
-        }
-        if (player.level.value == 7) {
-            enemyCheckerText.text = "Name: Roter Blob \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 20 \n" +
-                "Geschwindigkeit: Normal \n" +
-                "Resistenzen: 40% Physisch \n\n" +
-                "Natürlische Schleim Rüstung.";
+        //}
+        //if (player.level.value == 6) {
+        //    enemyCheckerText.text = "Name: Roter Blob \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 20 \n" +
+        //        "Geschwindigkeit: Normal \n" +
+        //        "Resistenzen: 40% Physisch \n\n" +
+        //        "Natürlische Schleim Rüstung.";
 
-        }
-        if (player.level.value == 8) {
-            enemyCheckerText.text = "Name: Roter Blob \n" +
-                "Lebenspunkte: 100 \n" +
-                "Anzahl: 20 \n" +
-                "Geschwindigkeit: Normal \n" +
-                "Resistenzen: 40% Physisch \n\n" +
-                "Natürlische Schleim Rüstung.";
+        //}
+        //if (player.level.value == 7) {
+        //    enemyCheckerText.text = "Name: Roter Blob \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 20 \n" +
+        //        "Geschwindigkeit: Normal \n" +
+        //        "Resistenzen: 40% Physisch \n\n" +
+        //        "Natürlische Schleim Rüstung.";
 
-        }
+        //}
+        //if (player.level.value == 8) {
+        //    enemyCheckerText.text = "Name: Roter Blob \n" +
+        //        "Lebenspunkte: 100 \n" +
+        //        "Anzahl: 20 \n" +
+        //        "Geschwindigkeit: Normal \n" +
+        //        "Resistenzen: 40% Physisch \n\n" +
+        //        "Natürlische Schleim Rüstung.";
+
+        //}
     }
 
     public void NextWave()
     {
         //Disable the actioneer and tileHighlighting on waveStart. You can not build in combat phase
         player.gameObject.GetComponent<PlayerActioneer>().enabled = false;
-        tileHighlightingLight.SetActive(false);
 
         foreach (Spawner sp in spawners) {
             remaining_waves += sp.waves[wave].enemyWaves.Length;
@@ -218,8 +238,11 @@ public class GameManager : MonoBehaviour
         foreach (Spawner sp in spawners)
             sp.SpawnNextWave();
         wave++;
-        roundText.text = "Wave " + wave + " / " + spawners[0].waves.Length;
+        roundText.transform.parent.gameObject.SetActive(true);
+        roundText.text = "Runde " + wave + " / " + spawners[0].waves.Length;
         dayNightCycle.SetBool("isDay", false);
+        enemyCheckerText.text = spawners[0].waves[player.level.value].enemyWaves[0].enemyPrefab.GetComponent<HoverTooltip>().tooltipText;
+        enemyCheckerText.text = enemyCheckerText.text.Replace("\\n", "\n");
     }
 
     public void RoundEnd()

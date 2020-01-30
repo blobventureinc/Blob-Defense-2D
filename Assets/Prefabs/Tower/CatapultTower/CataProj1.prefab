@@ -95,9 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e655b9f7a55af4485e2b8244206d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 10
   dmg:
-    _physicalDmg: 50
+    _physicalDmg: 80
     _poisonDmg: 0
     _fireDmg: 0
     _waterDmg: 0

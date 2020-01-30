@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6743655755348722400}
   - component: {fileID: 6743655755348722402}
   - component: {fileID: 7010881216185398376}
+  - component: {fileID: 5940749410221121453}
   m_Layer: 0
   m_Name: 6 Fledermaus Boss
   m_TagString: Untagged
@@ -319,6 +320,19 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: 'BossBat \n\nLeben: 1000\nKeine Resistenzen\n\n"Mentoren Alpha-Boss-Transformation.
     Melde dich an."'
+--- !u!114 &5940749410221121453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743655755348722403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1001 &4887050164429481006
 PrefabInstance:
   m_ObjectHideFlags: 0

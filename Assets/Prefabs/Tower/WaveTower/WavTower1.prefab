@@ -193,9 +193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.27
+  m_FalloffIntensity: 0
   m_Color: {r: 0, g: 0.39215687, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -396,7 +396,7 @@ MonoBehaviour:
   - {x: -0.14674401, y: 0.066781044, z: 0}
   m_ShapePathHash: 1977336830
   m_Mesh: {fileID: 0}
-  m_InstanceId: 156790
+  m_InstanceId: 472660
 --- !u!1001 &4671533491983145477
 PrefabInstance:
   m_ObjectHideFlags: 0

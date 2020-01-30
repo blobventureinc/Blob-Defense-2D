@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1574189601126310057}
   - component: {fileID: 2876216111571104288}
   - component: {fileID: 6616885307751198682}
+  - component: {fileID: 79901886914823215}
   m_Layer: 0
   m_Name: 12 Blob-Armee (5)
   m_TagString: Untagged
@@ -171,7 +172,20 @@ MonoBehaviour:
   - {x: 0.01008833, y: 0.06667359, z: 0}
   m_ShapePathHash: -1034654839
   m_Mesh: {fileID: 0}
-  m_InstanceId: -64872
+  m_InstanceId: 423924
+--- !u!114 &79901886914823215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1272036259995021527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &4926867607631488589
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +200,7 @@ GameObject:
   - component: {fileID: 6398100933924851725}
   - component: {fileID: 6134923952594649546}
   - component: {fileID: 3044721747867321585}
+  - component: {fileID: 4671587926677256098}
   m_Layer: 0
   m_Name: 12 Blob-Armee (2)
   m_TagString: Untagged
@@ -343,7 +358,20 @@ MonoBehaviour:
   - {x: 0.01008833, y: 0.06667359, z: 0}
   m_ShapePathHash: -1034654839
   m_Mesh: {fileID: 0}
-  m_InstanceId: -60114
+  m_InstanceId: 423862
+--- !u!114 &4671587926677256098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4926867607631488589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &4974721702102959930
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +386,7 @@ GameObject:
   - component: {fileID: 4187407295891605500}
   - component: {fileID: 5132113086743167701}
   - component: {fileID: 483023590735181900}
+  - component: {fileID: 3667769705083368911}
   m_Layer: 0
   m_Name: 12 Blob-Armee
   m_TagString: Untagged
@@ -515,7 +544,20 @@ MonoBehaviour:
   - {x: 0.01008833, y: 0.06667359, z: 0}
   m_ShapePathHash: -1034654839
   m_Mesh: {fileID: 0}
-  m_InstanceId: -55668
+  m_InstanceId: 423848
+--- !u!114 &3667769705083368911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4974721702102959930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &5398242097054567688
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +572,7 @@ GameObject:
   - component: {fileID: 8879123530444211211}
   - component: {fileID: 2059609003663892305}
   - component: {fileID: 4886244957128976712}
+  - component: {fileID: 3569888474320581212}
   m_Layer: 0
   m_Name: 12 Blob-Armee (3)
   m_TagString: Untagged
@@ -687,7 +730,20 @@ MonoBehaviour:
   - {x: 0.01008833, y: 0.06667359, z: 0}
   m_ShapePathHash: -1034654839
   m_Mesh: {fileID: 0}
-  m_InstanceId: -61382
+  m_InstanceId: 423886
+--- !u!114 &3569888474320581212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5398242097054567688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &5912552057445553000
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +758,7 @@ GameObject:
   - component: {fileID: 4719475235379984209}
   - component: {fileID: 2024473296819575710}
   - component: {fileID: 8427362252973377953}
+  - component: {fileID: 3577415938382850361}
   m_Layer: 0
   m_Name: 12 Blob-Armee (1)
   m_TagString: Untagged
@@ -859,7 +916,20 @@ MonoBehaviour:
   - {x: 0.01008833, y: 0.06667359, z: 0}
   m_ShapePathHash: -1034654839
   m_Mesh: {fileID: 0}
-  m_InstanceId: -58554
+  m_InstanceId: 423956
+--- !u!114 &3577415938382850361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5912552057445553000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &6743655755348722403
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +949,7 @@ GameObject:
   - component: {fileID: 6743655755348722400}
   - component: {fileID: 6743655755348722402}
   - component: {fileID: 3898800903493307321}
+  - component: {fileID: 2149445713598070699}
   m_Layer: 0
   m_Name: 12 Blob-Armee
   m_TagString: Untagged
@@ -895,7 +966,7 @@ Transform:
   m_GameObject: {fileID: 6743655755348722403}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children:
   - {fileID: 3579387827405815012}
   - {fileID: 4932222446898918263}
@@ -1020,7 +1091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 0
-  _baseHealth: 400
+  _baseHealth: 1500
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -1086,7 +1157,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0.2
+  _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
   _waterRes: 0
@@ -1167,7 +1238,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 76996
+  m_InstanceId: 423928
 --- !u!114 &3898800903493307321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1182,8 +1253,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: "Fieser Blob \\n\\nLeben: 250\\nResistenzen: 15% Physisch\\n\\n\"Nat\xFCrliche
-    Schleim-R\xFCstung.\""
+  tooltipText: 'Blob-Armee \n\nLeben: 250\nResistenzen: 20% Physisch\n\n"Regenbogen."'
+--- !u!114 &2149445713598070699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743655755348722403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1 &8498226708958532558
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,6 +1281,7 @@ GameObject:
   - component: {fileID: 7486202867041471152}
   - component: {fileID: 7663273936020285980}
   - component: {fileID: 4715398341432424026}
+  - component: {fileID: 2844645864301285877}
   m_Layer: 0
   m_Name: 12 Blob-Armee (4)
   m_TagString: Untagged
@@ -1355,7 +1439,20 @@ MonoBehaviour:
   - {x: 0.01008833, y: 0.06667359, z: 0}
   m_ShapePathHash: -1034654839
   m_Mesh: {fileID: 0}
-  m_InstanceId: -62720
+  m_InstanceId: 423882
+--- !u!114 &2844645864301285877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498226708958532558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1001 &5200415357812698563
 PrefabInstance:
   m_ObjectHideFlags: 0

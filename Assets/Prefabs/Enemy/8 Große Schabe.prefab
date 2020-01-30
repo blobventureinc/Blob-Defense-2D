@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6743655755348722400}
   - component: {fileID: 6743655755348722402}
   - component: {fileID: 8980388511252086761}
+  - component: {fileID: -3512443986083182484}
   m_Layer: 0
   m_Name: "8 Gro\xDFe Schabe"
   m_TagString: Untagged
@@ -155,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 1
-  _baseHealth: 250
+  _baseHealth: 600
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _physicalRes: 0
-  _poisonRes: 0.3
+  _poisonRes: 0
   _fireRes: 0
   _waterRes: 0
   _windRes: 0
@@ -317,8 +318,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 30% Gift\n\n"Dance, Dance,
-    Dance!"'
+  tooltipText: "Gro\xDFe Schabe \\n\\nLeben: 200\\nResistenz: 30% Gift\\n\\n"
+--- !u!114 &-3512443986083182484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743655755348722403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
 --- !u!1001 &3309161707346291509
 PrefabInstance:
   m_ObjectHideFlags: 0

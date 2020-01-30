@@ -9,19 +9,29 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 230236897880762626, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
-      propertyPath: attacks_per_sec
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 230236897880762626, guid: 88263ed2c7ee37149b34dc7db8285d6b,
-        type: 3}
       propertyPath: projectile
       value: 
       objectReference: {fileID: 4917670702602946693, guid: 4a104908151493d4e983b97a11cb1da3,
         type: 3}
+    - target: {fileID: 230236897880762626, guid: 88263ed2c7ee37149b34dc7db8285d6b,
+        type: 3}
+      propertyPath: attacks_per_sec
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153972993913756215, guid: 88263ed2c7ee37149b34dc7db8285d6b,
+        type: 3}
+      propertyPath: tooltipText
+      value: "Katapultturm \\n\\nStufe 2 \\n\\n \"Etwas macht Aufzieh-Ger\xE4usche.\" "
+      objectReference: {fileID: 0}
     - target: {fileID: 1876641285881146503, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
       propertyPath: m_Name
       value: CatTower 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2966338236063661601, guid: 88263ed2c7ee37149b34dc7db8285d6b,
+        type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 3.85
       objectReference: {fileID: 0}
     - target: {fileID: 3478855575405915023, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
@@ -32,12 +42,12 @@ PrefabInstance:
     - target: {fileID: 4496214735971990434, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7.560852
       objectReference: {fileID: 0}
     - target: {fileID: 4496214735971990434, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.3376937
       objectReference: {fileID: 0}
     - target: {fileID: 4496214735971990434, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
@@ -84,15 +94,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5574693813635621691, guid: 88263ed2c7ee37149b34dc7db8285d6b,
-        type: 3}
-      propertyPath: tooltipText
-      value: "Katapultturm \\n\\nStufe 2 \\n\\n \"Etwas macht Aufzieh-Ger\xE4usche.\" "
-      objectReference: {fileID: 0}
     - target: {fileID: 7149892805807410136, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}
       propertyPath: m_InstanceId
-      value: -639190
+      value: -579696
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827755980585746850, guid: 88263ed2c7ee37149b34dc7db8285d6b,
+        type: 3}
+      propertyPath: m_Radius
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 8470414420292315498, guid: 88263ed2c7ee37149b34dc7db8285d6b,
         type: 3}

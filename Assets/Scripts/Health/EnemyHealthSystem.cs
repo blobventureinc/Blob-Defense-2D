@@ -16,11 +16,6 @@ public class EnemyHealthSystem : HealthSystem
     bool isHiddenEnemy = true;
     [SerializeField] SpriteRenderer spriteRenderer;
 
-    Vector3 oldPosition;
-    Vector3 newPosition;
-    Vector3 direction;
-    bool step;
-
     bool resetted;
     bool hasLight;
     bool destroyed;
@@ -32,25 +27,7 @@ public class EnemyHealthSystem : HealthSystem
     {
         player = GameObject.Find("Player").GetComponent<AttributeManager>();
         onDeath.AddListener(DestroyItself);
-        step = true;
         destroyed = false;
-    }
-
-    private void Update() {
-        if (step) {
-            oldPosition = transform.position;
-            step = false;
-        } else {
-            newPosition = transform.position;
-            var heading = newPosition - oldPosition;
-            var distance = heading.magnitude;
-            Vector3 direction = heading / distance;
-            if (!float.IsNaN(direction.x)) {
-                anim.SetFloat("SpeedX", direction.x);
-                anim.SetFloat("SpeedY", direction.y);
-            }
-            step = true;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -79,7 +56,7 @@ public class EnemyHealthSystem : HealthSystem
     private void OnTriggerExit2D(Collider2D collision) {
         if (collision.gameObject.tag == "Light") {
             if (!isHiddenEnemy) {
-                if (overlapping < 1) {
+                if (overlapping == 0) {
                     isHiddenEnemy = true;
                     gameObject.tag = "Untagged";
                 } else {

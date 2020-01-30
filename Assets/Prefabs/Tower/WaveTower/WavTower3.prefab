@@ -99,6 +99,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7570752191010464923, guid: 8f4df8484a5a5644db2476cc9d584539,
         type: 3}
+    - target: {fileID: 4379871770576973116, guid: da4c9bce90b1f184d848af6ce2ce65b0,
+        type: 3}
+      propertyPath: tooltipText
+      value: Wellenturm \n\nStufe 3 \n\n "Es blubbert."
+      objectReference: {fileID: 0}
     - target: {fileID: 5684747478902355545, guid: da4c9bce90b1f184d848af6ce2ce65b0,
         type: 3}
       propertyPath: m_Sprite
@@ -113,7 +118,7 @@ PrefabInstance:
     - target: {fileID: 9214809545464593723, guid: da4c9bce90b1f184d848af6ce2ce65b0,
         type: 3}
       propertyPath: m_InstanceId
-      value: -206140
+      value: -483024
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da4c9bce90b1f184d848af6ce2ce65b0, type: 3}

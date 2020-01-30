@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 6743655755348722400}
   - component: {fileID: 6743655755348722402}
   - component: {fileID: 9077909230815753457}
+  - component: {fileID: 6247321094286005383}
   m_Layer: 0
   m_Name: "1-2 Gr\xFCner Blob"
   m_TagString: Untagged
@@ -379,7 +380,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 0
-  _baseHealth: 100
+  _baseHealth: 200
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -445,7 +446,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0.1
+  _physicalRes: 0
   _poisonRes: 0
   _fireRes: 0
   _waterRes: 0
@@ -526,7 +527,7 @@ MonoBehaviour:
   - {x: -0.023339272, y: 0.07371998, z: 0}
   m_ShapePathHash: 18268807
   m_Mesh: {fileID: 0}
-  m_InstanceId: 78240
+  m_InstanceId: 425494
 --- !u!114 &9077909230815753457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,3 +544,16 @@ MonoBehaviour:
   text: {fileID: 0}
   tooltipText: "Kleiner Gr\xFCner Blob \\n\\nLeben: 100 \\nResistenzen: 0 \\nSpeed:
     1.3f \\n\\n\"Macht einen besonders gr\xFCnen Eindruck.\""
+--- !u!114 &6247321094286005383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743655755348722403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b001fc198c4bd7e4387b369c5d233def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}

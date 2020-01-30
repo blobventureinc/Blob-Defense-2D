@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154054031083247694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 1.7224504}
+  m_LocalPosition: {x: 0, y: 1, z: 1.7224504}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 3876481841818699249}
@@ -45,9 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.33
+  m_FalloffIntensity: 0
   m_Color: {r: 0, g: 0.39215687, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 6
+  m_PointLightOuterRadius: 3.2
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -322,7 +322,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 6
+  m_Radius: 4.5
 --- !u!114 &230236897880762626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea39b20489a56a41a7902584d4821bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks_per_sec: 0.5
+  attacks_per_sec: 0.7
   projectile: {fileID: 836078761720240636, guid: b42f5fba80178b3409d6152b21dbfd7f,
     type: 3}
   targetfinder: {fileID: 67170969202216199}
@@ -401,7 +401,7 @@ MonoBehaviour:
   - {x: -0.15249783, y: -0.045708477, z: 0}
   m_ShapePathHash: 95237465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 148454
+  m_InstanceId: 472742
 --- !u!1001 &6364297516596548947
 PrefabInstance:
   m_ObjectHideFlags: 0

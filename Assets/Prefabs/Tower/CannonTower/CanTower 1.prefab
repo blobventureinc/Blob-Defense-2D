@@ -193,9 +193,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.33
+  m_FalloffIntensity: 0
   m_Color: {r: 0, g: 0.39215687, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1.4
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 8.01
+  m_PointLightOuterRadius: 5.6
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea39b20489a56a41a7902584d4821bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks_per_sec: 0.15
+  attacks_per_sec: 0.3
   projectile: {fileID: 920499496550540103, guid: f988067d007219a46bd921385a623c01,
     type: 3}
   targetfinder: {fileID: 3596291869047049947}
@@ -394,7 +394,7 @@ MonoBehaviour:
   - {x: -0.2927723, y: 0.09595215, z: 0}
   m_ShapePathHash: 1813992061
   m_Mesh: {fileID: 0}
-  m_InstanceId: 148340
+  m_InstanceId: -250458
 --- !u!1001 &3788433271791506241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -464,23 +464,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933966101207193571, guid: 284c7b1e7be31064fa491e32c2907028,
         type: 3}
-      propertyPath: m_Offset.y
-      value: -0.3761832
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933966101207193571, guid: 284c7b1e7be31064fa491e32c2907028,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.08474302
-      objectReference: {fileID: 0}
-    - target: {fileID: 8933966101207193571, guid: 284c7b1e7be31064fa491e32c2907028,
-        type: 3}
       propertyPath: m_Offset.x
       value: 0.028264958
       objectReference: {fileID: 0}
     - target: {fileID: 8933966101207193571, guid: 284c7b1e7be31064fa491e32c2907028,
         type: 3}
+      propertyPath: m_Offset.y
+      value: -0.3761832
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933966101207193571, guid: 284c7b1e7be31064fa491e32c2907028,
+        type: 3}
       propertyPath: m_Size.x
       value: 0.077841215
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933966101207193571, guid: 284c7b1e7be31064fa491e32c2907028,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.08474302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284c7b1e7be31064fa491e32c2907028, type: 3}
