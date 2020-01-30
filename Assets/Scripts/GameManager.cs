@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
 
     bool wasIncreased = true;
 
+    private void Awake() {
+        ui.GetComponentInChildren<UpdatePlayerAttributes>().Init();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
