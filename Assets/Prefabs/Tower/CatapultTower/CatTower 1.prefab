@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea39b20489a56a41a7902584d4821bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attacks_per_sec: 0.7
+  attacks_per_sec: 0.8
   projectile: {fileID: 836078761720240636, guid: b42f5fba80178b3409d6152b21dbfd7f,
     type: 3}
   targetfinder: {fileID: 67170969202216199}
@@ -401,7 +401,7 @@ MonoBehaviour:
   - {x: -0.15249783, y: -0.045708477, z: 0}
   m_ShapePathHash: 95237465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 472742
+  m_InstanceId: 118592
 --- !u!1001 &6364297516596548947
 PrefabInstance:
   m_ObjectHideFlags: 0
