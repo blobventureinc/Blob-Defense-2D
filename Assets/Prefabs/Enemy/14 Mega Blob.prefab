@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isScalabeByLevel: 0
-  _baseHealth: 7000
+  _baseHealth: 5000
   _baseMana: 0
   _baseEnergy: 0
   _initGold: 0
@@ -221,7 +221,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0
+  _physicalRes: 0.15
   _poisonRes: 0
   _fireRes: 0
   _waterRes: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'Der fiese Doppler \n\nLeben: 250\nResistenzen: 15% Physisch\n\n"Sieht
+  tooltipText: 'Der fiese Doppler \n\nLeben: 5000\nResistenzen: 15% Physisch\n\n"Sieht
     ein bisschen aus wie du!"'
 --- !u!114 &4144286986024970657
 MonoBehaviour:

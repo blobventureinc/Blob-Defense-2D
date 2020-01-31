@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'BossBat \n\nLeben: 1000\nKeine Resistenzen\n\n"Mentoren Alpha-Boss-Transformation.
+  tooltipText: 'BossBat \n\nLeben: 4000\nKeine Resistenzen\n\n"Mentoren Alpha-Boss-Transformation.
     Melde dich an."'
 --- !u!114 &5940749410221121453
 MonoBehaviour:

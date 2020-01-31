@@ -223,10 +223,10 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0
-  _poisonRes: 0
+  _physicalRes: 0.4
+  _poisonRes: 0.4
   _fireRes: 0
-  _waterRes: 0
+  _waterRes: 0.4
   _windRes: 0
   _earthRes: 0
   _shadowRes: 0
@@ -319,8 +319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: "Das Dunkel \\n\\nLeben: 14000\\nResistenzen: 40% auf Alles\\n\\n\"Entscheidet
-    sich immer f\xFCr die Linke Seite.\"\""
+  tooltipText: "Das Dunkel \\n\\nLeben: 10000\\nResistenzen: 40% auf Alles\\n\\n\"Entscheidet
+    sich immer f\xFCr die Linke Seite.\""
 --- !u!198 &8458888796780104945
 ParticleSystem:
   m_ObjectHideFlags: 0

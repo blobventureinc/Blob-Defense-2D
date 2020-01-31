@@ -106,7 +106,7 @@ MonoBehaviour:
     _earthDmg: 0
     _shadowDmg: 0
     _lightDmg: 0
-  attacks_per_sec: 4
+  attacks_per_sec: 5
   range_radius: 2
 --- !u!95 &1367952621550685177
 Animator:

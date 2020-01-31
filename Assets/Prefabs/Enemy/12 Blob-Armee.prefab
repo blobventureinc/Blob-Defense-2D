@@ -1157,7 +1157,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0
+  _physicalRes: 0.2
   _poisonRes: 0
   _fireRes: 0
   _waterRes: 0

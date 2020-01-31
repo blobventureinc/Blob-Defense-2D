@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'Kleine Fledermaus \n\n Leben: 150 \nResistenzen: 0\n\n"Die Augen
+  tooltipText: 'Kleine Fledermaus \n\n Leben: 300 \nResistenzen: 0\n\n"Die Augen
     funkeln bedrohlich!"'
 --- !u!114 &8150541550057463988
 MonoBehaviour:

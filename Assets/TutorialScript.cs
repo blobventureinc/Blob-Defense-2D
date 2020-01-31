@@ -203,6 +203,7 @@ public class TutorialScript : MonoBehaviour
         tutorialTooltips.SetActive(true);
         Camera.main.orthographicSize = 4.0f;
         Camera.main.transform.localPosition = new Vector3(0, 0.4f, -100f);
+        updateUI.Init();
         gameObject.SetActive(false);
         yield break;
     }

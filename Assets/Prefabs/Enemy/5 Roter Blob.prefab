@@ -221,7 +221,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0
+  _physicalRes: 0.3
   _poisonRes: 0
   _fireRes: 0
   _waterRes: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: "Fieser Blob \\n\\nLeben: 250\\nResistenzen: 30% Physisch\\n\\n\"Nat\xFCrliche
+  tooltipText: "Fieser Blob \\n\\nLeben: 500\\nResistenzen: 30% Physisch\\n\\n\"Nat\xFCrliche
     Schleim-R\xFCstung.\""
 --- !u!114 &6357148553880901977
 MonoBehaviour:

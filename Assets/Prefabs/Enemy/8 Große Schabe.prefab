@@ -223,7 +223,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _physicalRes: 0
-  _poisonRes: 0
+  _poisonRes: 0.3
   _fireRes: 0
   _waterRes: 0
   _windRes: 0
@@ -318,7 +318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: "Gro\xDFe Schabe \\n\\nLeben: 200\\nResistenz: 30% Gift\\n\\n"
+  tooltipText: "Gro\xDFe Schabe \\n\\nLeben: 600\\nResistenz: 30% Gift\\n\\n \"Stampf,
+    Stampf, Stampf\""
 --- !u!114 &-3512443986083182484
 MonoBehaviour:
   m_ObjectHideFlags: 0

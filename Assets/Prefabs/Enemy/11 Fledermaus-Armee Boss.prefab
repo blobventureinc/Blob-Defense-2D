@@ -1133,7 +1133,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _physicalRes: 0
-  _poisonRes: 0
+  _poisonRes: 0.2
   _fireRes: 0
   _waterRes: 0
   _windRes: 0
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'Fledermaus Armee - BOSS\n\n Leben: 8000 \nResistenzen: 0\n\n'
+  tooltipText: 'Fledermaus Armee - BOSS\n\n Leben: 5000 \nResistenzen: 20% Gift\n\n'
 --- !u!114 &-7631215981341141001
 MonoBehaviour:
   m_ObjectHideFlags: 0

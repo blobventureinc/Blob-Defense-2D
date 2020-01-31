@@ -1290,8 +1290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'Schaben-Armee \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
-    Dance!"'
+  tooltipText: 'Schaben-Armee \n\nLeben: 1600\nResistenz: 50% Gift\n\n"Elegant."'
 --- !u!114 &-3562867934590280939
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -223,7 +223,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _physicalRes: 0
-  _poisonRes: 0
+  _poisonRes: 0.5
   _fireRes: 0
   _waterRes: 0
   _windRes: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: 'Kleine Schabe \n\nLeben: 200\nResistenz: 50% Gift\n\n"Dance, Dance,
+  tooltipText: 'Kleine Schabe \n\nLeben: 400\nResistenz: 50% Gift\n\n"Dance, Dance,
     Dance!"'
 --- !u!114 &5073221624874135567
 MonoBehaviour:

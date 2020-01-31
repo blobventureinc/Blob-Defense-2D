@@ -221,7 +221,7 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0
+  _physicalRes: 0.15
   _poisonRes: 0
   _fireRes: 0
   _waterRes: 0
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: "Gro\xDFer Blob \\n\\nLeben: 450\\nResistenzen: 15% Physisch\\n\\n"
+  tooltipText: "Gro\xDFer Blob \\n\\nLeben: 900\\nResistenzen: 15% Physisch\\n\\n"
 --- !u!114 &-8285139089865056817
 MonoBehaviour:
   m_ObjectHideFlags: 0

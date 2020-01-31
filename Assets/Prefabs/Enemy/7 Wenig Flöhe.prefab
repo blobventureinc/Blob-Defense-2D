@@ -223,8 +223,8 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
-  _physicalRes: 0
-  _poisonRes: 0
+  _physicalRes: 0.25
+  _poisonRes: 0.25
   _fireRes: 0
   _waterRes: 0
   _windRes: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooltip: {fileID: 0}
   text: {fileID: 0}
-  tooltipText: "Ein paar Fl\xF6he \\n\\nLeben: 250\\nResistenzen: 40% auf Alles au\xDFer
+  tooltipText: "Ein paar Fl\xF6he \\n\\nLeben: 250\\nResistenzen: 25% auf Alles au\xDFer
     Wasser\\n\\n"
 --- !u!198 &8458888796780104945
 ParticleSystem:

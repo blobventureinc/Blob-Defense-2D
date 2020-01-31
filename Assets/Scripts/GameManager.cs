@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     [Header("UI Elements")]
     [SerializeField] private GameObject ui;
+    [SerializeField] private UpdatePlayerAttributes updatePlayerAttributes;
     [SerializeField] private GameObject winGameUI = null;
     [SerializeField] private GameObject gameOverUI = null;
     [SerializeField] private GameObject escapeMenuUI;
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     bool wasIncreased = true;
 
     private void Awake() {
-        ui.GetComponentInChildren<UpdatePlayerAttributes>().Init();
+        updatePlayerAttributes.Init();
     }
 
     // Start is called before the first frame update
@@ -68,6 +69,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && escaped == false) {
+            updatePlayerAttributes.Init();
             Time.timeScale = 0.00001f;
             escapeMenuUI.SetActive(true);
             escaped = true;
@@ -76,9 +78,9 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 1.0f;
             escaped = false;
         }
-        if (player.level.value == spawners[0].waves.Length) {
+        if (player.level.value == spawners[0].waves.Length && player.health.value >= 0) {
             Time.timeScale = 0.00001f;
-            ui.SetActive(false);
+            textTooltip.gameObject.SetActive(false);
             winGameUI.SetActive(true);
         }
         if (player.health.value <= 0) {

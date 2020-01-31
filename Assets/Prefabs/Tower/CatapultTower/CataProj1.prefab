@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   dmg:
-    _physicalDmg: 100
+    _physicalDmg: 120
     _poisonDmg: 0
     _fireDmg: 0
     _waterDmg: 0
