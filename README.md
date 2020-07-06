@@ -1,11 +1,14 @@
 ## Blob-Defense
 <br>
+<br>
 Blob-Defense is a 2D Tower-Defense game with some unique mechanics.
+<br>
 <br>
 A Tower-Defense-Game is a game, where enemy non player characters try to follow a path until they reach a specific destination.
 If they reach their destination the player will lose a healthpoint.
 The players goal is to prevent the enemys from reaching their destination by
 building towers that will shoot on those enemys.
+<br>
 <br>
 Our game will start at daytime. You have energy to spend on doing things like building, upgrading and mining.<br>
 Since you only get a random amount of energy every round, the player has to think about his actions first. <br>
