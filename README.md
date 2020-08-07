@@ -26,5 +26,5 @@ Philipp Haustein<br>
 Florian Taute<br>
 <br>
 <br>
-This project isnt actively developed anymore. There is no license. This may remain as an interesting 
+This project isnt actively developed anymore. This may remain as an interesting 
 Example Project for others starting to get into Unity Development. Feel free to use whatever you like.
